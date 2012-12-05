@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jnlp spec="1.0+" codebase="" href="">
     <information>
-        <title>Channels</title>
+        <title>Channels Demo</title>
 
-        <vendor> Channels Demo</vendor>
+        <vendor>Channels Demo</vendor>
     </information>
     <resources>
         <!-- Application Resources -->
@@ -11,12 +11,12 @@
               href="http://java.sun.com/products/autodl/j2se"
               max-heap-size="128m" />
 
-        <jar href="vlab2.jar" main="true" />
+        <jar href="virtual.jar" main="true" />
 
     </resources>
     <applet-desc 
-         name="Channels Demo Applet"
-         main-class="com.vlab.fm.Channels$MyApplet"
+         name="Channels Applet"
+         main-class="eerc.vlab.demos.Channels$MyApplet"
          width="300"
          height="300">
      </applet-desc>
