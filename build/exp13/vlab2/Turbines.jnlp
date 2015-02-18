@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jnlp spec="1.0+" codebase="" href="">
+    <information>
+        <title>Turbines Demo</title>
+
+        <vendor>Turbines Demo</vendor>
+    </information>
+    <resources>
+        <!-- Application Resources -->
+        <j2se version="1.5+"
+              href="http://java.sun.com/products/autodl/j2se"
+              max-heap-size="128m" />
+
+        <jar href="work4.jar" main="true" />
+
+    </resources>
+    <applet-desc 
+         name="Turbines Applet"
+         main-class="com.vlab.geo.SieveAnalysis$MyApplet"
+         width="300"
+         height="300">
+     </applet-desc>
+</jnlp>	
