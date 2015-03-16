@@ -94,11 +94,11 @@
             "platform": {
                 "arch": "i386", 
                 "hosting": "dedicated", 
-                "installer": ["sudo apt-get update","sudo apt-get install -y php5 apache2"], 
+                "installer": [], 
                 "lab_actions": {
                     "backup": [], 
                     "clean": [], 
-                    "init": ["cp -r ../build/* /var/www/","mv /var/www/index.html index.html.default"], 
+                    "init": ["mv /var/www/index.html index.html.default","cp -r ../build/* /var/www/"], 
                     "pause": [], 
                     "publish": [], 
                     "restore": [], 
