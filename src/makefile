@@ -1,5 +1,5 @@
 JAVAC=javac
-sources = $(EXP_1sep2010 *.java)
+sources = $(lab *.java)
 classes = $(sources: .java=.class)
 
 all: $(classes)
