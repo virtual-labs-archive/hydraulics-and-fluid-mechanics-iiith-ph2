@@ -142,7 +142,6 @@
 					False <br/>
 </input></input></p>
 <p>
-<br/>
 <input class="button" onclick="eval();" type="submit" value="Evaluate"/>
 <input class="button" onclick="document.quiz.reset();" type="button" value="Reset"/><br/><br/>
 <a href="3.Orifices.pdf" target="_blank">Read More</a>
