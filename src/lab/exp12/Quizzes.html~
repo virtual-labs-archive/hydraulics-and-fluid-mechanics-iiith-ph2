@@ -101,24 +101,24 @@
 <h1 class="text-h2-lightblue">Jets</h1><div class="content" id="experiment-article-section-6-content">
 <p>
 <b>Q1.</b> 
-              What is the force exerted by the Jet on the vane ?  <!--<br>
+              Flow to be laminar the Reynolds number should be greater than 2000.  <br>
 <input id="q1" name="q1" type="radio" value="1">
 <font color="green"> True </font> <br>
 <input id="q1" name="q1" type="radio" value="0">
-<font color="red"> False </font>--> <br/><br/>
+<font color="red"> False </font> <br/><br/>
 <b>Q2.</b> 
-              What is the usage of Collecting tank? <!--<br>
+              For flow to be turbulent the flow should be more than 400. <br>
 <input id="q2" name="q2" type="radio" value="1">
 <font color="green"> True </font> <br>
 <input id="q2" name="q2" type="radio" value="0">
-<font color="red"> False </font> --><br/><br/>
+<font color="red"> False </font> <br/><br/>
 <b>Q3.</b> 
-              Give the equations of force exerted by the jet on the vane for a flat plate and hemispherical curved plate. <!--<br>
+              Concept of Reynolds number is used in open channels. <br>
 <input id="q3" name="q3" type="radio" value="1">
 <font color="green"> True </font> <br>
 <input id="q3" name="q3" type="radio" value="0">
-<font color="red"> False </font> --><br/><br/>
-<!--<b>Q4.</b> 
+<font color="red"> False </font> <br/><br/>
+<b>Q4.</b> 
               The behavior of path lines is laminar flow.  <br>
 <input id="q4" name="q4" type="radio" value="1">
 <font color="green"> True </font> <br>
@@ -130,7 +130,7 @@
 <font color="green"> True </font> <br>
 <input id="q5" name="q5" type="radio" value="0">
 <font color="red"> False </font> <br/><br/>
-</input></br></input></br></input></br></input></br></input></br></input></br></input></br></input></br></input></br></input></br>--></p>
+</input></br></input></br></input></br></input></br></input></br></input></br></input></br></input></br></input></br></input></br></p>
 <p>
 <a href="9.Jets.pdf" target="_blank">Read More</a>
 </p>
