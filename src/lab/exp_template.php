@@ -199,7 +199,7 @@
   footer-->
    <footer id="lab-footer" class="footer">
     <!-- Put the content here-->
-	<a href="http://virtual-labs.ac.in/nmeict/">Sponsered by MHRD (NME-ICT) </a> | <a href="http://virtual-labs.ac.in/licensing/" target="_blank"> Licensing Terms </a> | <a href="http://virtual-labs.ac.in/feedback/?lab=eerc03/" target="_blank"> Feedback </a>
+	<a href="http://www.sakshat.ac.in/">Sponsered by MHRD (NME-ICT) </a> | <a href="http://www.sakshat.ac.in/" target="_blank"> Licensing Terms </a> | <a href="http://virtual-labs.ac.in/feedback/?lab=eerc03/" target="_blank"> Feedback </a>
   </footer>
 	
   	
