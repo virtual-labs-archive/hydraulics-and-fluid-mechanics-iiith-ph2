@@ -36,10 +36,10 @@ echo "<html>
 <head></head>";
 echo "<body class=\"page_bg\">";
 echo "<br>Total number of correct answers : ".$total."/8";
-echo "	<h2>Correct Answers</h2>
+echo "  <h2>Correct Answers</h2>
 <br>
 <ol>
-	        <li><b>Venturimeter is used to measure average velocity </b></li>
+                <li><b>Venturimeter is used to measure average velocity </b></li>
                 True<br>
                 <br>
                 <li><b>Angle of contraction is more than angle of diversion </b></li>
