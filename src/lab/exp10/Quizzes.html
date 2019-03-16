@@ -119,7 +119,7 @@
 <input id="q3" name="q3" type="radio" value="0">
 <font color="red"> False </font> <br/><br/>
 <b>Q4.</b> 
-              The behavior of path lines is laminar flow.  <br>
+              The behavior of path lines is laminar Flow.  <br>
 <input id="q4" name="q4" type="radio" value="1">
 <font color="green"> True </font> <br>
 <input id="q4" name="q4" type="radio" value="0">
@@ -132,6 +132,31 @@
 <font color="red"> False </font> <br/><br/>
 </input></br></input></br></input></br></input></br></input></br></input></br></input></br></input></br></input></br></input></br></p>
 <p>
+
+
+
+
+	<button onclick="submit()" style="color: brown; background-color:yellow;">Check your answers</button> 
+	<p id="answers" style="color: green">
+		
+
+	</p>
+
+
+
+	<script type="text/javascript">
+		
+		function submit(){
+		r=document.getElementById("answers"); 
+		var p="Correct answers are as follows:<br>";
+		p=p+"<ol><li>" + "False : It should be less than 2000" + "</li><li>"+" False: it should be more than 4000" + "</li> <li>" + "True : It is used." + "</li><li>" + "True" + "</li> <li>" + " Transational " +"</li></ol>" 
+		document.getElementById("answers").innerHTML=p;
+		console.log(r);
+		console.log(p);
+		}
+	</script>
+
+
 <a href="7.Reynolds_experiment.pdf" target="_blank">Read More</a>
 </p>
 </div>						</div>
