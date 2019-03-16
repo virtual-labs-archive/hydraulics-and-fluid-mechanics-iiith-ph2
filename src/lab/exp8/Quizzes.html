@@ -118,7 +118,34 @@
               	What is the effect of drowning the weir (increasing the downstream depth)? <br/><br/>
 </p>
 <p>
-<a href="5.Weirs.pdf" target="_blank">Read More</a>
+<a href="5.Weirs.pdf" target="_blank">Read More</a><br><br>
+<button onclick="answer()">See answers</button>
+<ol id="List"></ol>
+<script>
+	function answer(){
+		
+		p="<li> A weir is a notch on a large scale, used, for example, to measure the flow of a river, and may be sharp edged or have a substantial breadth in the direction of flow. ... Main difference: Notch is made with metal and Weir is made with concrete(Masonry). Notches are openings which is used to measure discharge through it.</li>"
+		
+		p=p+"<li> <a href='https://www.engineeringtoolbox.com/weirs-flow-rate-d_592.html'> See from here </a> </li>"
+		
+		p=p+"<li> Broad-Crested weirs are much thicker in cross section when compared to sharp-crested weirs.    They are commonly used to measure the discharge of larger rivers and agriculture / irrigation canals.</li>"
+		
+		p=p+"<li>Yes </li>";
+		
+		p=p+"<li> It increases </li>";
+		
+		p=p+"<li>  They cascade down to lower levels</li>"
+
+		p=p+"<li>Yes</li>"
+
+		p=p+"<li> Cod increases</li>"
+		document.getElementById("List").innerHTML=p;
+	}
+</script>
+
+
+
+
 </p>
 </div>						</div>
 					</div>
