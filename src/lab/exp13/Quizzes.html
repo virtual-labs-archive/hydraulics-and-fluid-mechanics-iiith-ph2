@@ -103,9 +103,30 @@
 <b>Q1.</b> 
               What is Pelton Turbine? <br/><br/>
 </p>
+<button onclick="answer()" style="color : brown ">See the Answer</button>
+
 <p>
+	<ol id="List" style="color: green">
+	
+
+	</ol>
 <a href="10.Turbines.pdf" target="_blank">Read More</a>
 </p>
+
+<script type="text/javascript">
+	function answer(){
+		p="<li>A Pelton wheel is an impulse-type water turbine invented by Lester Allan Pelton in the 1870s. The Pelton wheel extracts energy from the impulse of moving water, as opposed to water's dead weight like the traditional overshot water wheel. SEE more "
+		p=p+ ' <a href="https://en.wikipedia.org/wiki/Pelton_wheel" style="color:blue"> here </a></li>'
+		document.getElementById("List").innerHTML=p;
+		console.log(p);
+	}
+
+
+
+
+</script>
+
+
 </div>						</div>
 					</div>
 			</div>
