@@ -35,3 +35,38 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
+
+$('#quiz-result').click(
+    function(){
+        if($("#q1f").is(':checked')) {
+            $('#Q1').css("background-color", "green");
+        }
+        if($("#q1t").is(':checked')){
+            $('#Q1').css("background-color", "red");
+        }
+        if($("#q2t").is(':checked')) {
+            $('#Q2').css("background-color", "green");
+        }
+        if($("#q2f").is(':checked')){
+            $('#Q2').css("background-color", "red");
+        }
+        if($("#q3t").is(':checked')) {
+            $('#Q3').css("background-color", "green");
+        }
+        if($("#q3f").is(':checked')){
+            $('#Q3').css("background-color", "red");
+        }
+        if($("#q4t").is(':checked')) {
+            $('#Q4').css("background-color", "green");
+        }
+        if($("#q4f").is(':checked')){
+            $('#Q4').css("background-color", "red");
+        }
+        if($("#q5t").is(':checked')) {
+            $('#Q5').css("background-color", "green");
+        }
+        if($("#q5f").is(':checked')){
+            $('#Q5').css("background-color", "red");
+        }
+    }
+);
