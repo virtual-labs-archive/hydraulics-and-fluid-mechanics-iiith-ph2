@@ -26,5 +26,5 @@ function checkQuiz(){
     }
 
     var result = document.getElementById("result");
-    result.innerHTML = "You got " + count.toString() + " correct answers." 
+    result.innerHTML = "You got " + count.toString() + " correct answer(s)." 
 }
