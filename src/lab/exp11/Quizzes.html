@@ -100,36 +100,37 @@
 							<!--edit -->
 <h1 class="text-h2-lightblue">Vortices's</h1><div class="content" id="experiment-article-section-6-content">
 <p>
-<b>Q1.</b> 
+<b><span id="Q1"> Q1.</span></b> 
               Flow to be laminar the Reynolds number should be greater than 2000. <br>
-<input id="q1" name="q1" type="radio" value="1">
+<input id="q1t" name="q1" type="radio" value="1">
 <font color="green"> True </font> <br>
-<input id="q1" name="q1" type="radio" value="0">
+<input id="q1f" name="q1" type="radio" value="0">
 <font color="red"> False </font> <br/><br/>
-<b>Q2.</b> 
+<b><span id="Q2"> Q2.</span></b> 
               For flow to be turbulent the flow should be more than 400. <br>
-<input id="q2" name="q2" type="radio" value="1">
+<input id="q2t" name="q2" type="radio" value="1">
 <font color="green"> True </font> <br>
-<input id="q2" name="q2" type="radio" value="0">
+<input id="q2f" name="q2" type="radio" value="0">
 <font color="red"> False </font> <br/><br/>
-<b>Q3.</b> 
+<b><span id="Q3"> Q3.</span></b> 
               	Concept of Reynolds number is used in open channels.  <br>
-<input id="q3" name="q3" type="radio" value="1">
+<input id="q3t" name="q3" type="radio" value="1">
 <font color="green"> True </font> <br>
-<input id="q3" name="q3" type="radio" value="0">
+<input id="q3f" name="q3" type="radio" value="0">
 <font color="red"> False </font> <br/><br/>
-<b>Q4.</b> 
+<b><span id="Q4"> Q4.</span></b> 
               The behavior of path lines is laminar flow.  <br>
-<input id="q4" name="q4" type="radio" value="1">
+<input id="q4t" name="q4" type="radio" value="1">
 <font color="green"> True </font> <br>
-<input id="q4" name="q4" type="radio" value="0">
+<input id="q4f" name="q4" type="radio" value="0">
 <font color="red"> False </font> <br/><br/>
-<b>Q5.</b> 
-              	If the Reynolds number is in between 2000 and 4000 then the flow is. <br>
-<input id="q5" name="q5" type="radio" value="1">
+<b><span id="Q5"> Q5.</span></b> 
+              	If the Reynolds number is in between 2000 and 4000 then the flow is Transitional flow. <br>
+<input id="q5t" name="q5" type="radio" value="1">
 <font color="green"> True </font> <br>
-<input id="q5" name="q5" type="radio" value="0">
+<input id="q5f" name="q5" type="radio" value="0">
 <font color="red"> False </font> <br/><br/>
+<button id="quiz-result">Submit</button>
 </input></br></input></br></input></br></input></br></input></br></input></br></input></br></input></br></input></br></input></br></p>
 <p>
 <a href=".pdf" target="_blank">Read More</a>
@@ -211,7 +212,8 @@
     <script src="../../../js/bootstrap.min.js"></script>
 
 	<!-- Custom Theme JavaScript -->
-    <script src="../../../js/custom.js"></script>
+	<script src="../../../js/custom.js"></script>
+	<script src="quiz.js"></script>
     
     <!-- Include js plugin -->
 	<script src="../../../vendors/owl-carousel/owl.carousel.js"></script>
