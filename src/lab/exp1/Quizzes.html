@@ -100,30 +100,31 @@
 							<!--edit -->
 <h1 class="text-h2-lightblue">Bernoulli's Experiment</h1><div class="content" id="experiment-article-section-6-content">
 <p>
-<b>Q1.</b> 
+<b><span id="Q1"> Q1.</span></b> 
              Bernoulli’s equation holds good for non ideal fluids <br>
-<input id="q1" name="q1" type="radio" value="1">
+<input id="q1t" name="q1" type="radio" value="1">
 <font color="green"> True </font> <br>
-<input id="q1" name="q1" type="radio" value="0">
+<input id="q1f" name="q1" type="radio" value="0">
 <font color="red"> False </font> <br/><br/>
-<b>Q2.</b> 
+<b><span id="Q2"> Q2.</span></b> 
               The pressure head is given by<br>
-<input id="q2" name="q2" type="radio" value="1">
+<input id="q2t" name="q2" type="radio" value="1">
 <font color="green"> P/γ</font> <br>
-<input id="q2" name="q2" type="radio" value="0">
+<input id="q2f" name="q2" type="radio" value="0">
 <font color="red"> V2/2g </font> <br/><br/>
-<b>Q3.</b> 
+<b><span id="Q3">Q3.</span></b> 
               Incompressible ideal fluids are fluids which have constant density. <br>
-<input id="q3" name="q3" type="radio" value="1">
+<input id="q3t" name="q3" type="radio" value="1">
 <font color="green"> True </font> <br>
-<input id="q3" name="q3" type="radio" value="0">
+<input id="q3f" name="q3" type="radio" value="0">
 <font color="red"> False </font> <br/><br/>
-<b>Q4.</b> 
+<b><span id="Q4"> Q4.</span></b> 
               Bernoulli’s theorem  deals with law conservation of momentum  <br>
-<input id="q4" name="q4" type="radio" value="1">
+<input id="q4t" name="q4" type="radio" value="1">
 <font color="green"> True </font> <br>
-<input id="q4" name="q4" type="radio" value="0">
+<input id="q4f" name="q4" type="radio" value="0">
 <font color="red"> False </font> <br/><br/>
+<button id="quiz-result" type="button">Submit</button><br>
 </input></br></input></br></input></br></input></br></input></br></input></br></input></br></input></br></p>
 <p>
 <a href="1.Bernoullis_experiment.pdf" target="_blank">Read More</a>
@@ -205,7 +206,8 @@
     <script src="../../../js/bootstrap.min.js"></script>
 
 	<!-- Custom Theme JavaScript -->
-    <script src="../../../js/custom.js"></script>
+	<script src="../../../js/custom.js"></script>
+	<script src="quiz.js"></script>
     
     <!-- Include js plugin -->
 	<script src="../../../vendors/owl-carousel/owl.carousel.js"></script>
