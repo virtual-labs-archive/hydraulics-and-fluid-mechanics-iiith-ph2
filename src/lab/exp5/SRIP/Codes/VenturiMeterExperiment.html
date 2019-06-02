@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Venturi Meter Experiment</title>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	
+		<script type="text/javascript" src="main.js"></script>
+		<link rel="stylesheet" href="style.css" />
+	
+
+	</head>
+	<body>
+	<div id="txt1">
+		<u><font size="6" color="#3465b5">Venturi meter</font></u>
+	</div>
+
+<div style='width:200px;height:200px;padding-left: 200px;padding-top: 150px'>
+  <svg class="mysvg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="508px"
+   height="119px" viewBox="0 0 508 119" style="enable-background:new 0 0 508 119;" xml:space="preserve">
+<style type="text/css">
+  .st0{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+</style>
+<defs>
+   <linearGradient id="progress">
+      <stop id="stop1" offset="0" stop-color="blue"/>
+      <stop id="stop2" offset="0" stop-color="grey"/>
+    </linearGradient>
+</defs>
+<path id="pathi" class="st0" d="M0.5,1.5c1-1,1-1,1-1h5h125l63,39h126l47-39h140v118h-113l-74-34h-128l-61,34H0.5V1.5z"/>
+</svg>
+<div class="contols">
+<button id="iambutton">start</button>
+<button id="restart">restart</button>
+</div>
+ <script>
+//---button---
+$(document).ready(function(){
+$("#iambutton").click(function(){
+$("#pathi").attr("style","fill:url(#progress)");
+});
+$("#restart").click(function(){
+window.location.reload();
+});
+});
+function setProgress(amt)
+{
+  amt = (amt < 0) ? 0 : (amt > 1) ? 1 : amt;
+  document.getElementById("stop1").setAttribute("offset", amt);
+  document.getElementById("stop2").setAttribute("offset", amt);
+}
+
+  
+// Simple test of setProgress().style='fill: url(#progress);'
+// We step up from 0 to 1 using timeouts
+val = 0;
+doTimeout();
+
+function doTimeout() {
+  setProgress(val);
+  val += 0.01;
+  if (val <= 1) {
+    setTimeout(doTimeout, 30);
+  }
+}
+
+ </script>
+
+<!--<div class="ldBar" data-type="fill" data-path="M0.5,1.5c1-1,1-1,1-1h5h125l63,39h126l47-39h140v118h-113l-74-34h-128l-61,34H0.5V1.5z"></div>
+
+
+
+<div class="ldBar" data-value="50">
+	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="508px"
+	 height="119px" viewBox="0 0 508 119" style="enable-background:new 0 0 508 119;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+</style>
+<defs>
+</defs>
+<path class="st0" d="M0.5,1.5c1-1,1-1,1-1h5h125l63,39h126l47-39h140v118h-113l-74-34h-128l-61,34H0.5V1.5z"/>
+</svg>
+</div>-->
+	</body>
+</html>
+
+<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In  -->
+
+
+<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In  -->
+
+
+
+

@@ -1,0 +1,53 @@
+body{
+
+    width: 900px;
+    height: 600px;
+margin: auto;
+    border: solid blue;
+    border-width: 6px;
+    overflow:hidden;
+    display:block;
+    box-sizing: border-box;
+}
+#txt1{
+	  padding-top: 40px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 10px;
+}
+progress {
+  margin-left: 10px;
+  position: relative;
+  top: 3px;
+}
+
+button {
+  background: black;
+  color: white;
+  margin: 5px;
+  padding-left: 20px;
+padding-right:20px;
+padding-top: 10px;
+padding-bottom: 10px;
+  border-radius: 4px;
+  font-family: 'Lato';
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+button:hover {
+  background: grey;
+}
+
+
+#anime-demo {
+  text-align: left;
+}
+
+.controls {
+  padding-left:800px;
+  top:-200px;
+
+}
+
