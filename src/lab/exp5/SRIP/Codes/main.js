@@ -9,6 +9,6 @@ window.onload = function() { var animateProgress=anime({
   easing: 'linear',
   autoplay: false
 });
-document.querySelector('.play-progress').onclick = animateProgress.restart;
+document.querySelector('.play-progress1').onclick = animateProgress.restart;
 }
 

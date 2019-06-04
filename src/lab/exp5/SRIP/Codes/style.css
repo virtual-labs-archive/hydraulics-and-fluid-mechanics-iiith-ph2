@@ -16,9 +16,16 @@ margin: auto;
   padding-left: 10px;
 }
 progress {
-  margin-left: 10px;
-  position: relative;
-  top: 3px;
+
+    -webkit-transform-origin: 0 100%;
+    -webkit-transform: rotate(90deg);
+    -moz-transform-origin: 0 100%;
+    -moz-transform: rotate(90deg);
+    -ms-transform-origin: 0 100%;
+    -ms-transform: rotate(90deg);
+    transform-origin: 0 100%;
+    transform: rotate(270deg);    
+
 }
 
 button {
@@ -41,9 +48,7 @@ button:hover {
 }
 
 
-#anime-demo {
-  text-align: left;
-}
+
 
 .controls {
   padding-left:800px;
