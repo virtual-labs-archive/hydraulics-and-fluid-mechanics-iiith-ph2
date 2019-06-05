@@ -4,36 +4,64 @@
 		<title>Venturi Meter Experiment</title>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="../Libraries/anime.min.js"></script>
 	
 		<script type="text/javascript" src="main.js"></script>
 		<link rel="stylesheet" href="style.css" />
-	
+	<script>
+
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 1;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 60) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+  }
+}
+function move2() {
+
+
+  var elem = document.getElementById("myBar1");   
+  var width = 1;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 40) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+  }
+}
+	</script>
 
 	</head>
 	<body>
 	<div id="txt1">
 		<u><font size="6" color="#3465b5">Venturi meter</font></u>
 	</div>
-<div class="controls">
-  <button class="play-progress">Start</button>
+<div id="myProgress" >
+  <div id="myBar" ></div>
 </div>
-	<div id="anime-demo" style="float:left;padding-left: 270px;padding-top: 190px">
-  <progress id="p1"  value="0" max="100"></progress>
+
+<div id="myProgress1" >
+  <div id="myBar1" ></div>
 </div>
-<div id="anime-demo1" style="padding-left: 650px;padding-top: 190px">
-  <progress id="p2"  value="0" max="100"></progress>
-</div>
-<div style='width:508px;height:119px;padding-left: 200px'>
+
+<div style='width:508px;height:119px;padding-left: 200px;padding-top:200px'>
   <svg class="mysvg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="508px"
    height="119px" viewBox="0 0 508 119" style="enable-background:new 0 0 508 119;" xml:space="preserve">
 <style type="text/css">
-  .st0{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+  .st0{fill:#FFFFFF;stroke:#a8a8a8;stroke-miterlimit:0;}
 </style>
 <defs>
    <linearGradient id="progress">
-      <stop id="stop1" offset="0" stop-color="blue"/>
-      <stop id="stop2" offset="0" stop-color="grey"/>
+      <stop id="stop1" offset="0" stop-color="#679bef"/>
+      <stop id="stop2" offset="0" stop-color="white"/>
     </linearGradient>
 </defs>
 <path id="pathi" class="st0" d="M0.5,1.5c1-1,1-1,1-1h5h125l63,39h126l47-39h140v118h-113l-74-34h-128l-61,34H0.5V1.5z"/>
@@ -45,6 +73,8 @@
 $(document).ready(function(){
 $("#iambutton").click(function(){
 $("#pathi").attr("style","fill:url(#progress)");
+move();
+window.setTimeout(move2, 800);
 
 });
 $("#restart").click(function(){

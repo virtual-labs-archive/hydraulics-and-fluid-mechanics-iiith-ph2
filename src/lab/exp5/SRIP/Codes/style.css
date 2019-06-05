@@ -15,6 +15,7 @@ margin: auto;
   padding-bottom: 50px;
   padding-left: 10px;
 }
+
 progress {
 
     -webkit-transform-origin: 0 100%;
@@ -27,7 +28,6 @@ progress {
     transform: rotate(270deg);    
 
 }
-
 button {
   background: black;
   color: white;
@@ -56,3 +56,39 @@ button:hover {
 
 }
 
+#myProgress {
+  float:left;
+  width: 20%;
+  height:20px;
+  background-color: white;
+border: 1px solid #a8a8a8;
+    top: 124px;
+    left: 150px;
+    position: relative;
+ 
+    transform: rotate(270deg); 
+}
+
+#myBar {
+width:0%;
+  height: 20px;
+  background-color:#679bef;
+}
+#myProgress1 {
+  width: 20%;
+  height:20px;
+  background-color: white;
+border: 1px solid #a8a8a8;
+
+    top: 162px;
+    left: 340px;
+    position: relative;
+ 
+    transform: rotate(270deg); 
+}
+
+#myBar1 {
+width:0%;
+  height: 20px;
+  background-color:#679bef;
+}
