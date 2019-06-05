@@ -4,46 +4,25 @@
 		<title>Venturi Meter Experiment</title>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	
+	    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<script type="text/javascript" src="main.js"></script>
+		    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="style.css" />
-	<script>
-
-function move() {
-  var elem = document.getElementById("myBar");   
-  var width = 1;
-  var id = setInterval(frame, 10);
-  function frame() {
-    if (width >= 60) {
-      clearInterval(id);
-    } else {
-      width++; 
-      elem.style.width = width + '%'; 
-    }
-  }
-}
-function move2() {
-
-
-  var elem = document.getElementById("myBar1");   
-  var width = 1;
-  var id = setInterval(frame, 10);
-  function frame() {
-    if (width >= 40) {
-      clearInterval(id);
-    } else {
-      width++; 
-      elem.style.width = width + '%'; 
-    }
-  }
-}
-	</script>
+	
 
 	</head>
 	<body>
 	<div id="txt1">
 		<u><font size="6" color="#3465b5">Venturi meter</font></u>
 	</div>
+	
+	<button class="play-progress1" id="iambutton">start</button>
+	<pre id="pre1"><b>&lt;---Upstream pressure tap (pa)</b></pre>
+	<pre id="pre2"><b>&lt;---Downstream pressure tap (pb)</b></pre>
+	<pre id="pre3"><b>flow direction -----&gt</b></pre>
 <div id="myProgress" >
   <div id="myBar" ></div>
 </div>
@@ -52,7 +31,7 @@ function move2() {
   <div id="myBar1" ></div>
 </div>
 
-<div style='width:508px;height:119px;padding-left: 200px;padding-top:200px'>
+<div style='width:508px;height:119px;padding-left: 200px;padding-top:10px'>
   <svg class="mysvg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="508px"
    height="119px" viewBox="0 0 508 119" style="enable-background:new 0 0 508 119;" xml:space="preserve">
 <style type="text/css">
@@ -66,20 +45,28 @@ function move2() {
 </defs>
 <path id="pathi" class="st0" d="M0.5,1.5c1-1,1-1,1-1h5h125l63,39h126l47-39h140v118h-113l-74-34h-128l-61,34H0.5V1.5z"/>
 </svg>
-<button class="play-progress1" id="iambutton">start</button>
-<button id="restart">restart</button>
+
+
  <script>
-//---button---
+
+
 $(document).ready(function(){
+	window.onload=function(){
+	
+			$("#pathi").attr("style","fill:url(#progress)");
+		
+window.setTimeout(move, 1000);
+window.setTimeout(move2, 5000);
+
+}
+	//if start button is clicked the flow will start again
 $("#iambutton").click(function(){
-$("#pathi").attr("style","fill:url(#progress)");
-move();
-window.setTimeout(move2, 800);
+
+	window.location.reload();
+
 
 });
-$("#restart").click(function(){
-window.location.reload();
-});
+
 });
 function setProgress(amt)
 {
@@ -96,7 +83,19 @@ doTimeout();
 
 function doTimeout() {
   setProgress(val);
-  val += 0.01;
+  if(val==0){
+  	val+=0.0001;
+  }
+  else if(val<0.25){
+  	val+=0.002;
+  }
+  else if (val>0.78){
+  	val+=0.002;
+  }
+  else{
+val+=0.005;
+  }
+
   if (val <= 1) {
     setTimeout(doTimeout, 30);
   }
@@ -104,28 +103,11 @@ function doTimeout() {
 
  </script>
 
-<!--<div class="ldBar" data-type="fill" data-path="M0.5,1.5c1-1,1-1,1-1h5h125l63,39h126l47-39h140v118h-113l-74-34h-128l-61,34H0.5V1.5z"></div>
 
-
-
-<div class="ldBar" data-value="50">
-	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="508px"
-	 height="119px" viewBox="0 0 508 119" style="enable-background:new 0 0 508 119;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
-</style>
-<defs>
-</defs>
-<path class="st0" d="M0.5,1.5c1-1,1-1,1-1h5h125l63,39h126l47-39h140v118h-113l-74-34h-128l-61,34H0.5V1.5z"/>
-</svg>
-</div>-->
 	</body>
 </html>
 
-<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In  -->
 
-
-<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In  -->
 
 
 

@@ -16,19 +16,11 @@ margin: auto;
   padding-left: 10px;
 }
 
-progress {
 
-    -webkit-transform-origin: 0 100%;
-    -webkit-transform: rotate(90deg);
-    -moz-transform-origin: 0 100%;
-    -moz-transform: rotate(90deg);
-    -ms-transform-origin: 0 100%;
-    -ms-transform: rotate(90deg);
-    transform-origin: 0 100%;
-    transform: rotate(270deg);    
-
-}
 button {
+  position:relative;
+  top:-105px;
+  float: right;
   background: black;
   color: white;
   margin: 5px;
@@ -48,21 +40,44 @@ button:hover {
 }
 
 
-
-
-.controls {
-  padding-left:800px;
-  top:-200px;
+#pre1 {
+    position: relative;
+    top: 0px;
+    left: 239px;
+    width: 620px;
+    background-color: white; 
+     border: 0px 
 
 }
+#pre2 {
+    position: relative;
+    top: 10px;
+    left: 430px;
+    width: 400px;
 
+    word-wrap: break-word;
+    background-color: white; 
+     border: 0px 
+
+}
+#pre3 {
+    position: relative;
+    top: 100px;
+  
+    width: 169px;
+
+    word-wrap: break-word;
+    background-color: white; 
+     border: 0px 
+
+}
 #myProgress {
   float:left;
   width: 20%;
   height:20px;
   background-color: white;
 border: 1px solid #a8a8a8;
-    top: 124px;
+    top: -68px;
     left: 150px;
     position: relative;
  
@@ -80,7 +95,7 @@ width:0%;
   background-color: white;
 border: 1px solid #a8a8a8;
 
-    top: 162px;
+    top: -29px;
     left: 340px;
     position: relative;
  
