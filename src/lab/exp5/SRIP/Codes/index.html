@@ -1,28 +1,35 @@
+
+
+
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Venturi Meter Experiment</title>
-		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	    <meta charset="utf-8" />
+  <head>
+    <title>Venturi Meter Experiment</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<script type="text/javascript" src="main.js"></script>
-		    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script type="text/javascript" src="main.js"></script>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		<link rel="stylesheet" href="style.css" />
-	
+    <link rel="stylesheet" href="style.css" />
+  
 
-	</head>
-	<body>
-	<div id="txt1">
-		<u><font size="6" color="#3465b5">Venturi meter</font></u>
-	</div>
-	
-	<button class="play-progress1" id="iambutton" onclick="window.location = 'VenturiMeterExperiment.html';">start</button>
-	<pre id="pre1"><b>&lt;---Upstream pressure tap (pa)</b></pre>
-	<pre id="pre2"><b>&lt;---Downstream pressure tap (pb)</b></pre>
-	<pre id="pre3"><b>flow direction -----&gt</b></pre>
+  </head>
+  <body>
+  <div id="txt1">
+    <u><font size="6" color="#3465b5">Venturi meter</font></u>
+  </div>
+    <button class="play-progress1" id="iambutton" onclick="window.location = 'VenturiMeterExperiment.html';">start</button>
+
+  <pre id="pre1"><b>&lt;---Upstream pressure tap </b></pre>
+  <pre id="pre4"><b>Pa </b></pre>
+  <pre id="pre2"><b>&lt;---Downstream pressure tap (pb)</b></pre>
+  <pre id="pre5"><b>Pb </b></pre>
+  <pre id="pre3"><b>flow direction -----&gt</b></pre>
+  <pre id="pre6"><b>&lt------Da-----&gt</b></pre>
+  
 <div id="myProgress" >
   <div id="myBar" ></div>
 </div>
@@ -33,7 +40,8 @@
 
 <div style='width:508px;height:119px;padding-left: 200px;padding-top:10px'>
   <svg class="mysvg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="508px"
-   height="119px" viewBox="0 0 508 119" style="enable-background:new 0 0 508 119;" xml:space="preserve">
+   height="119px" viewBox="0 0 508 119" style="position: relative;
+    top: -157px;enable-background:new 0 0 508 119;" xml:space="preserve">
 <style type="text/css">
   .st0{fill:#FFFFFF;stroke:#a8a8a8;stroke-miterlimit:0;}
 </style>
@@ -44,24 +52,20 @@
     </linearGradient>
 </defs>
 <path id="pathi" class="st0" d="M0.5,1.5c1-1,1-1,1-1h5h125l63,39h126l47-39h140v118h-113l-74-34h-128l-61,34H0.5V1.5z"/>
+<text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle" style="writing-mode: tb-rl">&lt-Db-&gt</text>
 </svg>
 
 
- <script>
 
 
-$(document).ready(function(){
-
-	//if start button is clicked the flow will start again
-
-
-});
-
- </script>
-
-
-	</body>
+  </body>
 </html>
+
+
+
+
+
+
 
 
 

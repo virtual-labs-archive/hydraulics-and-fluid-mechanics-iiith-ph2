@@ -11,7 +11,7 @@ function move() {
     if (width >= 60) {
       clearInterval(id);
     } else {
-      width=width+0.1; 
+      width=width+0.06; 
       elem.style.width = width + '%'; 
     }
   }
@@ -26,9 +26,72 @@ function move2() {
     if (width >= 40) {
       clearInterval(id);
     } else {
-      width=width+0.1; 
+      width=width+0.07; 
       elem.style.width = width + '%'; 
     }
   }
 }
+function t1()
+{
+var path = document.querySelector('#top1');
+var length = path.getTotalLength();
+path.style.transition = path.style.WebkitTransition = 'none';
+path.style.strokeDasharray = length + ' ' + length;
+path.style.strokeDashoffset = '0';
 
+
+
+path.style.transition = path.style.WebkitTransition = 'stroke-dashoffset 11s ease-in-out';
+path.style.strokeDashoffset = length;
+}
+function t2()
+{
+	var path2 = document.querySelector('#top2');
+var length2 = path2.getTotalLength();
+path2.style.transition = path2.style.WebkitTransition = 'none';
+path2.style.strokeDasharray = length2 + ' ' + length2;
+path2.style.strokeDashoffset = '0';
+
+
+
+path2.style.transition = path2.style.WebkitTransition = 'stroke-dashoffset 11s ease-in-out';
+path2.style.strokeDashoffset = length2;
+
+	}
+	function t3()
+{
+	var path3 = document.querySelector('#top3');
+var length3 = path3.getTotalLength();
+path3.style.transition = path3.style.WebkitTransition = 'none';
+path3.style.strokeDasharray = length3 + ' ' + length3;
+path3.style.strokeDashoffset = '0';
+
+
+path3.style.transition = path3.style.WebkitTransition = 'stroke-dashoffset 11s ease-in-out';
+path3.style.strokeDashoffset = -length3;
+}
+function t4()
+{
+
+	var path4 = document.querySelector('#top4');
+var length4 = path4.getTotalLength();
+path4.style.transition = path4.style.WebkitTransition = 'none';
+path4.style.strokeDasharray = length4 + ' ' + length4;
+path4.style.strokeDashoffset = '0';
+
+
+path4.style.transition = path4.style.WebkitTransition = 'stroke-dashoffset 11s ease-in-out';
+path4.style.strokeDashoffset = -length4;
+	}
+function t()
+{
+	var path = document.querySelector('#top');
+var length = path.getTotalLength();
+path.style.transition = path.style.WebkitTransition = 'none';
+path.style.strokeDasharray = length + ' ' + length;
+path.style.strokeDashoffset = '0';
+
+
+path.style.transition = path.style.WebkitTransition = 'stroke-dashoffset 11s ease-in-out';
+path.style.strokeDashoffset = length;
+	}

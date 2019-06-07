@@ -35,6 +35,19 @@ padding-bottom: 10px;
   outline: none;
 }
 
+
+#pre6 { writing-mode: tb-rl;
+    position: relative;
+    top: 10px;
+    left:159px;
+  
+    width: 46px;
+
+    word-wrap: break-word;
+    background-color: white; 
+     border: 0px 
+ }
+
 button:hover {
   background: grey;
 }
@@ -42,7 +55,7 @@ button:hover {
 
 #pre1 {
     position: relative;
-    top: 0px;
+    top: 80px;
     left: 239px;
     width: 620px;
     background-color: white; 
@@ -51,7 +64,7 @@ button:hover {
 }
 #pre2 {
     position: relative;
-    top: 10px;
+    top: 50px;
     left: 430px;
     width: 400px;
 
@@ -71,13 +84,35 @@ button:hover {
      border: 0px 
 
 }
+#pre4 {
+    position: relative;
+    top: 60px;
+  left:241px;
+    width: 49px;
+
+    word-wrap: break-word;
+    background-color: white; 
+     border: 0px 
+
+}
+#pre5 {
+    position: relative;
+    top: 80px;
+  left:432px;
+    width: 49px;
+
+    word-wrap: break-word;
+    background-color: white; 
+     border: 0px 
+
+}
 #myProgress {
   float:left;
   width: 20%;
   height:20px;
   background-color: white;
 border: 1px solid #a8a8a8;
-    top: -68px;
+    top: -221px;
     left: 150px;
     position: relative;
  
@@ -95,7 +130,7 @@ width:0%;
   background-color: white;
 border: 1px solid #a8a8a8;
 
-    top: -29px;
+    top: -187px;
     left: 340px;
     position: relative;
  
