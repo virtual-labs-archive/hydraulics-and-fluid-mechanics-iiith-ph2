@@ -20,6 +20,97 @@
 	</div>
 	
 	<button class="play-progress1" id="iambutton">start</button>
+	<div class="container">
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalNorm">
+Calculations
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog" 
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    Calculations
+                </h4>
+            </div>
+
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+                
+                <form role="form">
+                  <div class="form-group">
+                  	   <label style="font-size: 16px"><u>parameters for calculating Actual Discharge(Qa)</u></label>
+                  
+                  	   <br>
+                    <label for="area">Area of measuring tank in cm2(a)</label>
+                      <input type="text" class="form-control"
+                      id="area"  required/>
+                  </div>
+                  <div class="form-group">
+                    <label for="heightDiffInPyrometer">Height differences in pyrometer in cm(h)</label>
+                      <input type="text" class="form-control"
+                          id="heightDiffInPyrometer"  required/>
+                  </div>
+                  <div class="form-group">
+                    <label for="time">Time to collect water for a height difference of h cm, measured in Seconds(t)</label>
+                      <input type="text" class="form-control"
+                          id="time"  required/>
+                  </div>
+
+                  <div class="form-group">
+                  	<label style="font-size: 16px"><u>parameters for calculating Theoretical Discharge(Qth)</u></label>
+                  
+                  	   <br>
+                    <label for="area1">The area at inlet side in cm2</label>
+                      <input type="text" class="form-control"
+                          id="area1" required/>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="area2">The area at throat in cm2</label>
+                      <input type="text" class="form-control"
+                          id="area2" required/>
+                  </div>
+           
+                  <div class="form-group">
+                    <label for="height1">Head difference in the manometer, converted to cm of water(Hw)</label>
+                      <input type="text" class="form-control"
+                          id="height1"  required/>
+                  </div>
+
+                 </button>
+    <button type="submit" class="btn btn-success" style="position:relative;top:40px" onclick="calculate()">Submit</button>
+                </form>
+                
+                
+            </div>
+            
+            <!-- Modal Footer -->
+            <div class="modal-footer" >
+                <button type="button" class="btn btn-danger"
+                        data-dismiss="modal" style="position:relative;top:10px">
+                            Close
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+</div>
+ 
 	<pre id="pre1"><b>&lt;---Upstream pressure tap </b></pre>
 	<pre id="pre4"><b>Pa </b></pre>
 	<pre id="pre2"><b>&lt;---Downstream pressure tap (pb)</b></pre>
