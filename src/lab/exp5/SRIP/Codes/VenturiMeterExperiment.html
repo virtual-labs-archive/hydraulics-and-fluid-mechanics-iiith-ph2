@@ -28,6 +28,26 @@ Calculations
 <!-- Modal -->
 <div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog" 
      aria-labelledby="myModalLabel" aria-hidden="true">
+     <script>
+     	function calculate(){
+     		var area=document.getElementById("area").value; 
+     		var height=document.getElementById("height").value;
+     		var time=document.getElementById("time").value;  
+
+     		var area1=document.getElementById("area1").value; 
+     		var area2=document.getElementById("area2").value; 
+     		var height1=document.getElementById("height1").value;
+     		var Qa=((area/10000)*(height/100))/time;
+     		var c1=Math.sqrt(2*9.81*(height1/100));
+     	var a1=area1*area1;
+     	var a2=area2*area2;
+     		var c2=(Math.sqrt(a1-a2))/10000;
+ 
+     		var Qth=(area1*area2*c1)/(c2*10000*10000);
+
+     		alert(Qa/Qth);
+     	}
+     </script>
     <div class="modal-dialog">
         <div class="modal-content">
             <!-- Modal Header -->
@@ -52,17 +72,17 @@ Calculations
                   
                   	   <br>
                     <label for="area">Area of measuring tank in cm2(a)</label>
-                      <input type="text" class="form-control"
+                      <input type="number" class="form-control"
                       id="area"  required/>
                   </div>
                   <div class="form-group">
                     <label for="heightDiffInPyrometer">Height differences in pyrometer in cm(h)</label>
-                      <input type="text" class="form-control"
-                          id="heightDiffInPyrometer"  required/>
+                      <input type="number" class="form-control"
+                          id="height"  required/>
                   </div>
                   <div class="form-group">
                     <label for="time">Time to collect water for a height difference of h cm, measured in Seconds(t)</label>
-                      <input type="text" class="form-control"
+                      <input type="number" class="form-control"
                           id="time"  required/>
                   </div>
 
@@ -71,19 +91,19 @@ Calculations
                   
                   	   <br>
                     <label for="area1">The area at inlet side in cm2</label>
-                      <input type="text" class="form-control"
+                      <input type="number" class="form-control"
                           id="area1" required/>
                   </div>
 
                   <div class="form-group">
                     <label for="area2">The area at throat in cm2</label>
-                      <input type="text" class="form-control"
+                      <input type="number" class="form-control"
                           id="area2" required/>
                   </div>
            
                   <div class="form-group">
                     <label for="height1">Head difference in the manometer, converted to cm of water(Hw)</label>
-                      <input type="text" class="form-control"
+                      <input type="number" class="form-control"
                           id="height1"  required/>
                   </div>
 
