@@ -1,5 +1,82 @@
+.bernoulli-class {
+	background-color: #DCF4FC;
+}
+
 .main-heading {
     text-align: center;
     font-size: 40px;
 
+}
+
+ .tank-left {
+         width: 178px;
+         background-color: #00B0EA;
+         height: 0px;
+         position: absolute;
+         left: 229px;
+         top: 457px;
+
+        }
+
+ .tank-right {
+         width: 178px;
+         background-color: #00B0EA;
+         height: 0px;
+         position: absolute;
+         left: 719px;
+         top: 457px;
+
+        }
+
+.measure-tank {
+	
+		width: 228px;
+         background-color: #00B0EA;
+         height: 0px;
+         position: absolute;
+         left: 929px;
+         top: 556px;
+	
+}
+
+.vertical-pipe1 {
+		 width: 13px;
+         background-color: #00B0EA;
+         height: 0px;
+         position: absolute;
+         left: 439px;
+         top: 387px;
+	
+}
+
+
+.vertical-pipe2 {
+		 width: 13px;
+         background-color: #00B0EA;
+         height: 0px;
+         position: absolute;
+         left: 509px;
+         top: 387px;
+	
+}
+
+.vertical-pipe3 {
+		 width: 13px;
+         background-color: #00B0EA;
+         height: 0px;
+         position: absolute;
+         left: 579px;
+         top: 387px;
+	
+}
+
+
+.vertical-pipe4 {
+		 width: 13px;
+         background-color: #00B0EA;
+         height: 0px;
+         position: absolute;
+         left: 649px;
+         top: 387px;
+	
 }
