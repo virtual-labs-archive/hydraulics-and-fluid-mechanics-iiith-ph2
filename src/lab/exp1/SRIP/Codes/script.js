@@ -15,8 +15,9 @@ function experimentSetup() {
 	});
 	
 	
-	var ductLower = draw.polygon([[400,425],[460,405],[650,405],[710,425],[710,380],[400,380]]).fill('#023141').stroke ({
-    	width: 3
+	var ductLower = draw.polygon([[400,425],[460,405],[650,405],[710,425],[710,380],[400,380]]).fill('none').stroke ({
+    	width: 3,
+		
 	});
 	
 
@@ -77,13 +78,27 @@ function toggleAnimation() {
 	
 	incomingPipeVertical.animate({delay: '1s'}).size(18,280);
 	
-	var duct = draw.rect(0.01,3).attr ({ 
-		x: 400, 
-		y: 390, 
+	var ductRect = draw.rect(0.01,23).attr ({ 
+		x: 401, 
+		y: 381, 
 		'fill': '#00B0EA'
 	});
 	
-	duct.animate(4600,'',2500).size(307,1)
+	ductRect.animate(4600,'',2500).size(307,23)
+	
+	ductTriangle1 = draw.polygon([[401,404],[401,433],[401.1,401]]).attr ({ 
+		'fill': '#00B0EA'
+	});
+	
+	ductTriangle1.animate(1000,'',2500).size(70,21.5);
+	
+	ductTriangle2 = draw.polygon([[650.5,401],[652.1,400],[652.1,406.5]]).attr ({
+		'fill':'#00B0EA'
+	});
+	
+	ductTriangle2.animate(920,'',6210).size(57.8,23.3);
+	
+	
 	
 	var outgoingPipeHorizontal = draw.rect(0.01,18).attr ({
 		'fill': '#00B0EA',
@@ -99,47 +114,68 @@ function toggleAnimation() {
 		y: 409
 	});
 	
-	outgoingPipeVertical.animate({delay: '8.6s'}).size(18,140);
+	outgoingPipeVertical.animate({delay: '8.6s'}).size(18,139);
 	
 	$('#tankLeft')
 		.animate({'height': 0},2000)
-		.animate({'height': 150, 'top': 307}, 1000)
+		.animate({'height': 150, 'top': 435}, 1000)
 	
 	$('#verticalPipe1')
 		.animate({'height': 0}, 3200)
-		.animate({'height': 145, 'top': 242},1000)
+		.animate({'height': 145, 'top': 370},1000)
 	
 	$('#verticalPipe2')
 		.animate({'height': 0}, 4200)
-		.animate({'height': 115, 'top': 272},1000)
+		.animate({'height': 115, 'top': 400},1000)
 	
 	$('#verticalPipe3')
 		.animate({'height': 0}, 5200)
-		.animate({'height': 85, 'top': 302},1000)
+		.animate({'height': 85, 'top': 430},1000)
 	
 	$('#verticalPipe4')
 		.animate({'height': 0}, 6200)
-		.animate({'height': 55, 'top': 332},1000)
+		.animate({'height': 55, 'top': 460},1000)
 		
 	
 	$('#tankRight')
 		.animate({'height': 0},7200)
-		.animate({'height': 150, 'top': 307}, 1000)
+		.animate({'height': 150, 'top': 435}, 1000)
 	
 	$('#measureTank')
 		.animate({'height': 0},9600)
-		.animate({'height': 60, 'top': 497}, 1000)
+		.animate({'height': 60, 'top': 625}, 1000)
 	
 	
 }
 
+var startButton = document.getElementById("start");
+var resetButton = document.getElementById("reset");
 
 window.onload = function() {
 	
 	experimentSetup();
-	toggleAnimation();
+	
 		
 }
+
+startButton.onclick = function() {
+	
+	toggleAnimation();
+	
+	setTimeout(function(){
+ alert('Simulation Completed!');
+		location.reload();
+ },10600) 
+	
+	
+	
+}
+
+resetButton.onclick = function() {
+	location.reload();
+}
+
+
 
 
 

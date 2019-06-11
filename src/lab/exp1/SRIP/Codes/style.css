@@ -1,30 +1,66 @@
-.bernoulli-class {
+@import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+
+.body {
 	background-color: #DCF4FC;
 }
 
 .main-heading {
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
+ 	font-family: 'Questrial', sans-serif;
+	color: #023141;
 
 }
 
+.start {
+	background-color: #023141;
+	color: #fff;
+	font-family: 'Questrial', sans-serif;
+	display: inline-block;
+	width: 60px;
+	padding: 10px;
+	margin: 10px auto;
+	cursor: pointer;
+	text-align: center;
+	font-size: 16px;	
+	margin-left: 550px;
+	margin-right: 10px
+	
+}
+
+.reset {
+	background-color: #023141;
+	color: #fff;
+	font-family: 'Questrial', sans-serif;
+	display: inline-block;
+	width: 60px;
+	padding: 10px;
+	margin: 10px auto;
+	cursor: pointer;
+	text-align: center;
+	font-size: 16px;
+
+
+	
+}
+
  .tank-left {
-         width: 178px;
+         width: 177px;
          background-color: #00B0EA;
          height: 0px;
          position: absolute;
          left: 229px;
-         top: 457px;
+         top: 586px;
 
         }
 
  .tank-right {
-         width: 178px;
+         width: 177px;
          background-color: #00B0EA;
          height: 0px;
          position: absolute;
          left: 719px;
-         top: 457px;
+         top: 586px;
 
         }
 
@@ -35,7 +71,7 @@
          height: 0px;
          position: absolute;
          left: 929px;
-         top: 556px;
+         top: 684px;
 	
 }
 
@@ -45,7 +81,7 @@
          height: 0px;
          position: absolute;
          left: 439px;
-         top: 387px;
+         top: 515px;
 	
 }
 
@@ -56,7 +92,7 @@
          height: 0px;
          position: absolute;
          left: 509px;
-         top: 387px;
+         top: 515px;
 	
 }
 
@@ -66,7 +102,7 @@
          height: 0px;
          position: absolute;
          left: 579px;
-         top: 387px;
+         top: 515px;
 	
 }
 
@@ -77,6 +113,6 @@
          height: 0px;
          position: absolute;
          left: 649px;
-         top: 387px;
+         top: 515px;
 	
 }
