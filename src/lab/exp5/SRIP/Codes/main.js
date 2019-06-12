@@ -1,8 +1,4 @@
 
-	function calculate() {
-  document.getElementById("demo").innerHTML = Math.sqrt(9);
-}
-
 
 
 

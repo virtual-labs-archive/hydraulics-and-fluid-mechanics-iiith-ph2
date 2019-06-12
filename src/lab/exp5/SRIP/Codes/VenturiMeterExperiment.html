@@ -29,6 +29,24 @@ Calculations
 <div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog" 
      aria-labelledby="myModalLabel" aria-hidden="true">
      <script>
+     	
+function isnumber(e)
+{
+	
+    var keyCode = (event.which) ? event.which : (window.event.keyCode) ? window.event.keyCode : -1;
+    var str=e.value;
+if(str.length>3) return false;
+
+ /*   if ((str.length==0) && (event.keyCode==46)) return false; // checking that length ==0 than not allow to enter '.'
+    if ((str.indexOf('.')>1) && (event.keyCode==46)) return false; // checking that if user already entered '.' than not allow to enter '.'*/
+if(keyCode==32) return false;
+          if (keyCode == 46 && keyCode > 31 && (keyCode < 48 || keyCode > 57))
+             return false;
+
+          return true;
+
+}
+
      	function calculate(){
      		var area=document.getElementById("area").value; 
      		var height=document.getElementById("height").value;
@@ -39,13 +57,11 @@ Calculations
      		var height1=document.getElementById("height1").value;
      		var Qa=((area/10000)*(height/100))/time;
      		var c1=Math.sqrt(2*9.81*(height1/100));
-     	var a1=area1*area1;
+     	var a1=(area1*area1);
      	var a2=area2*area2;
      		var c2=(Math.sqrt(a1-a2))/10000;
- 
      		var Qth=(area1*area2*c1)/(c2*10000*10000);
-
-     		alert(Qa/Qth);
+     		alert("The Coefficient Cd:       "+Qa/Qth);
      	}
      </script>
     <div class="modal-dialog">
@@ -66,24 +82,24 @@ Calculations
             <!-- Modal Body -->
             <div class="modal-body">
                 
-                <form role="form">
+                <form role="form" onSubmit="return calculate()" name="f1" id="f1">
                   <div class="form-group">
                   	   <label style="font-size: 16px"><u>parameters for calculating Actual Discharge(Qa)</u></label>
                   
                   	   <br>
                     <label for="area">Area of measuring tank in cm2(a)</label>
-                      <input type="number" class="form-control"
-                      id="area"  required/>
+                      <input type="text" class="form-control"
+                      id="area"  onkeypress="return isnumber(this);" required/>
                   </div>
                   <div class="form-group">
                     <label for="heightDiffInPyrometer">Height differences in pyrometer in cm(h)</label>
-                      <input type="number" class="form-control"
-                          id="height"  required/>
+                      <input type="text" class="form-control"
+                          id="height"  onkeypress="return isnumber(this);" required/>
                   </div>
                   <div class="form-group">
                     <label for="time">Time to collect water for a height difference of h cm, measured in Seconds(t)</label>
-                      <input type="number" class="form-control"
-                          id="time"  required/>
+                      <input type="text" class="form-control"
+                          id="time"  onkeypress="return isnumber(this);" required/>
                   </div>
 
                   <div class="form-group">
@@ -91,24 +107,24 @@ Calculations
                   
                   	   <br>
                     <label for="area1">The area at inlet side in cm2</label>
-                      <input type="number" class="form-control"
-                          id="area1" required/>
+                      <input type="text" class="form-control"
+                          id="area1"  onkeypress="return isnumber(this);" required/>
                   </div>
 
                   <div class="form-group">
                     <label for="area2">The area at throat in cm2</label>
-                      <input type="number" class="form-control"
-                          id="area2" required/>
+                      <input type="text" class="form-control"
+                          id="area2"  onkeypress="return isnumber(this);" required/>
                   </div>
            
                   <div class="form-group">
                     <label for="height1">Head difference in the manometer, converted to cm of water(Hw)</label>
-                      <input type="number" class="form-control"
-                          id="height1"  required/>
+                      <input type="text" class="form-control"
+                          id="height1"  onkeypress="return isnumber(this);" required/>
                   </div>
 
                  </button>
-    <button type="submit" class="btn btn-success" style="position:relative;top:40px" onclick="calculate()">Submit</button>
+    <button type="submit" class="btn btn-success" style="position:relative;top:40px">Submit</button>
                 </form>
                 
                 
@@ -203,39 +219,28 @@ Calculations
 </svg>
 
 
-
-
-
-
-
-
-
-
-
-
-<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="490px"
-	 height="17px" viewBox="0 0 490 17" style="position:relative;top:-304px;enable-background:new 0 0 490 17;" xml:space="preserve">
+	 height="17px" viewBox="0 0 490 17" style="position:relative;top:-304px;transform: rotate(180deg);enable-background:new 0 0 490 17;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
 </style>
 <defs>
 </defs>
-  <path stroke="#000" stroke-width="1.5" fill="none" d="M0,16.5h120l60-16h134l81,16h95" stroke-dasharray="5,5" stroke-dashoffset="0.00"/>
-    <path id="top3" stroke="#fff" stroke-width="3" fill="none" d="M0,16.5h120l60-16h134l81,16h95"/>
+  <path stroke="#000" stroke-width="1.5" fill="none" d="M492,0.5H364l-46,37H184l-61-37H0" stroke-dasharray="5,5" stroke-dashoffset="0.00"/>
+    <path id="top3" stroke="#fff" stroke-width="3" fill="none" d="M492,0.5H364l-46,37H184l-61-37H0"/>
 
 </svg>
 
 
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="490px"
-	 height="17px" viewBox="0 0 490 17" style="position:relative;top:-311px;enable-background:new 0 0 490 17;" xml:space="preserve">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="492px"
+	 height="38px" viewBox="0 0 492 38" style="position:relative;top:-327px;transform: rotate(180deg);enable-background:new 0 0 492 38;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
 </style>
 <defs>
 </defs>
-  <path stroke="#000" stroke-width="1.5" fill="none" d="M0,16.5h120l60-16h134l81,16h95" stroke-dasharray="5,5" stroke-dashoffset="0.00"/>
-    <path id="top4" stroke="#fff" stroke-width="3" fill="none" d="M0,16.5h120l60-16h134l81,16h95"/>
+    <path stroke="#000" stroke-width="1.5" fill="none" d="M492,0.5H364l-46,37H184l-61-37H0" stroke-dasharray="5,5" stroke-dashoffset="0.00"/>
+    <path id="top4" stroke="#fff" stroke-width="3" fill="none" d="M492,0.5H364l-46,37H184l-61-37H0"/>
 
 </svg>
 
