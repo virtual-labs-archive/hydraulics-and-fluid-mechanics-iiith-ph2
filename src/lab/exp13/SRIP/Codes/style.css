@@ -1,13 +1,21 @@
 #img1
 {
 	  display: block;
-	  margin-left: auto;
-	  margin-right: auto;
-	  margin-top:27%;	
-	  width: 10%;
+	  margin-top: 34%;
+	  width: 20%;
+
+	 /* margin-right: auto;
+	  margin-left:auto;*/
+	  /*float: right;*/
 }
 
 h1{
 	text-align: center;
 	font-size: 75px;
+}
+
+.container
+{
+	float:right;
+	width:50%;
 }

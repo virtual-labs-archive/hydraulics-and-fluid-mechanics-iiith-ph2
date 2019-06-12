@@ -3,30 +3,36 @@
 <head>
 	<h1>Pelton Turbine Experiment</h1>
 	<script src="java.js"></script>
-	<script src="../library/two.js"></script>
+	<script src="../Libraries/two.js"></script>
+	<script src="../Libraries/svg.js"></script>
 
 	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-	<img id="img1" src="34542.png">
-	<script>
-		rotat("img1",15);
-	</script>
-
-	<!--
 	<div id="draw-shapes">
 		<script>
 			draw();
 		</script>
 	</div>
 
-	 -->
-	 <svg height="500" width="700">
-  	 <polyline points=" 500,1  800,1"
-     style="fill:none;stroke:black;stroke-width:3" />
-	</svg> 
+	<div class="container">
+		<img id="img1" src="34542.png">
+		
+		<script>
+			rotat("img1",15);
+		
+		</script>
+	</div>
+
+
+	<div id="lines" class="container">
+		<script >
+			line();
+		</script>
+	</div>
+	
+
 
 
 </body>
