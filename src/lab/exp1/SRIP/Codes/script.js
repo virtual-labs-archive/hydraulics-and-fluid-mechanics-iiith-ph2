@@ -1,64 +1,7 @@
 
 var draw = SVG("bernoulli-setup").size(1300, 1000); //GLOBAL VARIABLE : DRAW
 
-	
-
-function experimentSetup() {
-
-
-    var tankLeft = draw.polyline([[200, 200],[220, 220],[220, 450],[400, 450],[400, 220],[420, 200]]).fill('none').stroke ({
-    	width: 3,
-	});  
-	
-	var incomingPipe = draw.polyline([[300,250],[300,150],[150,150],[150,170],[280,170],[280,250]]).fill('none').stroke ({
-		width: 3
-	});
-	
-	
-	var ductLower = draw.polygon([[400,425],[460,405],[650,405],[710,425],[710,380],[400,380]]).fill('none').stroke ({
-    	width: 3,
-		
-	});
-	
-
-	var tankRight = draw.polyline([[690,200],[710,220],[710,450],[890,450],[890,220],[910,200]]).fill('none').stroke ({ 
-    	width: 3
-	});
-
-		var verticalPipe1 = draw.polyline([[430,380],[430,220],[445,220],[445,380]]).fill('none').stroke ({ 
-    	width: 3
-	});
-	
-
-
-	var verticalPipe3 = draw.polyline([[500,380],[500,220],[515,220],[515,380]]).fill('none').stroke ({
-    	width: 3
-	});
-
-
-
-	var verticalPipe5 = draw.polyline([[570,380],[570,220],[585,220],[585,380]]).fill('none').stroke ({
-    	width: 3
-	});
-
-	
-	
-	var verticalPipe7 = draw.polyline([[640,380],[640,220],[655,220],[655,380]]).fill('none').stroke ({ 
-    	width: 3
-	});
-
-
-
-	var measureTank = draw.polyline([[890,390],[1000,390],[1000,450],[1150,450],[1150,550],[920,550],[920,450],[980,450],[980,410],	[890,410]]).fill('none').stroke ({
-    
-    	width: 3   
-	});
-	
-
-	
-}
-
-function toggleAnimation() {
+	function toggleAnimation() {
 	
 	
 	
@@ -148,8 +91,63 @@ function toggleAnimation() {
 	
 }
 
-var startButton = document.getElementById("start");
-var resetButton = document.getElementById("reset");
+
+function experimentSetup() {
+
+
+    var tankLeft = draw.polyline([[200, 200],[220, 220],[220, 450],[400, 450],[400, 220],[420, 200]]).fill('none').stroke ({
+    	width: 3,
+	});  
+	
+	var incomingPipe = draw.polyline([[300,250],[300,150],[150,150],[150,170],[280,170],[280,250]]).fill('none').stroke ({
+		width: 3
+	});
+	
+	
+	var ductLower = draw.polygon([[400,425],[460,405],[650,405],[710,425],[710,380],[400,380]]).fill('none').stroke ({
+    	width: 3,
+		
+	});
+	
+
+	var tankRight = draw.polyline([[690,200],[710,220],[710,450],[890,450],[890,220],[910,200]]).fill('none').stroke ({ 
+    	width: 3
+	});
+
+		var verticalPipe1 = draw.polyline([[430,380],[430,220],[445,220],[445,380]]).fill('none').stroke ({ 
+    	width: 3
+	});
+	
+
+
+	var verticalPipe3 = draw.polyline([[500,380],[500,220],[515,220],[515,380]]).fill('none').stroke ({
+    	width: 3
+	});
+
+
+
+	var verticalPipe5 = draw.polyline([[570,380],[570,220],[585,220],[585,380]]).fill('none').stroke ({
+    	width: 3
+	});
+
+	
+	
+	var verticalPipe7 = draw.polyline([[640,380],[640,220],[655,220],[655,380]]).fill('none').stroke ({ 
+    	width: 3
+	});
+
+
+
+	var measureTank = draw.polyline([[890,390],[1000,390],[1000,450],[1150,450],[1150,550],[920,550],[920,450],[980,450],[980,410],	[890,410]]).fill('none').stroke ({
+    
+    	width: 3   
+	});
+	
+
+	
+}
+
+
 
 window.onload = function() {
 	
@@ -158,12 +156,16 @@ window.onload = function() {
 		
 }
 
+var startButton = document.getElementById("start");
+var resetButton = document.getElementById("reset");
+
+
 startButton.onclick = function() {
-	
+	closeForm();
 	toggleAnimation();
 	
 	setTimeout(function(){
- alert('Simulation Completed!');
+ 		alert('Simulation Completed!');
 		location.reload();
  },10600) 
 	
@@ -176,6 +178,55 @@ resetButton.onclick = function() {
 }
 
 
+
+function openForm() {
+
+
+  document.getElementById("myForm").style.display = "block";
+	
+	}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+function calculate() {
+	var volume = document.getElementById("volume").value;
+	
+	var time = document.getElementById("time").value;
+	
+	var area = document.getElementById("area").value;
+	
+	var pressure = document.getElementById("pressure").value;
+	
+	var discharge = parseFloat(volume)/parseFloat(time);
+	
+	var velocity = discharge/parseFloat(area);
+	
+	var velocityHead = (velocity*velocity)/19.6;
+	
+	var pressureHead = parseFloat(pressure)/0.0098;
+	
+	var totalHead = velocityHead + pressureHead;
+
+	
+	
+	if(!isNaN(totalHead)) {
+		alert("Total head is " + totalHead+ " cm");
+	}
+	else {
+		alert("NaN");
+	}
+	
+	
+}
+
+resultButton = document.getElementById("result");
+
+resultButton.onclick = function() {
+	calculate();
+	
+}
 
 
 

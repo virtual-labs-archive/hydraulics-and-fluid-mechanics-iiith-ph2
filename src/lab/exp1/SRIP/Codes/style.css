@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
 
 .body {
-	background-color: #DCF4FC;
+	background-color: #D5F5E3;
+	
 }
 
 .main-heading {
@@ -9,6 +10,7 @@
     font-size: 30px;
  	font-family: 'Questrial', sans-serif;
 	color: #023141;
+	margin-left: 52px; 
 
 }
 
@@ -17,15 +19,20 @@
 	color: #fff;
 	font-family: 'Questrial', sans-serif;
 	display: inline-block;
-	width: 60px;
+	width: 90px;
 	padding: 10px;
 	margin: 10px auto;
 	cursor: pointer;
 	text-align: center;
-	font-size: 16px;	
-	margin-left: 550px;
-	margin-right: 10px
+	font-size: 15px;	
+	margin-left: 520px;
+	margin-right: 10px;
+	opacity: 0.8;
+
 	
+}
+.start:hover {
+	opacity: 1;
 }
 
 .reset {
@@ -33,16 +40,19 @@
 	color: #fff;
 	font-family: 'Questrial', sans-serif;
 	display: inline-block;
-	width: 60px;
+	width: 90px;
 	padding: 10px;
 	margin: 10px auto;
 	cursor: pointer;
 	text-align: center;
-	font-size: 16px;
-
-
+	font-size: 15px;
+	opacity: 0.8;
 	
 }
+.reset:hover {
+	opacity: 1;
+}
+
 
  .tank-left {
          width: 177px;
@@ -115,4 +125,82 @@
          left: 649px;
          top: 515px;
 	
+}
+
+
+
+
+* {box-sizing: border-box;}
+
+
+.open-button {
+  	background-color: #023141;
+  	color: white;
+  	padding: 9px;
+  	border: none;
+  	cursor: pointer;
+  	opacity: 0.8;
+  	margin-left: 10px;
+  	right: 480px;
+  	width: 135px;
+	top: 91px;
+	text-align: center;
+	font-size: 14px;
+	font-family: 'Questrial', sans-serif;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  	display: none;
+	position: fixed;
+	top: 80px;
+	bottom: 20px;
+	right: 30px;
+	border: 3px solid #f1f1f1;
+	z-index: 9;
+	
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=number] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+
+.form-container input[type=text]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
 }
