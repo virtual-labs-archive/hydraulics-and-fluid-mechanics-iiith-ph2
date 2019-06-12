@@ -42,9 +42,9 @@ if(str.length>3) return false;
 if(keyCode==32) return false;
           if (keyCode == 46 && keyCode > 31 && (keyCode < 48 || keyCode > 57))
              return false;
-
+ if ((keyCode >= 48 && keyCode <= 57))
           return true;
-
+return false;
 }
 
      	function calculate(){
