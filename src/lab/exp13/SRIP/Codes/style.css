@@ -1,17 +1,29 @@
 #img1
 {
 	  display: block;
-	  margin-top: 34%;
-	  width: 20%;
+	  margin-top: 58%;
+	  width: 25%;
 
-	 /* margin-right: auto;
-	  margin-left:auto;*/
-	  /*float: right;*/
+	  /*margin-right: auto;
+	  margin-left:auto;
+	  float: right;*/
 }
 
 h1{
 	text-align: center;
 	font-size: 75px;
+}
+
+
+.box
+{
+	width:1200px;
+	height:500px;
+	background-color:#DFD4D1;
+	padding: 40px;
+	text-align: center;
+	margin-left: 15%;
+	margin-top: 3%;
 }
 
 .container

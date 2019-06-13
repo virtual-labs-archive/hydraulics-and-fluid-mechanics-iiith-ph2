@@ -6,33 +6,29 @@
 	<script src="../Libraries/two.js"></script>
 	<script src="../Libraries/svg.js"></script>
 
+
 	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-	<div id="draw-shapes">
-		<script>
-			draw();
-		</script>
+	<div class="box">
+
+		<div class="container">
+			<img id="img1" src="34542.png">
+		</div>
+
+
+		<div id="lines" class="container">
+			<script >
+				line();
+			</script>
+		</div>
+
 	</div>
 
-	<div class="container">
-		<img id="img1" src="34542.png">
-		
-		<script>
-			rotat("img1",15);
-		
-		</script>
-	</div>
-
-
-	<div id="lines" class="container">
-		<script >
-			line();
-		</script>
-	</div>
-	
-
+	<button type="button" id="b2" onclick="start(this)">START</butto>
+	<button type="button" id="b1" onclick="stop()">STOP</button>
+	<button type="button" id="b3" onclick="reset()">RESET</butto>
 
 
 </body>
