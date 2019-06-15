@@ -9,24 +9,50 @@
         <meta name="description" content="Bernoulli's Experiment">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     </head>
     
     
     <body class ="body">
       	<script src = "../Libraries/svg.js"></script>
 	 	<script src = "../Libraries/jquery.js"></script>
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 		
-       	
-		<div id = "bernoulli-setup" class = "bernoulli-class">
-			<h2 class = "main-heading"><b>BERNOULLI'S &nbsp;EXPERIMENT</b></h2>
+       			
+			
+<div class="container">
+	<div class = "row">
+		<div class = "col-md-4.5"></div>
+	<div class = "col-md-4.5 text-center">
+	<h2 class = "main-heading"><b>BERNOULLI'S &nbsp;EXPERIMENT</b></h2>	
+	</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-3.25"></div>
+		<div class = "col-md-3.25 text-center">
+				
+  
+  <button type="button" id = "start" class="start btn btn-success">START</button>
+ 
+  <button type="button" id = "reset" class="reset btn btn-warning">RESET</button>
+  <button type="button" class="open-button btn btn-primary" onclick="openForm()">CALCULATIONS</button>
+    
+</div>
+</div>
+	
+	
+		</div>
 		
-			
-			<a id = "start" class = "start"><b>START</b></a>
-			<a id = "reset" class = "reset"><b>RESET</b></a>
-			
-			
-		 
-	<button class="open-button" onclick="openForm()"><b>CALCULATIONS</b></button>
+	<div id = "bernoulli-setup" class = "col-xs-12 bernoulli-class"></div>	
+	
+		
+		
+				
+		
+
+		
+
 
 			<div class="form-popup" id="myForm">
   				<form class="form-container">
@@ -42,7 +68,7 @@
 				<input type="number" placeholder="in square centimeter" id="area" required>
 
 				<label for="pressure"><b>Pressure:</b></label>
-				<input type="number" placeholder="in seconds" id="pressure" required>
+				<input type="number" placeholder="in newton per sq cm" id="pressure" required>
 
 				 <button type="submit" class="btn" id="result"><b>CALCULATE RESULTS!</b></button>
 

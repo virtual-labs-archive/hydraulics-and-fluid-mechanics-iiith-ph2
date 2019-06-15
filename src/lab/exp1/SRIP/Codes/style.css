@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
 
 .body {
-	background-color: #D5F5E3;
 	
+	
+}
+.bernoulli-class {
+ margin-left: 35px
 }
 
 .main-heading {
@@ -10,47 +13,51 @@
     font-size: 30px;
  	font-family: 'Questrial', sans-serif;
 	color: #023141;
-	margin-left: 52px; 
+	margin-right: 15px;
 
 }
 
 .start {
-	background-color: #023141;
+
 	color: #fff;
 	font-family: 'Questrial', sans-serif;
 	display: inline-block;
-	width: 90px;
-	padding: 10px;
-	margin: 10px auto;
-	cursor: pointer;
-	text-align: center;
-	font-size: 15px;	
-	margin-left: 520px;
-	margin-right: 10px;
-	opacity: 0.8;
 
-	
-}
-.start:hover {
-	opacity: 1;
-}
-
-.reset {
-	background-color: #023141;
-	color: #fff;
-	font-family: 'Questrial', sans-serif;
-	display: inline-block;
-	width: 90px;
 	padding: 10px;
 	margin: 10px auto;
 	cursor: pointer;
 	text-align: center;
 	font-size: 15px;
-	opacity: 0.8;
-	
+	margin-right: 10px;
+		
 }
-.reset:hover {
-	opacity: 1;
+
+.reset {
+
+	color: #fff;
+	font-family: 'Questrial', sans-serif;
+	display: inline-block;
+
+	padding: 10px;
+	margin: 10px auto;
+	cursor: pointer;
+	text-align: center;
+	font-size: 15px;
+		margin-right: 10px;
+
+}
+
+.open-button {
+ 	color: #fff;
+	font-family: 'Questrial', sans-serif;
+	display: inline-block;
+
+	padding: 10px;
+	margin: 10px auto;
+	cursor: pointer;
+	text-align: center;
+	font-size: 15px;
+		margin-right: 10px;
 }
 
 
@@ -133,21 +140,7 @@
 * {box-sizing: border-box;}
 
 
-.open-button {
-  	background-color: #023141;
-  	color: white;
-  	padding: 9px;
-  	border: none;
-  	cursor: pointer;
-  	opacity: 0.8;
-  	margin-left: 10px;
-  	right: 480px;
-  	width: 135px;
-	top: 91px;
-	text-align: center;
-	font-size: 14px;
-	font-family: 'Questrial', sans-serif;
-}
+
 
 /* The popup form - hidden by default */
 .form-popup {
