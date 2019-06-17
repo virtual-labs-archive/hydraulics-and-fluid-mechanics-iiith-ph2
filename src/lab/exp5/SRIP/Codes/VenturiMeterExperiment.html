@@ -20,6 +20,7 @@
 	</div>
 	
 	<button class="play-progress1" id="iambutton">start</button>
+  <button class="play-progress1" id="iambutton1">restart</button>
 	<div class="container">
 <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalNorm">
 Calculations
@@ -36,7 +37,6 @@ function isnumber(e)
     var keyCode = (event.which) ? event.which : (window.event.keyCode) ? window.event.keyCode : -1;
     var str=e.value;
 if(str.length>3) return false;
-
  /*   if ((str.length==0) && (event.keyCode==46)) return false; // checking that length ==0 than not allow to enter '.'
     if ((str.indexOf('.')>1) && (event.keyCode==46)) return false; // checking that if user already entered '.' than not allow to enter '.'*/
 if(keyCode==32) return false;
@@ -46,12 +46,10 @@ if(keyCode==32) return false;
           return true;
 return false;
 }
-
      	function calculate(){
      		var area=document.getElementById("area").value; 
      		var height=document.getElementById("height").value;
      		var time=document.getElementById("time").value;  
-
      		var area1=document.getElementById("area1").value; 
      		var area2=document.getElementById("area2").value; 
      		var height1=document.getElementById("height1").value;
@@ -62,7 +60,6 @@ return false;
      		var c2=(Math.sqrt(a1-a2))/10000;
      		var Qth=(area1*area2*c1)/(c2*10000*10000);
      		alert("The Coefficient Cd:       "+Qa/Qth);
-
      		return false;
      	}
      </script>
@@ -252,32 +249,23 @@ return false;
 
 
  <script>
-
-
 $(document).ready(function(){
-	window.onload=function(){
-	
-			$("#pathi").attr("style","fill:url(#progress)");
+$("#iambutton1").click(function(){
+window.location.reload();
+});
+	//if start button is clicked the flow will start again
+$("#iambutton").click(function(){
+      $("#pathi").attr("style","fill:url(#progress)");
 t();
 t1();
 t2();
 t3();
 t4();
-	
+  
 window.setTimeout(move, 1000);
 window.setTimeout(move2, 5000);
-
-}
-	//if start button is clicked the flow will start again
-$("#iambutton").click(function(){
-
-	window.location.reload();
-
-
 });
-
 });
-
 function setProgress(amt)
 {
   amt = (amt < 0) ? 0 : (amt > 1) ? 1 : amt;
@@ -285,41 +273,31 @@ function setProgress(amt)
   document.getElementById("stop2").setAttribute("offset", amt);
    
 }
-
   
 // Simple test of setProgress().style='fill: url(#progress);'
 // We step up from 0 to 1 using timeouts
 val = 0;
 doTimeout();
-
 function doTimeout() {
   setProgress(val);
   if(val==0){
-  	val+=0.0001;
+  	val+=0.00001;
   }
   else if(val<0.25){
-  	val+=0.002;
+  	val+=0.0015;
   }
   else if (val>0.78){
-  	val+=0.002;
+  	val+=0.0015;
   }
   else{
-val+=0.005;
+val+=0.0055;
   }
-
   if (val <= 1) {
     setTimeout(doTimeout, 30);
   }
 }
-
  </script>
 
 
 	</body>
 </html>
-
-
-
-
-
-
