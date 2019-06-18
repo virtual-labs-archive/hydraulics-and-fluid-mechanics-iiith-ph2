@@ -1,11 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
 
-.body {
+body {
 	
-	
+background: #E0EAFC;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
 }
 .bernoulli-class {
- margin-left: 35px
+ margin-left: 35px;
+	width: 100%;
+	
+
+
 }
 
 .main-heading {
@@ -14,6 +22,8 @@
  	font-family: 'Questrial', sans-serif;
 	color: #023141;
 	margin-right: 15px;
+
+
 
 }
 
@@ -144,27 +154,41 @@
 
 /* The popup form - hidden by default */
 .form-popup {
-  	display: none;
-	position: fixed;
+ 
+	
 	top: 80px;
 	bottom: 20px;
 	right: 30px;
-	border: 3px solid #f1f1f1;
+	
 	z-index: 9;
 	
-}
 
+	
+}
+.calc {
+background: #283048;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #859398, #283048);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #859398, #283048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+}
 /* Add styles to the form container */
 .form-container {
-  max-width: 300px;
-  padding: 10px;
-  background-color: white;
+  max-width: 100%;
+
+background: #283048;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #859398, #283048);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #859398, #283048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
 }
 
 /* Full-width input fields */
 .form-container input[type=number] {
-  width: 100%;
-  padding: 10px;
+  width: 75%;
+	padding: 8px;
   margin: 5px 0 22px 0;
   border: none;
   background: #f1f1f1;
@@ -180,17 +204,20 @@
 .form-container .btn {
   background-color: #4CAF50;
   color: white;
-  padding: 16px 20px;
+ 
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 40%;
   margin-bottom:10px;
   opacity: 0.8;
+	margin-right: 20px;
+	padding: 10px;
+	
 }
 
 
 .form-container .cancel {
-  background-color: red;
+  background-color: orange;
 }
 
 /* Add some hover effects to buttons */

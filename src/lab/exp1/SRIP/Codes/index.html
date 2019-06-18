@@ -36,7 +36,7 @@
   <button type="button" id = "start" class="start btn btn-success">START</button>
  
   <button type="button" id = "reset" class="reset btn btn-warning">RESET</button>
-  <button type="button" class="open-button btn btn-primary" onclick="openForm()">CALCULATIONS</button>
+  <button type="button" class="open-button btn btn-primary" id = "calc-button">CALCULATIONS</button>
     
 </div>
 </div>
@@ -44,40 +44,7 @@
 	
 		</div>
 		
-	<div id = "bernoulli-setup" class = "col-xs-12 bernoulli-class"></div>	
-	
-		
-		
-				
-		
-
-		
-
-
-			<div class="form-popup" id="myForm">
-  				<form class="form-container">
-    			<h2>Calculations</h2>
-
-				<label for="volume"><b>Volume of water collected:</b></label>
-				<input type="number" placeholder="in cubic centimter" id="volume" required>
-
-				<label for="time"><b>Time taken:</b></label>
-				<input type="number" placeholder="in seconds" id="time" required>
-
-				<label for="area"><b>Cross sectional area of fluid flow:</b></label>
-				<input type="number" placeholder="in square centimeter" id="area" required>
-
-				<label for="pressure"><b>Pressure:</b></label>
-				<input type="number" placeholder="in newton per sq cm" id="pressure" required>
-
-				 <button type="submit" class="btn" id="result"><b>CALCULATE RESULTS!</b></button>
-
-				<button type="button" class="btn cancel" onclick="closeForm()"><b>CLOSE</b></button>
-				</form>
-			</div>
-			
-			
-			
+	<div id = "bernoulli-setup" class = "bernoulli-class"></div>
 		<div id = "tankLeft" class = "tank-left"></div>
 		<div id = "verticalPipe1" class = "vertical-pipe1"></div>
 		<div id = "verticalPipe2" class = "vertical-pipe2"></div>
@@ -85,8 +52,56 @@
 		<div id = "verticalPipe4" class = "vertical-pipe4"></div>
 		<div id = "tankRight" class = "tank-right"></div>
 		<div id = "measureTank" class = "measure-tank"></div>
+		
+	
+	
+
+			<div class = "container-fluid calc">
+			<div class="form-popup" id="myForm">
+  				<form class="form-container">
+    			<h2>Calculations</h2>
+				<div class = "row">
+					<div class = "col-md-3">
+				<label for="volume"><b>Volume of water collected:</b></label>
+				<input type="number" placeholder="in cubic centimter (Reading 1)" class ="form-control form-rounded" id="volume" required>
+				<input type="number" placeholder="in cubic centimter (Reading 2)" class ="form-control form-rounded"  id="volume2" required>
+					</div>
+					
+					<div class = "col-md-3">
+				<label for="time"><b>Time taken:</b></label>
+				<input type="number" placeholder="in seconds (Reading 1)" class ="form-control form-rounded" id="time" required>
+				<input type="number" placeholder="in seconds (Reading 2)" class ="form-control form-rounded"  id="time2" required>
+					</div>
+					
+					<div class = "col-md-3">
+				<label for="area"><b>Cross sectional area of fluid flow:</b></label>
+				<input type="number" placeholder="in square centimeter (Reading 1)" class ="form-control form-rounded"  id="area" required>
+				<input type="number" placeholder="in square centimeter (Reading 2)" class ="form-control form-rounded"  id="area2" required>
+					</div>
+					
+					<div class = "col-md-3">
+				<label for="pressure"><b>Pressure:</b></label>
+				<input type="number" placeholder="in newton per sq cm (Reading 1)" class ="form-control form-rounded" id="pressure" required>
+				<input type="number" placeholder="in newton per sq cm (Reading 2)" class ="form-control form-rounded" id="pressure2" required>
+					</div>
+					</div>
+					<div class = "row">
+					<div class = "col-md-4"></div>
+						<div class = "col-md-4">	
+				 <button type="submit" class="btn" id="result"><b>CALCULATE!</b></button>
+						
+						
+						
+				<button type="button" class="btn cancel" id = "clear-btn"><b>CLEAR</b></button>
+						</div>
+							<div class = "col-md-4"></div>
+					</div>
+				</form>
+			</div>
 			
 		</div>
+			
+	
 		
 	
 
