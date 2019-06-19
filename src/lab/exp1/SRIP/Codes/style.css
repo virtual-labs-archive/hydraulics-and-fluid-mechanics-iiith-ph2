@@ -11,7 +11,7 @@ background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, F
 .bernoulli-class {
  margin-left: 35px;
 	width: 100%;
-	
+height: 600px;
 
 
 }
@@ -22,6 +22,7 @@ background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, F
  	font-family: 'Questrial', sans-serif;
 	color: #023141;
 	margin-right: 15px;
+
 
 
 
@@ -76,8 +77,8 @@ background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, F
          background-color: #00B0EA;
          height: 0px;
          position: absolute;
-         left: 229px;
-         top: 586px;
+         left: 256px;
+         top: 556px;
 
         }
 
@@ -86,8 +87,8 @@ background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, F
          background-color: #00B0EA;
          height: 0px;
          position: absolute;
-         left: 719px;
-         top: 586px;
+         left: 746px;
+         top: 556px;
 
         }
 
@@ -97,50 +98,50 @@ background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, F
          background-color: #00B0EA;
          height: 0px;
          position: absolute;
-         left: 929px;
-         top: 684px;
+         left: 956px;
+         top: 655px;
 	
 }
 
 .vertical-pipe1 {
-		 width: 13px;
+		 width: 12px;
          background-color: #00B0EA;
          height: 0px;
          position: absolute;
-         left: 439px;
-         top: 515px;
+         left: 466px;
+         top: 486px;
 	
 }
 
 
 .vertical-pipe2 {
-		 width: 13px;
+		 width: 12px;
          background-color: #00B0EA;
          height: 0px;
          position: absolute;
-         left: 509px;
-         top: 515px;
+         left: 536px;
+         top: 486px;
 	
 }
 
 .vertical-pipe3 {
-		 width: 13px;
+		 width: 12px;
          background-color: #00B0EA;
          height: 0px;
          position: absolute;
-         left: 579px;
-         top: 515px;
+         left: 606px;
+         top: 486px;
 	
 }
 
 
 .vertical-pipe4 {
-		 width: 13px;
+		 width: 12px;
          background-color: #00B0EA;
          height: 0px;
          position: absolute;
-         left: 649px;
-         top: 515px;
+         left: 676px;
+         top: 486px;
 	
 }
 
@@ -181,7 +182,7 @@ background: #283048;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #859398, #283048);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #859398, #283048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-
+color: white;
 
 }
 
@@ -192,6 +193,7 @@ background: linear-gradient(to right, #859398, #283048); /* W3C, IE 10+/ Edge, F
   margin: 5px 0 22px 0;
   border: none;
   background: #f1f1f1;
+	
 }
 
 
@@ -217,7 +219,7 @@ background: linear-gradient(to right, #859398, #283048); /* W3C, IE 10+/ Edge, F
 
 
 .form-container .cancel {
-  background-color: orange;
+  background-color: steelblue;
 }
 
 /* Add some hover effects to buttons */
