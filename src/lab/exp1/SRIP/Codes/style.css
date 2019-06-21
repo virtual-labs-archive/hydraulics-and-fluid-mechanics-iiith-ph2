@@ -1,3 +1,4 @@
+/* IMPORTING QUESTRIAL GOOGLE FONT */
 @import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
 
 body {
@@ -10,7 +11,7 @@ background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, F
 }
 .bernoulli-class {
  margin-left: 35px;
-	width: 100%;
+width: 100%;
 height: 600px;
 
 
@@ -28,6 +29,8 @@ height: 600px;
 
 }
 
+/* ADDING STYLE TO START BUTTON */
+
 .start {
 
 	color: #fff;
@@ -42,6 +45,8 @@ height: 600px;
 	margin-right: 10px;
 		
 }
+
+/* ADDING STYLE TO RESET BUTTON */
 
 .reset {
 
@@ -58,7 +63,9 @@ height: 600px;
 
 }
 
-.open-button {
+/* ADDING STYLE TO CALCULATIONS BUTTON */
+
+.calc-button {
  	color: #fff;
 	font-family: 'Questrial', sans-serif;
 	display: inline-block;
@@ -68,9 +75,11 @@ height: 600px;
 	cursor: pointer;
 	text-align: center;
 	font-size: 15px;
-		margin-right: 10px;
+	margin-right: 10px;
 }
 
+
+/* ADDING STYLES TO VERTICAL WATER ANIMATIONS */
 
  .tank-left {
          width: 177px;
@@ -151,22 +160,18 @@ height: 600px;
 * {box-sizing: border-box;}
 
 
-
-
-/* The popup form - hidden by default */
-.form-popup {
+.form-class {
  
 	
 	top: 80px;
 	bottom: 20px;
 	right: 30px;
-	
 	z-index: 9;
 	
 
 	
 }
-.calc {
+.calculations {
 background: #283048;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #859398, #283048);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #859398, #283048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -186,7 +191,7 @@ color: white;
 
 }
 
-/* Full-width input fields */
+
 .form-container input[type=number] {
   width: 75%;
 	padding: 8px;
@@ -197,12 +202,7 @@ color: white;
 }
 
 
-.form-container input[type=text]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-
+/* "CALCULATE!" BUTTON */
 .form-container .btn {
   background-color: #4CAF50;
   color: white;
@@ -217,8 +217,8 @@ color: white;
 	
 }
 
-
-.form-container .cancel {
+/* "CLEAR" BUTTON */
+.form-container .clear-btn {
   background-color: steelblue;
 }
 

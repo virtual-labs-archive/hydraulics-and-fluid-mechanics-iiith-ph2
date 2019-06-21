@@ -1,5 +1,7 @@
 
-var draw = SVG("bernoulli-setup").size(1300, 620); //GLOBAL VARIABLE : DRAW
+var draw = SVG("bernoulli-setup").size(1200, 620); //GLOBAL VARIABLE : DRAW
+
+//FUNCTION experimentSetup() TO DRAW EXPERIMENT OUTLINES
 
 function experimentSetup() {
 
@@ -29,19 +31,19 @@ function experimentSetup() {
 	
 
 
-	var verticalPipe3 = draw.polyline([[500,380],[500,220],[515,220],[515,380]]).fill('none').stroke ({
+	var verticalPipe2 = draw.polyline([[500,380],[500,220],[515,220],[515,380]]).fill('none').stroke ({
     	width: 3
 	});
 
 
 
-	var verticalPipe5 = draw.polyline([[570,380],[570,220],[585,220],[585,380]]).fill('none').stroke ({
+	var verticalPipe3 = draw.polyline([[570,380],[570,220],[585,220],[585,380]]).fill('none').stroke ({
     	width: 3
 	});
 
 	
 	
-	var verticalPipe7 = draw.polyline([[640,380],[640,220],[655,220],[655,380]]).fill('none').stroke ({ 
+	var verticalPipe4 = draw.polyline([[640,380],[640,220],[655,220],[655,380]]).fill('none').stroke ({ 
     	width: 3
 	});
 
@@ -56,11 +58,13 @@ function experimentSetup() {
 	
 }
 
+// FUNCTION toggleAnimation() IS FOR THE WATER ANIMATIONS IN THE EXPERIMENT
 
 	function toggleAnimation() {
 	
 	
-	
+	// HORIZONTAL WATER ANIMATIONS USING SVG.JS
+		
 	var incomingPipeHorizontal = draw.rect(1,18).attr ({
 		'fill': '#00B0EA', 
 		x: 151, 
@@ -115,6 +119,10 @@ function experimentSetup() {
 	
 	outgoingPipeVertical.animate({delay: '8.6s'}).size(18,139);
 	
+		
+		
+	// VERTICAL WATER ANIMATIONS USING JQUERY.JS
+		
 	$('#tankLeft')
 		.animate({'height': 0},2000)
 		.animate({'height': 150, 'top': 405}, 1000)
@@ -148,7 +156,7 @@ function experimentSetup() {
 }
 
 
-
+// CALLS EXPERIMENT SETUP AND EMPTY GRAPH AFTER LOADING THE HTML BODY  
 window.onload = function() {
 
 	
@@ -156,6 +164,8 @@ experimentSetup();
 plotGraph();
 	
 }
+
+// FUNCTIONING OF THE START, RESET AND CALCULATIONS BUTTONS
 
 var startButton = document.getElementById("start");
 var resetButton = document.getElementById("reset");
@@ -187,6 +197,7 @@ calcButton.onclick = function() {
 }
 
 
+// FUNCTION calculate() IS FOR THE CALCULATIONS PERFORMED IN THE EXPERIMENT 
 
 function calculate() {
 	
@@ -213,7 +224,7 @@ function calculate() {
         }
 	
 	try {
-		
+		// HANDLING EXCEPTIONS
 		if(time <= 0 || time2 <= 0 || volume < 0 || volume2 < 0 || area <= 0 || area2 <= 0 || pressure < 0 || pressure2 < 0) {
 			throw("Invalid input(s)! Values of Time and Area must be positive, values of Volume and Pressure must be non-negative");
 		}
@@ -265,6 +276,8 @@ function calculate() {
 		alert("Error: " + e);
 	}
 }
+
+// FUNCTION plotGraph() PLOTS THE GRAPH BY USING THE ANSWERS OBTAINED BY calculate() FUNCTION USING CANVAS.JS
 
 function plotGraph(vh1,vh2,ph1,ph2,th1,th2) {
 		var chart = new CanvasJS.Chart("chartContainer", {
@@ -340,6 +353,7 @@ function toggleDataSeries(e) {
 }
 }
 
+// FUNCTIONING OF THE CALCULATE AND CLEAR BUTTONS
  
 resultButton = document.getElementById("result");
 
