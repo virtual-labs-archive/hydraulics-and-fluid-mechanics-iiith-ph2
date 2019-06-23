@@ -3,26 +3,30 @@
 	<head>
 		<title>Venturi Meter Experiment</title>
 		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	    <meta charset="utf-8" />
+		
+	  <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		<script type="text/javascript" src="main.js"></script>
-		    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<link rel="stylesheet" href="style.css" />
-	
+	 
 
 	</head>
 	<body>
 	<div id="txt1">
 		<u><font size="6" color="#3465b5">Venturi meter</font></u>
 	</div>
-	
+	 <button class="play-progress1" id="iambutton1">restart</button>
 	<button class="play-progress1" id="iambutton">start</button>
-  <button class="play-progress1" id="iambutton1">restart</button>
+ 
 	<div class="container">
-<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalNorm">
+<button style=" 
+    position: relative;
+    left: 150px;"
+data-toggle="modal" data-target="#myModalNorm">
 Calculations
 </button>
 
@@ -174,7 +178,7 @@ return false;
       <stop id="stop2" offset="0" stop-color="white"/>
     </linearGradient>
 </defs>
-<path id="pathi" class="st0" d="M0.5,1.5c1-1,1-1,1-1h5h125l63,39h126l47-39h140v118h-113l-74-34h-128l-61,34H0.5V1.5z"/>
+<path id="pathi" class="st0" style="fill:none" d="M0.5,1.5c1-1,1-1,1-1h5h125l63,39h126l47-39h140v118h-113l-74-34h-128l-61,34H0.5V1.5z"/>
 <text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle" style="writing-mode: tb-rl">&lt-Db-&gt</text>
 </svg>
 
@@ -250,11 +254,14 @@ return false;
 
  <script>
 $(document).ready(function(){
+
 $("#iambutton1").click(function(){
+
 window.location.reload();
 });
 	//if start button is clicked the flow will start again
 $("#iambutton").click(function(){
+ 
       $("#pathi").attr("style","fill:url(#progress)");
 t();
 t1();
@@ -263,7 +270,7 @@ t3();
 t4();
   
 window.setTimeout(move, 1000);
-window.setTimeout(move2, 5000);
+window.setTimeout(move2, 5500);
 });
 });
 function setProgress(amt)
@@ -274,7 +281,7 @@ function setProgress(amt)
    
 }
   
-// Simple test of setProgress().style='fill: url(#progress);'
+
 // We step up from 0 to 1 using timeouts
 val = 0;
 doTimeout();

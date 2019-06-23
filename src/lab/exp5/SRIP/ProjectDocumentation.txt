@@ -1,0 +1,28 @@
+Venturi Meter Experiment Simulation using JavaScript Project Documentation and Test Cases.
+
+
+Prepared By:
+       		M Amrutha Varshini
+
+
+
+INTRODUCTION
+The venturi meter experiment simulator is JavaScript version of Simulator written in java3D.
+ABOUT THE EXPERIMENT:
+The Venturi meter used in this experiment consists of successive converging, uniform and diverging sections equipped with pressure taps at selected locations. A Venturi meter is a device for determining the flow-rate of a fluid down a pipe. One measures the pressure difference between the venturi inlet and neck, and from this the flow-rate can be determined
+LANGUAGES USED:
+•	HTML
+•	CSS
+•	JavaScript
+Frameworks Used:
+•	Bootstrap: It is a CSS framework.
+Libraries:
+•	jQuery: It is a JavaScript library.
+
+OVERALL DESCRIPTION:
+•	Venturi meter: The heading of the experiment “Venturi meter” is at the top of the page.
+•	BODY: The body is bordered with dark blue color. Inside the body at the top there are Three Buttons that are:
+ 1.Start: The start button is used to start the simulation.
+ 2.Restart: The restart button is used to bring back the simulation to its initial state, and then again click “start” button to again start the Simulation.
+3.Calculations: when the calculation button is clicked a modal will be displayed in which some values are to be entered(The values should be only positive integers less than 10,000) to get the coefficient Cd. After entering all the values click on the submit button then an alert will be displayed showing the value of coefficient Cd according to the given values. Then click on close button to close the modal.
+•	Venturi Meter Pipe: After the buttons at the top a svg path is used to display the shape of Venturi meter pipe.

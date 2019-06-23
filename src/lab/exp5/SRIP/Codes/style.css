@@ -1,5 +1,6 @@
 body{
-
+position:relative;
+top:90px;
     width: 900px;
     height: 800px;
 margin: auto;
@@ -10,6 +11,9 @@ margin: auto;
     box-sizing: border-box;
 }
 #txt1{
+  position:relative;
+  top:-100px;
+  left:300px;
 	  padding-top: 40px;
   padding-right: 30px;
   padding-bottom: 50px;
@@ -19,6 +23,7 @@ margin: auto;
 
 button {
   position:relative;
+  left:-130px;
   top:-105px;
   float: right;
   background: black;
@@ -112,7 +117,7 @@ button:hover {
   height:20px;
   background-color: white;
 border: 1px solid #a8a8a8;
-    top: -221px;
+    top: -224px;
     left: 150px;
     position: relative;
  
