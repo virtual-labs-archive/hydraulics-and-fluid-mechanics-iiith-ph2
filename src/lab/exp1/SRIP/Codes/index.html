@@ -1,135 +1,140 @@
 <!DOCTYPE html>
+
 <html>
-    
-    <head>
-		<meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Bernoulli's Experiment</title>
-        <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
-        <meta name="description" content="Bernoulli's Experiment">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-		<!--LINKING STYLE.CSS -->
-		<link rel="stylesheet" href="style.css">
-		
-		<!--IMPORTING BOOTSTRAP.MIN.CSS-->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-	</head>
-    
-    
-    <body class ="body">
-		<!-- IMPORTING SVG.JS-->
-      	<script src = "../Libraries/svg.js"></script> 
-		
-      	<!-- IMPORTING JQUERY.JS -->
-	 	<script src = "../Libraries/jquery.js"></script>
-		
-		<!--IMPORTING CANVAS.JS-->
-		<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-
-		   			
-		<!--HEADING AND BUTTONS-->
-<div class="container-fluid">
-	<div class = "row">
-		<div class = "col-md-4.5"></div>
-	<div class = "col-md-4.5 text-center">
-	<h2 class = "main-heading"><b>BERNOULLI'S &nbsp;EXPERIMENT</b></h2>	
-	</div>
-	</div>
-	<div class = "row">
-		<div class = "col-md-3.25"></div>
-		<div class = "col-md-3.25 text-center">
-				
-  
-  <button type="button" id = "start" class="start btn btn-success">START</button>
- 
-  <button type="button" id = "reset" class="reset btn btn-warning">RESET</button>
-  <button type="button" class="calc-button btn btn-primary" id = "calc-button">CALCULATIONS</button>
-    
-</div>
-</div>
-
-</div>
-		
-<!-- EXPERIMENT SIMULATION  (INCLUDES LINES SETUP AND HORIZONTAL WATER ANIMATIONS) -->
-	<div id = "bernoulli-setup" class = "bernoulli-class"></div>
-		
-<!-- VERTICAL WATER ANIMATION DIVISIONS -->
-		<div id = "upward-animations">
-		<div id = "tankLeft" class = "tank-left"></div>
-		<div id = "verticalPipe1" class = "vertical-pipe1"></div>
-		<div id = "verticalPipe2" class = "vertical-pipe2"></div>
-		<div id = "verticalPipe3" class = "vertical-pipe3"></div>		
-		<div id = "verticalPipe4" class = "vertical-pipe4"></div>
-		<div id = "tankRight" class = "tank-right"></div>
-		<div id = "measureTank" class = "measure-tank"></div>
-		</div>
 	
-<!-- CALCULATIONS SECTION-->
-
-
-			<div class = "container-fluid calculations">
-			<div class="form-class" id="myForm">
-				<h2><b>Calculations</b></h2>
-  				<form class="form-container">
-    			
-				<div class = "row">
-					<div class = "col-md-3">
-				<label for="volume"><b>Volume of water collected:</b></label>
-				<input type="number" placeholder="in cubic centimter (Reading 1)" class ="form-control form-rounded" id="volume" required>
-				<input type="number" placeholder="in cubic centimter (Reading 2)" class ="form-control form-rounded"  id="volume2" required>
-					</div>
-					
-					<div class = "col-md-3">
-				<label for="time"><b>Time taken:</b></label>
-				<input type="number" placeholder="in seconds (Reading 1)" class ="form-control form-rounded" id="time" required>
-				<input type="number" placeholder="in seconds (Reading 2)" class ="form-control form-rounded"  id="time2" required>
-					</div>
-					
-					<div class = "col-md-3">
-				<label for="area"><b>Cross sectional area of fluid flow:</b></label>
-				<input type="number" placeholder="in square centimeter (Reading 1)" class ="form-control form-rounded"  id="area" required>
-				<input type="number" placeholder="in square centimeter (Reading 2)" class ="form-control form-rounded"  id="area2" required>
-					</div>
-					
-					<div class = "col-md-3">
-				<label for="pressure"><b>Pressure:</b></label>
-				<input type="number" placeholder="in newton per sq cm (Reading 1)" class ="form-control form-rounded" id="pressure" required>
-				<input type="number" placeholder="in newton per sq cm (Reading 2)" class ="form-control form-rounded" id="pressure2" required>
-					</div>
-					</div>
-					<div class = "row">
-					<div class = "col-md-4"></div>
-						<div class = "col-md-4">	
-				 <button type="button" class="btn" id="result"><b>CALCULATE!</b></button>
-						
-						
-						
-				<button type="reset" class="btn clear-btn" id = "clear-btn"><b>CLEAR</b></button>
-						</div>
-					</div>
-					<br>
-							
-					
-						<!-- GRAPH -->
-							<div class = "row">
-						<div class = "col-md-3"></div>
-								
-								<div class = "col-md-6">
-						<div id="chartContainer" style="height: 300px; width: 89%;"></div>
-								</div>
-						</div>
-					
-				</form>
-			</div>
-			
-		</div>
-			
+  <head>
+	  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bernoulli's Experiment</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <meta name="description" content="Bernoulli's Experiment">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  
+    <!--LINKING STYLE.CSS -->
+	  
+    <link rel="stylesheet" href="style.css">
+	  
+    <!--IMPORTING BOOTSTRAP.MIN.CSS-->
+	  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	  
+  </head>
 	
-<!-- LINKING SCRIPT.JS -->
 	
-<script src="script.js" type = "text/javascript"></script>
+  <body class ="body">
+	  
+    <!-- IMPORTING SVG.JS-->
+	  
+    <script src = "../Libraries/svg.js"></script> 
+	  
+    <!-- IMPORTING JQUERY.JS -->
+	  
+    <script src = "../Libraries/jquery.js"></script>
+	  
+    <!--IMPORTING CANVAS.JS-->
+	  
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	  						
+    <!--HEADING AND BUTTONS-->
+	  
+    <div class="container-fluid">
       
-    
-    </body>
+		<div class = "row">
+        <div class = "col-md-4.5"></div>
+        <div class = "col-md-4.5 text-center">
+          <h2 class = "main-heading"><b>BERNOULLI'S &nbsp;EXPERIMENT</b></h2>
+        </div>
+		</div>
+      <div class = "row">
+        <div class = "col-md-3.25"></div>
+        <div class = "col-md-3.25 text-center">
+          <button type="button" id = "start" class="start btn btn-success">START</button>
+          <button type="button" id = "reset" class="reset btn btn-warning">RESET</button>
+          <button type="button" class="calc-button btn btn-primary" id = "calc-button">CALCULATIONS</button>
+        </div>
+      </div>
+		
+    </div>
+	  
+    <!-- EXPERIMENT SIMULATION  (INCLUDES LINES SETUP AND HORIZONTAL WATER ANIMATIONS) -->
+	  
+    <div id = "bernoulli-setup" class = "bernoulli-class"></div>
+	  
+    <!-- VERTICAL WATER ANIMATION DIVISIONS -->
+	  
+    <div id = "upward-animations">
+      <div id = "tankLeft" class = "tank-left"></div>
+      <div id = "verticalPipe1" class = "vertical-pipe1"></div>
+      <div id = "verticalPipe2" class = "vertical-pipe2"></div>
+      <div id = "verticalPipe3" class = "vertical-pipe3"></div>
+      <div id = "verticalPipe4" class = "vertical-pipe4"></div>
+      <div id = "tankRight" class = "tank-right"></div>
+      <div id = "measureTank" class = "measure-tank"></div>
+    </div>
+	  
+    <!-- CALCULATIONS SECTION-->
+	  
+    <div class = "container-fluid calculations">
+		
+      <div class="form-class" id="myForm">
+        <h2><b>Calculations</b></h2>
+        <form class="form-container">
+          <div class = "row">
+			  
+            <div class = "col-md-3">
+              <label for="volume"><b>Volume of water collected:</b></label>
+              <input type="number" placeholder="in cubic centimter (Reading 1)" class ="form-control form-rounded" id="volume" required>
+              <input type="number" placeholder="in cubic centimter (Reading 2)" class ="form-control form-rounded"  id="volume2" required>
+            </div>
+			  
+            <div class = "col-md-3">
+              <label for="time"><b>Time taken:</b></label>
+              <input type="number" placeholder="in seconds (Reading 1)" class ="form-control form-rounded" id="time" required>
+              <input type="number" placeholder="in seconds (Reading 2)" class ="form-control form-rounded"  id="time2" required>
+            </div>
+			  
+            <div class = "col-md-3">
+              <label for="area"><b>Cross sectional area of fluid flow:</b></label>
+              <input type="number" placeholder="in square centimeter (Reading 1)" class ="form-control form-rounded"  id="area" required>
+              <input type="number" placeholder="in square centimeter (Reading 2)" class ="form-control form-rounded"  id="area2" required>
+            </div>
+			  
+            <div class = "col-md-3">
+              <label for="pressure"><b>Pressure:</b></label>
+              <input type="number" placeholder="in newton per sq cm (Reading 1)" class ="form-control form-rounded" id="pressure" required>
+              <input type="number" placeholder="in newton per sq cm (Reading 2)" class ="form-control form-rounded" id="pressure2" required>
+            </div>
+			  
+          </div>
+			
+          <div class = "row">
+			  
+            <div class = "col-md-4"></div>
+            <div class = "col-md-4">	
+              <button type="button" class="btn" id="result"><b>CALCULATE!</b></button>
+              <button type="reset" class="btn clear-btn" id = "clear-btn"><b>CLEAR</b></button>
+            </div>
+			  
+          </div>
+          <br>
+			
+          <!-- GRAPH -->
+			
+          <div class = "row">
+            <div class = "col-md-3"></div>
+            <div class = "col-md-6">
+              <div id="chartContainer" style="height: 300px; width: 89%;"></div>
+            </div>
+          </div>
+        </form>
+      </div>
+		
+    </div>
+	  
+    <!-- LINKING SCRIPT.JS -->
+	  
+    <script src="script.js" type = "text/javascript"></script>
+	  
+  </body>
 </html>
