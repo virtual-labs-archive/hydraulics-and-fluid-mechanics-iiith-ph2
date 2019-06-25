@@ -1,100 +1,95 @@
+	
 
-		var degrees=360;
-		var looper;
+	function construct()
+	{
 
-
-		function rotat(el,speed)
-		{
-			var elem=document.getElementById(el);
-			elem.style.transform="rotate("+degrees+"deg)";
-			looper=setTimeout('rotat(\''+el+'\','+speed+')',speed);
-			degrees--;
-
-			if(degrees<1)
-				degrees=360;
-
-		}
-
-		// function draw()
-		// {
-		// var elem = document.getElementById('draw-shapes');
-		// var params = { width: 285, height: 200 };
-		// var two = new Two(params).appendTo(elem);
-
-		// // two has convenience methods to create shapes.
-		// var rect = two.makeRectangle(213, 100, 1000, 1000);
-
-		// //rect.fill = 'rgb(0, 0, 0)';
-		// //rect.opacity = 0.10;
-		// rect.Stroke='black';
-
-		// // Don't forget to tell two to render everything
-		// // to the screen
-
-
-		// 	var elem = document.getElementById('draw-shapes');
-		// 	var two = new Two({ fullscreen: true }).appendTo(elem);
-
-		// 	var rectA = two.makeRectangle(900, 400, 1500, 700);
-		// 	rectA.stroke = 'black';
-
-		// 	rectA.fill='grey';
-		// 	rectA.opacity=0.10;
-
-		// 	two.update();
-
-		// var d=SVG("draw-shapes").size(1500,1100);
-		// var rect=d.rect(1500,700).attr({
-		// 	'fill':'#000000',
-		// 	'stroke':'#000000',
-		// 	'stroke-width':'3px',
-		// 	'opacity':0.10
-		// });
-
-		// rect.x(300);
-		// rect.y(100);
+			var draw=window.value;
+			var v1=draw.polyline([[200,100],[350,100],[350,200]]).fill('none').stroke({width:2});
+			var v2=draw.polyline([[200,70],[380,70],[380,200]]).fill('none').stroke({width:2});
 			
-		// }
+			var v3=draw.polyline([[250,180],[250,400],[480,400],[480,180]]).fill('none').stroke({width:2});
+
+			var v4=draw.polyline([[350,400],[350,530],[600,530]]).fill('none').stroke({width:2});
+			var v5=draw.polyline([[380,400],[380,500],[600,500]]).fill('none').stroke({width:2});
+			var v6=draw.polyline([[900,515],[970,515],[980,515],[970,540],[900,515],[900,585],[900,595],[875,585],[900,515],[830,515],[820,515],[830,490],[900,515],[900,445],[900,435],[925,445],[900,515]]).fill('none').stroke({width:2});
+
+	}
 
 
-		function line()
-		{
-			var d=SVG("lines").size(1200,1200);
-			
-			var l1=d.line([[320,450],[500,450]]).stroke({width:2})
+	window.onload=function()
+	{
+		window.value=SVG("setup").size(1200,1200);
+		construct();
+	}	
 
-			var l2=d.line([[280,480],[500,480]]).stroke({width:2})
+	function reload()
+	{
+		alert("Simulation Interuppted!!");
+		location.reload();
+	}
 
-			var l3=d.line([[280,300],[280,480]]).stroke({width:2})
+	function animation()
+	{
 
-			var l4=d.line([[320,300],[320,450]]).stroke({width:2})
+			var draw=window.value;
+		
+			var v1 = draw.rect(0.1,30).attr ({
+			'fill': '#00B0EA', 
+			x: 200, 
+			y: 70
+			});
 
-			var l5=d.line([[400,300],[320,300]]).stroke({width:2})
+			v1.animate().size(180,30);
 
-			var l6=d.line([[200,300],[280,300]]).stroke({width:2})
 
-			var l7=d.line([[200,300],[200,100]]).stroke({width:2})
+			var v2 = draw.rect(30,0.01).attr({
+			'fill': '#00B0EA', 
+			x:350, 
+			y:100 
+			});
 
-			var l8=d.line([[400,300],[400,100]]).stroke({width:2})
+			v2.animate({
+				delay:'1s'
+			}).size(30,200);
 
-			// var l9=d.line([[800,490],[1000,490]]).stroke({width:2})
+			var v3 = draw.rect(30,0.01).attr({
+			'fill': '#00B0EA', 
+			x:350, 
+			y:400 
+			});
 
-			// var l10=d.line([[1000,490],[1000,200]]).stroke({width:2})
-		}
+			v3.animate({
+				delay:'3s'
+			}).size(30,130);
 
-		function stop()
-		{
-			clearTimeout(looper);
-		}
+			var v4 = draw.rect(0.01,30).attr({
+			'fill': '#00B0EA', 
+			x:380, 
+			y:500 
+			});
 
-		function start(el) {
+			v4.animate({
+				delay:'4s'
+			}).size(400,30);
 
-			rotat("img1",15);
-			document.getElementById(el.id).disabled = true;
-		}
+			var v5=draw.rect(230,0.01).attr({
+			'fill':'#00B0EA',
+			x:250,
+			y:180
+			});
 
-		function reset()
-		{
-			document.getElementById("b2").disabled = false;
+			v5.animate({
+				delay:'2s'
+			}).size(230,220);
 
-		}
+
+
+			$('#tankLeft')
+			.animate({'height': 0},6000)
+			.animate({'height': 150, 'top': 405}, 7000)
+
+			alert("Simulation Begins!!");
+
+			setTimeout(function(){
+ 			alert('Simulation Completed!!');},5000);
+	}

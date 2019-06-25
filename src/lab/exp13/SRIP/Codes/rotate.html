@@ -5,32 +5,20 @@
 	<script src="java.js"></script>
 	<script src="../Libraries/two.js"></script>
 	<script src="../Libraries/svg.js"></script>
-
+	<script src="../Libraries/jquery.js"></script>
 
 	<link rel="stylesheet" href="style.css">
+
+	<div id="switch">
+		<button id="start" type="button" onclick="animation()">START</button>
+		<button id="reset" type="button"onclick="reload()">RESET</button>
+		<button id="calc" type="button">CALCULATION</button>
+	</div>
+
 </head>
 
 <body>
-	<div class="box">
-
-		<div class="container">
-			<img id="img1" src="34542.png">
-		</div>
-
-
-		<div id="lines" class="container">
-			<script >
-				line();
-			</script>
-		</div>
-
-	</div>
-
-	<button type="button" id="b2" onclick="start(this)">START</butto>
-	<button type="button" id="b1" onclick="stop()">STOP</button>
-	<button type="button" id="b3" onclick="reset()">RESET</butto>
-
-
+	<div id="setup">
+	</div>	
 </body>
-
 </html>
