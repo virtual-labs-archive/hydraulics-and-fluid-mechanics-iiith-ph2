@@ -4,21 +4,73 @@
 	{
 
 			var draw=window.value;
-			var v1=draw.polyline([[200,100],[350,100],[350,200]]).fill('none').stroke({width:2});
-			var v2=draw.polyline([[200,70],[380,70],[380,200]]).fill('none').stroke({width:2});
-			
-			var v3=draw.polyline([[250,180],[250,400],[480,400],[480,180]]).fill('none').stroke({width:2});
 
-			var v4=draw.polyline([[350,400],[350,530],[600,530]]).fill('none').stroke({width:2});
-			var v5=draw.polyline([[380,400],[380,500],[600,500]]).fill('none').stroke({width:2});
-			var v6=draw.polyline([[900,515],[970,515],[980,515],[970,540],[900,515],[900,585],[900,595],[875,585],[900,515],[830,515],[820,515],[830,490],[900,515],[900,445],[900,435],[925,445],[900,515]]).fill('none').stroke({width:2});
+			var v1=draw.polyline([[800,500],[1100,500],[1100,510],[800,510],[800,500]]).stroke({width:2}).attr({
+				'fill':'#A3A09E'
+			});
+
+			var v2=draw.line([[800,500],[800,335]]).stroke({width:2});
+
+			var v12=draw.line([[800,295],[800,250]]).stroke({width:2});
+			
+			var v3=draw.line([[1100,500],[1100,250]]).stroke({width:2});
+			
+			var v4=draw.path('M 800 250 q 150 -350 300 0').fill('none').stroke({width:2});
+			
+			var v5=draw.circle(100).fill('none').stroke({width:2}).attr({
+				cx:948,
+				cy:250
+			});
+
+			var v6=draw.circle(90).fill('none').stroke({width:2}).attr({
+				cx:948,
+				cy:250
+			});
+
+			var v14=draw.circle(30).fill('#A3A09E').stroke({width:2}).attr({
+				cx:949,
+				cy:250
+			});
+
+
+
+			var v15=draw.polyline([[998,260],[1025,260],[998,240]]).stroke({width:2});
+
+			var v16=draw.polyline([[900,240],[873,240],[900,260]]).stroke({width:2});
+
+			var v17=draw.polyline([[955,200],[955,175],[935,202]]).stroke({width:2});
+
+			var v18=draw.polyline([[940,300],[940,325],[960,298]]).stroke({width:2});
+
+			// var v19=draw.polyline([[976,290],[998,305],[993,275]]).stroke({width:2});
+
+			// var v20=draw.polyline([[918,270	],[890,306],[918,250]]).stroke({width:2});
+			// var v7=draw.polyline([[905,225],[880,200],[]]).fill('none').stroke({width:2});
+
+			var v7=draw.polyline([[970,165],[970,140],[1100,140],[1100,150],[980,150],[980,165]]).fill('none').stroke({width:2});
+			
+			var v15=draw.polyline([[970,165],[960,171],[990,171],[980,165]]).stroke({width:2});
+
+			var v8=draw.polyline([[850,300],[780,290],[680,290]]).fill('none').stroke({width:2});
+			
+			var v9=draw.polyline([[850,330],[780,340],[680,340]]).fill('none').stroke({width:2});
+
+			// var v10=draw.polyline([[680,340],[650,330]]).fill('none').stroke({width:2});
+
+			
+			var v10=draw.path('M 680 340 Q 630 340 550 200').fill('none').stroke({width:2});
+			var v11=draw.path('M 680 290 Q 640 270 610 200').fill('none').stroke({width:2});
+
+			var v13=draw.polyline([[600,310],[780,310],[780,305],[790,315],[780,325],[780,320],[600,320]]).fill('none').stroke({width:2});
+
+			var v14=draw.polyline([[400,650],[400,510],[1250,510],[1250,650]]).fill('none').stroke({width:2});
 
 	}
 
 
 	window.onload=function()
 	{
-		window.value=SVG("setup").size(1200,1200);
+		window.value=SVG("setup").size(1800,1000);
 		construct();
 	}	
 
@@ -33,63 +85,44 @@
 
 			var draw=window.value;
 		
-			var v1 = draw.rect(0.1,30).attr ({
+			var v1 = draw.rect(0.1,50).attr ({
 			'fill': '#00B0EA', 
-			x: 200, 
-			y: 70
+			'fill-opacity':'0.7',			
+			x: 670, 
+			y: 290
 			});
 
-			v1.animate().size(180,30);
+			v1.animate().size(130,50);
 
-
-			var v2 = draw.rect(30,0.01).attr({
+			var v2 = draw.rect(0.1,40).attr ({
 			'fill': '#00B0EA', 
-			x:350, 
-			y:100 
+			'fill-opacity':'0.7',			
+			x: 800, 
+			y: 295
+
 			});
 
 			v2.animate({
 				delay:'1s'
-			}).size(30,200);
+			}).size(29,40);
 
-			var v3 = draw.rect(30,0.01).attr({
+
+			var v3 = draw.rect(0.1,30).attr ({
 			'fill': '#00B0EA', 
-			x:350, 
-			y:400 
+			'fill-opacity':'0.7',			
+			x: 829, 
+			y: 300
 			});
 
 			v3.animate({
-				delay:'3s'
-			}).size(30,130);
-
-			var v4 = draw.rect(0.01,30).attr({
-			'fill': '#00B0EA', 
-			x:380, 
-			y:500 
-			});
-
-			v4.animate({
-				delay:'4s'
-			}).size(400,30);
-
-			var v5=draw.rect(230,0.01).attr({
-			'fill':'#00B0EA',
-			x:250,
-			y:180
-			});
-
-			v5.animate({
 				delay:'2s'
-			}).size(230,220);
+			}).size(100,30);
+			
 
-
-
-			$('#tankLeft')
-			.animate({'height': 0},6000)
-			.animate({'height': 150, 'top': 405}, 7000)
+			
 
 			alert("Simulation Begins!!");
 
 			setTimeout(function(){
- 			alert('Simulation Completed!!');},5000);
+ 			alert('Simulation Completed!!');},3000);
 	}
