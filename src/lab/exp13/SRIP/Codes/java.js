@@ -1,4 +1,4 @@
-	
+	var img;
 
 	function construct()
 	{
@@ -60,43 +60,21 @@
 
 			var v13=draw.polyline([[600,310],[780,310],[780,305],[790,315],[780,325],[780,320],[600,320]]).fill('none').stroke({width:2});
 
-			var v14=draw.polyline([[400,650],[400,510],[1250,510],[1250,650]]).fill('none').stroke({width:2});
+			var v14=draw.polyline([[400,650],[400,510],[1250,510],[1250,650],[400,650]]).fill('none').stroke({width:2});
 	
-
-	}
-
-	var degrees=360;
-
-	function rotat(el,speed)
-	{
-
-		var looper;
-
-		el.style.transform="rotate("+degrees+"deg)";
-		looper=setTimeout('rotat(\''+el+'\','+speed+')',speed);
-
+			img = draw.image('34542.png');
+			img.size(135,135).move(880, 190);
 	}
 
 	window.onload=function()
 	{
-		window.value=SVG("setup").size(1800,1000);
+		window.value=SVG("setup").size(1800,800);
 		construct();
-		rotation();
 	}	
-
-	function rotation()
-	{
-		var draw=window.value;
-
-		var img = draw.image('34542.png');
-			img.size(135,135).move(880, 190);
-
-		rotat(img,1);
-	}
 
 	function reload()
 	{
-		alert("Simulation Interuppted!!");
+		// alert("Simulation Interuppted!!");
 
 		document.getElementById('start').disabled = true;
 
@@ -144,18 +122,22 @@
 			}).size(75,30);
 
 
-			// $('#container')
-		 //    .animate({
-		 //      'height': 0
-		 //    }, 2000)
+			$('#container')
+		    .animate({
+		      'height':170,
+		      'top':500	
+		    }, 7000)
 		 //    .animate({
 		 //      'height': 150,
 		 //      'top': 500
-			// }, 3000)
-						
+		// }, 3000);
+			
+			img.animate({
+			delay:'3s'
+			}).rotate(-50);
 
-			alert("Simulation Begins!!");
+			// alert("Simulation Begins!!");
 
-			setTimeout(function(){
- 			alert('Simulation Completed!!');},3000);
+			// setTimeout(function(){
+ 		// 	alert('Simulation Completed!!');},3000);
 	}

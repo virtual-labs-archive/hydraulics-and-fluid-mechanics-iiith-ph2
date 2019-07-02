@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Pelton Turbine Experiment	</title>
 	<h1>Pelton Turbine Experiment</h1>
 	<script src="java.js"></script>
 	<script src="../Libraries/two.js"></script>
@@ -20,6 +21,33 @@
 <body>
 	<div id="setup">
 		<div id="container"> </div>
+		<div id="fan"></div>
 	</div>	
+
+	<div id="calculation">
+		<h2>Calculations</h2><br>
+		
+		<form id="form">
+			<b>RATE OF WATER FLOW &nbsp&nbsp&nbsp &nbsp &nbsp &nbsp</b>
+			<input type="number" placeholder="in meter cube per second" required><br>
+
+			<b>WATER HEAD &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </b>
+			<input type="number" placeholder="in meter" required>
+			<br>
+
+			<b>REVOLUTION FREQUENCY&nbsp &nbsp</b>
+			<input type="number" placeholder="in revolutions per second" required>
+			<br>
+
+			<b>LENGTH OF THE HANDLE	&nbsp&nbsp &nbsp</b>
+			<input type="number" placeholder="in meter" required>
+			<br>
+
+			<b>MASS OF THE HANGER&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b>
+			<input type="number" placeholder="in meter" required>
+		</form>
+
+	</div>
+
 </body>
 </html>
