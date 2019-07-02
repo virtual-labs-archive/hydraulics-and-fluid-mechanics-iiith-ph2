@@ -17,22 +17,6 @@
 			
 			var v4=draw.path('M 800 250 q 150 -350 300 0').fill('none').stroke({width:2});
 			
-			// var v5=draw.circle(100).fill('none').stroke({width:2}).attr({
-			// 	cx:948,
-			// 	cy:250
-			// });
-
-			// var v6=draw.circle(90).fill('none').stroke({width:2}).attr({
-			// 	cx:948,
-			// 	cy:250
-			// });
-
-			// var v14=draw.circle(30).fill('#A3A09E').stroke({width:2}).attr({
-			// 	cx:949,
-			// 	cy:250
-			// });
-
-
 			// var v15=draw.polyline([[998,260],[1025,260],[998,240]]).stroke({width:2});
 
 			// var v16=draw.polyline([[900,240],[873,240],[900,260]]).stroke({width:2});
@@ -74,8 +58,6 @@
 
 	function reload()
 	{
-		// alert("Simulation Interuppted!!");
-
 		document.getElementById('start').disabled = true;
 
 		location.reload();
@@ -135,9 +117,47 @@
 			img.animate({
 			delay:'3s'
 			}).rotate(-50);
+	}
 
-			// alert("Simulation Begins!!");
+	function b()
+	{
+		var g=9.81;
+		var density=1000;
+		var pi=3.14159265359;
+	 	var Q=document.getElementById("form").elements["water-rate"].value;
+	 	var H=document.getElementById("form").elements["water-head"].value;
+	 	var n=document.getElementById("form").elements["revolution"].value;
+	 	var x=document.getElementById("form").elements["length"].value;
+	 	var m=document.getElementById("form").elements["mass"].value;
 
-			// setTimeout(function(){
- 		// 	alert('Simulation Completed!!');},3000);
+	 	var omega=2*pi*n;
+
+	 	try
+	 	{
+	 		if(Q==""||Q==null,H==""||H==null,n==""||n==null,x==""||x==null,m==""||m==null)
+	 		throw("Fill all the inputs");
+	 		
+	 		if(Q<=0||H<=0||n<=0||x<=0||m<=0)
+	 		throw("The input value should be positive");
+
+	 		var input_power=density*g*H*Q;
+
+	 		alert("The input power is "+input_power);
+
+	 		var output_power=parseFloat(omega)*m*x;
+
+	 		// alert(omega,m,x);
+
+	 		alert("The output power is "+output_power);
+
+	 		// var efficiency=output_power/input_power;
+
+	 		// alert("Efficiency of the Pelton Turbine is "+efficiency);
+	 	}
+
+	 	catch(e)
+	 	{
+	 		alert("Error: "+e);
+	 	}
+	 	
 	}

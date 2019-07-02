@@ -3,6 +3,7 @@
 <head>
 	<title>Pelton Turbine Experiment	</title>
 	<h1>Pelton Turbine Experiment</h1>
+	
 	<script src="java.js"></script>
 	<script src="../Libraries/two.js"></script>
 	<script src="../Libraries/svg.js"></script>
@@ -13,7 +14,7 @@
 	<div id="switch">
 		<button id="start" type="button" onclick="animation(this)">START</button>
 		<button id="reset" type="button" onclick="reload()">RESET</button>
-		<button id="calc" type="button">CALCULATION</button>
+		<button id="calc"><a href="#calculation-buttons">CALCULATION</a></button>
 	</div>
 
 </head>
@@ -26,26 +27,34 @@
 
 	<div id="calculation">
 		<h2>Calculations</h2><br>
-		
+
 		<form id="form">
 			<b>RATE OF WATER FLOW &nbsp&nbsp&nbsp &nbsp &nbsp &nbsp</b>
-			<input type="number" placeholder="in meter cube per second" required><br>
+			<input type="number" name="water-rate" placeholder="in meter cube per second" required><br>
 
 			<b>WATER HEAD &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </b>
-			<input type="number" placeholder="in meter" required>
+			<input type="number" name="water-head" placeholder="in meter" required>
 			<br>
 
 			<b>REVOLUTION FREQUENCY&nbsp &nbsp</b>
-			<input type="number" placeholder="in revolutions per second" required>
+			<input type="number" name="revolution" placeholder="in revolutions per second" required>
 			<br>
 
-			<b>LENGTH OF THE HANDLE	&nbsp&nbsp &nbsp</b>
-			<input type="number" placeholder="in meter" required>
+			<b>LENGTH OF THE HANDLE &nbsp&nbsp &nbsp</b>
+			<input type="number" name="length" placeholder="in meter" required>
 			<br>
 
 			<b>MASS OF THE HANGER&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b>
-			<input type="number" placeholder="in meter" required>
+			<input type="number" name="mass" placeholder="in meter" required>
 		</form>
+		
+		<div id="calculation-buttons">
+			<br><br>
+			<button id="submit" type="button" onclick="b()">SUBMIT</button>
+			<button id="erase" type="button" onclick="reload()">RESET</button>
+			<button id="plot" type="button" onclick="b()">PLOT GRAPH</button>
+			<br><br><br><br>
+		</div>
 
 	</div>
 
