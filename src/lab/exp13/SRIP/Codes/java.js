@@ -53,6 +53,7 @@
 	window.onload=function()
 	{
 		window.value=SVG("setup").size(1800,800);
+		document.getElementById('plot').disabled=true;
 		construct();
 	}	
 
@@ -103,12 +104,57 @@
 				delay:'2s'
 			}).size(75,30);
 
+			var v4=draw.rect(20,0.1).attr({
+			'fill': '#00B0EA', 
+			'fill-opacity':'0.7',			
+			x: 883, 
+			y: 330
+			});
 
-			$('#container')
-		    .animate({
-		      'height':170,
-		      'top':500	
-		    }, 7000)
+			v4.animate({
+				delay:'3s'
+			}).size(20,170);
+
+
+			var v5=draw.rect(20,0.1).attr({
+			'fill': '#00B0EA', 
+			'fill-opacity':'0.7',			
+			x: 903, 
+			y: 310
+			});
+
+			v5.animate({
+				delay:'3s'
+			}).size(20,190);
+
+
+			var v6=draw.rect(60,0.1).attr({
+			'fill': '#00B0EA', 
+			'fill-opacity':'0.7',			
+			x: 923, 
+			y: 317
+			});
+
+			v6.animate({
+				delay:'3s'
+			}).size(60,183);
+
+			var v7=draw.rect(20,0.1).attr({
+			'fill': '#00B0EA', 
+			'fill-opacity':'0.7',			
+			x: 983, 
+			y: 305
+			});
+
+			v7.animate({
+				delay:'3s'
+			}).size(20,195);
+
+			// $('#container')
+		 //    .animate({
+		 //      'height':170,
+		 //      'top':500	
+		 //    }, 7000)
 		 //    .animate({
 		 //      'height': 150,
 		 //      'top': 500
@@ -119,45 +165,93 @@
 			}).rotate(-50);
 	}
 
+
 	function b()
 	{
 		var g=9.81;
 		var density=1000;
 		var pi=3.14159265359;
-	 	var Q=document.getElementById("form").elements["water-rate"].value;
-	 	var H=document.getElementById("form").elements["water-head"].value;
-	 	var n=document.getElementById("form").elements["revolution"].value;
-	 	var x=document.getElementById("form").elements["length"].value;
-	 	var m=document.getElementById("form").elements["mass"].value;
+
+		var Q,Q2,H,H2,n,n2,x,x2,n,m2;
+		
+	 	Q=document.getElementById("form").elements["water-rate1"].value;
+	 	
+	 	Q2=document.getElementById("form").elements["water-rate2"].value;
+	 
+	 	H=document.getElementById("form").elements["water-head1"].value;
+	 	
+	 	H2=document.getElementById("form").elements["water-head2"].value;
+	 	
+	 	n=document.getElementById("form").elements["revolution1"].value;
+
+	 	n2=document.getElementById("form").elements["revolution2"].value;
+
+	 	x=document.getElementById("form").elements["length1"].value;
+
+	 	x2=document.getElementById("form").elements["length2"].value;
+
+	 	m=document.getElementById("form").elements["mass1"].value;
+	 	
+	 	m2=document.getElementById("form").elements["mass2"].value;
 
 	 	var omega=2*pi*n;
+		var omega2=2*pi*n2;
 
 	 	try
-	 	{
-	 		if(Q==""||Q==null,H==""||H==null,n==""||n==null,x==""||x==null,m==""||m==null)
-	 		throw("Fill all the inputs");
-	 		
-	 		if(Q<=0||H<=0||n<=0||x<=0||m<=0)
-	 		throw("The input value should be positive");
+		{
+		 		var input_power=density*g*H*Q;
 
-	 		var input_power=density*g*H*Q;
+		 		input_power=parseFloat(input_power)/1000;
 
-	 		alert("The input power is "+input_power);
+		 		var output_power=parseFloat(omega)*m*x;
 
-	 		var output_power=parseFloat(omega)*m*x;
 
-	 		// alert(omega,m,x);
+		 		var input_power2=density*g*H2*Q2;
 
-	 		alert("The output power is "+output_power);
+		 		input_power2=parseFloat(input_power2)/1000;
 
-	 		// var efficiency=output_power/input_power;
+		 		var output_power2=parseFloat(omega2)*m2*x2;
 
-	 		// alert("Efficiency of the Pelton Turbine is "+efficiency);
-	 	}
+		 		var efficiency=parseFloat(output_power-output_power2)/parseFloat(input_power-input_power2); 
 
-	 	catch(e)
-	 	{
-	 		alert("Error: "+e);
-	 	}
-	 	
+		 		// alert("The input power is "+input_power);
+		 		// alert("The output power is "+output_power);
+		 		// alert("Efficiency of the Pelton Turbine is "+efficiency);
+
+		 		
+		 		var chart = new CanvasJS.Chart("chartContainer",
+				{
+
+				    title:{
+				    
+				    	text: "Efficiency of the Pelton Turbine"
+				    },
+
+				    data: 
+				    [
+				      {
+				        type: "line",
+
+				        dataPoints: 
+				        [
+				        { x:input_power , y:output_power   },
+				        { x:input_power2 ,y:output_power2  }
+				        ]
+				      }
+				    ]
+				});
+
+				chart.render();
+
+		 }
+
+		catch(e)
+		{
+		 		alert("Error: "+e);
+		}
+	}
+
+	function enable() 
+	{
+		document.getElementById('plot').disabled=false;
 	}

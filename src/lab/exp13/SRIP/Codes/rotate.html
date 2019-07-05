@@ -4,10 +4,10 @@
 	<title>Pelton Turbine Experiment	</title>
 	<h1>Pelton Turbine Experiment</h1>
 	
-	<script src="java.js"></script>
 	<script src="../Libraries/two.js"></script>
 	<script src="../Libraries/svg.js"></script>
 	<script src="../Libraries/jquery.js"></script>
+	<script src="../Libraries/canvasjs.min.js"></script>
 
 	<link rel="stylesheet" href="style.css">
 
@@ -25,38 +25,68 @@
 		<div id="fan"></div>
 	</div>	
 
+	<br><br><br>
+
 	<div id="calculation">
-		<h2>Calculations</h2><br>
+		<h2>Calculations</h2>
 
-		<form id="form">
-			<b>RATE OF WATER FLOW &nbsp&nbsp&nbsp &nbsp &nbsp &nbsp</b>
-			<input type="number" name="water-rate" placeholder="in meter cube per second" required><br>
+		<form id="form" onsubmit="return false">
+			
+			<b>RATE OF WATER FLOW :</b>
+			<input type="number" id="water-rate1" name="water-rate1" placeholder="in meter cube per second (reading-1)" min="0" required>
 
-			<b>WATER HEAD &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </b>
-			<input type="number" name="water-head" placeholder="in meter" required>
-			<br>
-
-			<b>REVOLUTION FREQUENCY&nbsp &nbsp</b>
-			<input type="number" name="revolution" placeholder="in revolutions per second" required>
-			<br>
-
-			<b>LENGTH OF THE HANDLE &nbsp&nbsp &nbsp</b>
-			<input type="number" name="length" placeholder="in meter" required>
-			<br>
-
-			<b>MASS OF THE HANGER&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b>
-			<input type="number" name="mass" placeholder="in meter" required>
-		</form>
-		
-		<div id="calculation-buttons">
+			<input type="number" id="water-rate2" name="water-rate2" placeholder="in meter cube per second (reading-2)" min="0" required>
 			<br><br>
-			<button id="submit" type="button" onclick="b()">SUBMIT</button>
-			<button id="erase" type="button" onclick="reload()">RESET</button>
+
+			<b>WATER HEAD :</b>
+			<input type="number" id="water-head1" name="water-head1" placeholder="in meter (reading-1)" min="0" required>
+
+			<input type="number" id="water-head2" name="water-head2" placeholder="in meter (reading-2)" min="0" required>
+			<br><br>
+
+			<b>REVOLUTION FREQUENCY :</b>
+			<input type="number" id="revolution1" name="revolution1" placeholder="in revolutions per second (reading-1)" min="0" required>
+
+			<input type="number" id="revolution2" name="revolution2" placeholder="in revolutions per second (reading-2)" min="0" required>
+			<br><br>
+
+			<b>LENGTH OF THE HANDLE :</b>
+			<input type="number" id="length1" name="length1" placeholder="in meter (reading-1)" min="0" required>
+
+			<input type="number" id="length2" name="length2" placeholder="in meter (reading-2)" min="0" required>
+			<br><br>
+
+			<b>MASS OF THE HANGER :</b>
+			<select id="mass1" name="mass1">
+				<option value="0.5">0.5 KG</option>
+				<option value="1.0">1.0 KG</option>
+				<option value="1.5">1.5 KG</option>
+				<option value="2.0">2.0 KG</option>
+			</select>
+
+			<select id="mass2" name="mass2">
+				<option value="0.5">0.5 KG</option>
+				<option value="1.0">1.0 KG</option>
+				<option value="1.5">1.5 KG</option>
+				<option value="2.0">2.0 KG</option>
+			</select>
+
+			<div id="calculation-buttons">
+			<br><br><br>
+			<input type="submit" id="submit" value="SUBMIT" name="Submit" onclick="enable()">      
+			<button id="reset" type="button" onclick="reload()">RESET</button>
 			<button id="plot" type="button" onclick="b()">PLOT GRAPH</button>
-			<br><br><br><br>
+
+			<br><br><br><br><br><br><br>
 		</div>
 
+		</form>
 	</div>
 
+	<div id="chartContainer"></div>
+
 </body>
+
+<script src="java.js"></script>
+
 </html>
