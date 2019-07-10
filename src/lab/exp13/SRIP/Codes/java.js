@@ -189,9 +189,9 @@ function construct() {
         width: 2
     });
 
-    var v22 = draw.polyline([
-        []
-    ])
+    // var v22 = draw.polyline([
+    //     []
+    // ])
 
     img = draw.image('34542.png');
     img.size(135, 135).move(880, 190);
@@ -224,110 +224,110 @@ function animation(btn) {
 
     v1.animate({
         delay: '1s'
-    }).size(130, 50);
+    }).size(117, 50);
 
-    var v2 = draw.rect(0.1, 40).attr({
+    var v2 = draw.rect(0.1, 45).attr({
         'fill': '#00B0EA',
         // 'fill-opacity':'0.7',			
-        x: 800,
-        y: 295
+        x: 785,
+        y: 294
 
     });
 
     v2.animate({
-        delay: '1.5s'
-    }).size(29, 40);
+        delay: '2s'
+    }).size(29, 42);
 
 
-    var v3 = draw.rect(0.1, 30).attr({
+    var v3 = draw.rect(0.1, 35).attr({
         'fill': '#00B0EA',
         // 'fill-opacity':'0.7',			
-        x: 829,
-        y: 300
+        x: 800,
+        y: 298
     });
 
     v3.animate({
-        delay: '1.75s'
-    }).size(77, 30);
+        delay: '2.75s'
+    }).size(110, 35);
 
-    var v8 = draw.rect(0.1, 15).attr({
+    var v8 = draw.rect(0.1, 18).attr({
         'fill': '#00B0EA',
         // 'fill-opacity':'0.7',			
-        x: 900,
-        y: 300
-    });
-
-    v8.animate({
-        delay: '2.25s'
-    }).size(12, 15);
-
-    var v9 = draw.rect(0.1, 15).attr({
-        'fill': '#00B0EA',
-        // 'fill-opacity':'0.7',			
-        x: 900,
+        x: 910,
         y: 315
     });
 
-    v9.animate({
-        delay: '2.25s'
-    }).size(33, 15);
+    v8.animate({
+        delay: '3.65s'
+    }).size(15, 18);
 
-    var v10 = draw.rect(0.1, 9).attr({
+    var v9 = draw.rect(0.1, 17).attr({
         'fill': '#00B0EA',
         // 'fill-opacity':'0.7',			
-        x: 933,
-        y: 321
+        x: 920,
+        y: 316
+    });
+
+    v9.animate({
+        delay: '4.25s'
+    }).size(63, 17);
+
+    var v10 = draw.rect(0.1, 28).attr({
+        'fill': '#00B0EA',
+        // 'fill-opacity':'0.7',			
+        x: 975,
+        y: 305
     });
 
     v10.animate({
-        delay: '2.5s'
-    }).size(33, 9);
+        delay: '5s'
+    }).size(20, 28);
 
-    var v4 = draw.rect(20, 0.1).attr({
-        'fill': '#00B0EA',
-        // 'fill-opacity':'0.7',			
-        x: 883,
-        y: 330
-    });
+    // var v4 = draw.rect(20, 0.1).attr({
+    //     'fill': '#00B0EA',
+    //     // 'fill-opacity':'0.7',			
+    //     x: 883,
+    //     y: 330
+    // });
 
-    v4.animate({
-        delay: '3s'
-    }).size(20, 168);
+    // v4.animate({
+    //     delay: '3s'
+    // }).size(20, 168);
 
 
-    var v5 = draw.rect(20, 0.1).attr({
+    // var v5 = draw.rect(20, 0.1).attr({
+    //     'fill': '#00B0EA',
+    //     // 'fill-opacity':'0.7',			
+    //     x: 903,
+    //     y: 310
+    // });
+
+    // v5.animate({
+    //     delay: '3s'
+    // }).size(20, 188);
+
+
+    var v6 = draw.rect(80, 0.1).attr({
         'fill': '#00B0EA',
         // 'fill-opacity':'0.7',			
         x: 903,
-        y: 310
-    });
-
-    v5.animate({
-        delay: '3s'
-    }).size(20, 188);
-
-
-    var v6 = draw.rect(60, 0.1).attr({
-        'fill': '#00B0EA',
-        // 'fill-opacity':'0.7',			
-        x: 923,
         y: 317
     });
 
     v6.animate({
-        delay: '3s'
-    }).size(60, 181);
+        delay: '5.25s'
+    }).size(80, 181);
 
-    var v7 = draw.rect(20, 0.1).attr({
-        'fill': '#00B0EA',
-        // 'fill-opacity':'0.7',			
-        x: 983,
-        y: 305
-    });
+    // var v7 = draw.rect(20, 0.1).attr({
+    //     'fill': '#00B0EA',
+    //     // 'fill-opacity':'0.7',			
+    //     x: 983,
+    //     y: 305
+    // });
 
-    v7.animate({
-        delay: '3s'
-    }).size(20, 193);
+    // v7.animate({
+    //     delay: '3s'
+    // }).size(20, 193);
 
     var v8 = draw.rect(49, 0.1).attr({
         'fill': '#00B0EA',
@@ -337,15 +337,17 @@ function animation(btn) {
 
     v8.animate().size(49, 140);
 
-    $('#container').delay(2000)
+    $('#container').delay(5000)
         .animate({
             'height': 100,
             'top': 523
-        }, 4000);
+        }, 2500);
+
+
 
     img.animate({
-        delay: '3s'
-    }).rotate(-50);
+        delay: '3.75s'
+    }).rotate(-70);
 }
 
 
