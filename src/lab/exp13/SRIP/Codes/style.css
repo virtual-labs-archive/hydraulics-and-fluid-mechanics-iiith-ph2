@@ -1,6 +1,6 @@
 h1{
 	text-align: center;
-	font-size: 60px;
+	font-size: 40px;
 }
 
 #start{
@@ -34,10 +34,10 @@ h1{
 	width: 298px;
 	background-color: #00B0EA;
 	height:50px;
-	opacity:0.7;
+	/*opacity:0.7;*/
 	position: absolute;
 	left: 809px;
-	top: 622px;
+	top: 573px;
 }
 
 #water-rate1
