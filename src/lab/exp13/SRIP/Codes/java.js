@@ -315,7 +315,7 @@ function animation(btn) {
     });
 
     v6.animate({
-        delay: '5.25s'
+        delay: '4.5s'
     }).size(80, 181);
 
     // var v7 = draw.rect(20, 0.1).attr({
