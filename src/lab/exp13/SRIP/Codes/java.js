@@ -37,9 +37,17 @@ function construct() {
         width: 2
     });
 
-    var v4 = draw.path('M 800 250 q 150 -350 300 0').fill('none').stroke({
-        width: 2
-    });
+    // var v4 = draw.path('M 800 250 q 150 -350 300 0').fill('none').stroke({
+    //     width: 2
+    // });
+
+    // var v5=draw.path('M800,50 a1,1 0 0,0 270,0').fill('none').stroke({
+    // 	width:2
+    // });
+
+	var v5=draw.path('M 800 250 A 100 100 0 0 1 1100 250').fill('none').stroke({
+    	width:2
+    })
 
     // var v15=draw.polyline([[998,260],[1025,260],[998,240]]).stroke({width:2});
 
@@ -315,7 +323,7 @@ function animation(btn) {
     });
 
     v6.animate({
-        delay: '4.5s'
+        delay: '5s'
     }).size(80, 181);
 
     // var v7 = draw.rect(20, 0.1).attr({
