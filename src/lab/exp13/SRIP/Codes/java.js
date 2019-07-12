@@ -193,7 +193,7 @@ function construct() {
     //     []
     // ])
 
-    img = draw.image('34542.png');
+    img = draw.image('pelton.jpg');
     img.size(135, 135).move(880, 190);
 }
 
@@ -339,7 +339,7 @@ function animation(btn) {
 
     $('#container').delay(5000)
         .animate({
-            'height': 100,
+            'height':'+=50px',
             'top': 523
         }, 2500);
 
