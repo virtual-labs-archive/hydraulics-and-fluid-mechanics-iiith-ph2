@@ -197,10 +197,6 @@ function construct() {
         width: 2
     });
 
-    // var v22 = draw.polyline([
-    //     []
-    // ])
-
     img = draw.image('pelton.jpg');
     img.size(135, 135).move(880, 190);
 }
@@ -348,7 +344,7 @@ function animation(btn) {
     $('#container').delay(5000)
         .animate({
             'height':'+=50px',
-            'top': 523
+            'top': 525
         }, 2500);
 
 
