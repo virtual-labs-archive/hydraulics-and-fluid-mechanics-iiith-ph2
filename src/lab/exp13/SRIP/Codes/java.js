@@ -219,18 +219,55 @@ function animation(btn) {
 
     var draw = window.value;
 
-    var v1 = draw.rect(0.1, 50).attr({
+    // construct();
+
+    var v0 = draw.rect(48, 0.1).attr({
+        'fill': '#00B0EA',
+        x: 631,
+        y: 200
+    });
+
+    v0.animate().size(48, 139);
+
+    v0.animate({
+        delay:'7s'
+    }).size(48,0.1);
+
+
+     var v_0 = draw.rect(48, 0.1).attr({
+        'fill': '#FFFFFF',
+        x: 631,
+        y: 200
+    });
+
+    v_0.animate({
+        delay:'7s'
+    }).size(48, 139);
+
+
+    var v1 = draw.rect(0.01, 48).attr({
         'fill': '#00B0EA',
         // 'fill-opacity':'0.7',			
-        x: 670,
-        y: 290
+        x: 675,
+        y: 291
     });
 
     v1.animate({
         delay: '1s'
-    }).size(117, 50);
+    }).size(112, 48);
 
-    var v2 = draw.rect(0.1, 45).attr({
+    var v_1 = draw.rect(0.01, 48).attr({
+        'fill': '#FFFFFF',
+        // 'fill-opacity':'0.7',            
+        x: 670,
+        y: 291
+    });
+
+    v_1.animate({
+        delay: '8s'
+    }).size(117, 48);
+
+    var v2 = draw.rect(0.00001, 45).attr({
         'fill': '#00B0EA',
         // 'fill-opacity':'0.7',			
         x: 785,
@@ -243,7 +280,22 @@ function animation(btn) {
     }).size(29, 42);
 
 
-    var v3 = draw.rect(0.1, 35).attr({
+    var v_2 = draw.rect(0.0001, 45).attr({
+        'fill': '#FFFFFF',
+        // 'fill-opacity':'0.7',            
+        x: 783,
+        y: 294
+
+    });
+
+    v_2.animate({
+        delay: '9s'
+    }).size(31, 42);
+
+
+    construct();
+
+    var v3 = draw.rect(0.0001, 35).attr({
         'fill': '#00B0EA',
         // 'fill-opacity':'0.7',			
         x: 800,
@@ -254,92 +306,98 @@ function animation(btn) {
         delay: '2.75s'
     }).size(110, 35);
 
-    var v8 = draw.rect(0.1, 18).attr({
+    var v_3 = draw.rect(0.0001, 38).attr({
+        'fill': '#FFFFFF',
+        // 'fill-opacity':'0.7',            
+        x: 798,
+        y: 297
+    });
+
+    v_3.animate({
+        delay: '9.75s'
+    }).size(112, 38);
+
+
+    // construct();
+
+    var v4 = draw.rect(0.1, 18).attr({
         'fill': '#00B0EA',
         // 'fill-opacity':'0.7',			
         x: 910,
         y: 315
     });
 
-    v8.animate({
+    v4.animate({
         delay: '3.65s'
     }).size(15, 18);
 
-    var v9 = draw.rect(0.1, 17).attr({
+
+    // construct();
+
+    var v_4 = draw.rect(0.001, 18).attr({
+        'fill': '#FFFFFF',
+        // 'fill-opacity':'0.7',            
+        x: 910,
+        y: 315
+    });
+
+    v_4.animate({
+        delay: '9.65s'
+    }).size(15, 18);
+
+
+
+    var v5 = draw.rect(0.1, 17).attr({
         'fill': '#00B0EA',
         // 'fill-opacity':'0.7',			
         x: 920,
         y: 316
     });
 
-    v9.animate({
+    v5.animate({
         delay: '4.25s'
     }).size(63, 17);
 
-    var v10 = draw.rect(0.1, 28).attr({
-        'fill': '#00B0EA',
-        // 'fill-opacity':'0.7',			
-        x: 975,
-        y: 305
+
+    // construct();
+
+    var v_5 = draw.rect(0.1, 17).attr({
+        'fill': '#FFFFFF',
+        // 'fill-opacity':'0.7',            
+        x: 920,
+        y: 316
     });
 
-    v10.animate({
-        delay: '5s'
-    }).size(20, 28);
-
-    // var v4 = draw.rect(20, 0.1).attr({
-    //     'fill': '#00B0EA',
-    //     // 'fill-opacity':'0.7',			
-    //     x: 883,
-    //     y: 330
-    // });
-
-    // v4.animate({
-    //     delay: '3s'
-    // }).size(20, 168);
+    v_5.animate({
+        delay: '10.25s'
+    }).size(63, 17);
 
 
-    // var v5 = draw.rect(20, 0.1).attr({
-    //     'fill': '#00B0EA',
-    //     // 'fill-opacity':'0.7',			
-    //     x: 903,
-    //     y: 310
-    // });
-
-    // v5.animate({
-    //     delay: '3s'
-    // }).size(20, 188);
-
-
-    var v6 = draw.rect(80, 0.1).attr({
+    var v7 = draw.rect(80, 0.1).attr({
         'fill': '#00B0EA',
         // 'fill-opacity':'0.7',			
         x: 903,
         y: 317
     });
 
-    v6.animate({
+    v7.animate({
         delay: '5s'
     }).size(80, 181);
 
-    // var v7 = draw.rect(20, 0.1).attr({
-    //     'fill': '#00B0EA',
-    //     // 'fill-opacity':'0.7',			
-    //     x: 983,
-    //     y: 305
-    // });
+    // construct();
 
-    // v7.animate({
-    //     delay: '3s'
-    // }).size(20, 193);
-
-    var v8 = draw.rect(49, 0.1).attr({
-        'fill': '#00B0EA',
-        x: 630,
-        y: 200
+    var v_7 = draw.rect(82, 0.1).attr({
+        'fill': '#FFFFFF',
+        // 'fill-opacity':'0.7',            
+        x: 902,
+        y: 316
     });
 
-    v8.animate().size(49, 140);
+    v_7.animate({
+        delay: '10.75s'
+    }).size(82, 84);
+
+
 
     $('#container').delay(5000)
         .animate({
@@ -348,10 +406,23 @@ function animation(btn) {
         }, 2500);
 
 
+    $('#container').delay(4000)
+        .animate({
+            'height':'+=30px',
+             'top':495
+        },2500);
+
+    // construct();
 
     img.animate({
         delay: '3.75s'
     }).rotate(-70);
+
+    
+    img.animate({
+        delay: '0s'
+    }).rotate(-80);
+
 }
 
 
