@@ -3,11 +3,12 @@ h1
 {
 	text-align: center;
     margin-right: 15px;
- }
+}
 
- #setup{
- 	margin-left: 100px;
- }
+#setup{
+	margin-left: 60px;
+  margin-top: 60px;
+}
 
 #start{
   display: inline-block;
@@ -33,14 +34,42 @@ h1
 	font-size: 15px;
 }
 
+
+#progressbar {
+    background-color: black;
+    border-radius: 8px;
+    padding: 3px;
+    width: 400px;
+}
+
+#progressbar div {
+    background-color: #0063C6;
+    width: 80%;
+    height: 10px;
+    border-radius: 5px;
+    animation:loadbar 5s;
+}
+
+@keyframes loadbar {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 80%;
+    }
+}
+
+
+
+
 #container{
 	width: 298px;
 	background-color: #00B0EA;
 	height:50px;
 	/*opacity:0.7;*/
 	position: absolute;
-	left: 901px;
-	top: 575px;
+	left: 861px;
+	top: 635px;
 }
 
 #water-rate1

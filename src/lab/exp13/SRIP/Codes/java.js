@@ -10,10 +10,8 @@ function construct() {
         [1100, 510],
         [800, 510],
         [800, 500]
-    ]).stroke({
+    ]).fill('#A3A09E').stroke({
         width: 2
-    }).attr({
-        'fill': '#A3A09E'
     });
 
     var v2 = draw.line([
@@ -23,7 +21,7 @@ function construct() {
         width: 2
     });
 
-    var v12 = draw.line([
+    var v3 = draw.line([
         [800, 295],
         [800, 250]
     ]).stroke({
@@ -36,14 +34,6 @@ function construct() {
     ]).stroke({
         width: 2
     });
-
-    // var v4 = draw.path('M 800 250 q 150 -350 300 0').fill('none').stroke({
-    //     width: 2
-    // });
-
-    // var v5=draw.path('M800,50 a1,1 0 0,0 270,0').fill('none').stroke({
-    // 	width:2
-    // });
 
 	var v5=draw.path('M 800 250 A 100 100 0 0 1 1100 250').fill('none').stroke({
     	width:2
@@ -59,18 +49,28 @@ function construct() {
 
     // var v19=draw.polyline([[976,290],[998,305],[993,275]]).stroke({width:2});
 
-    var v7 = draw.polyline([
+    var v6 = draw.polyline([
         [970, 165],
-        [970, 140],
-        [1100, 140],
-        [1100, 150],
+        [970, 145],
+        [1150,145],
+        [1150,150],
         [980, 150],
         [980, 165]
-    ]).fill('none').stroke({
+    ]).fill('#A3A09E').stroke({
         width: 2
     });
 
-    var v15 = draw.polyline([
+    var v7=draw.polyline([
+        [1150,100],
+        [1160,100],
+        [1160,600],
+        [1150,600],
+        [1150,100]
+    ]).fill('#A3A09E').stroke({
+        width:2
+    });
+
+    var v8 = draw.polyline([
         [970, 165],
         [960, 171],
         [990, 171],
@@ -79,7 +79,7 @@ function construct() {
         width: 2
     });
 
-    var v8 = draw.polyline([
+    var v9 = draw.polyline([
         [850, 300],
         [780, 290],
         [680, 290]
@@ -87,7 +87,7 @@ function construct() {
         width: 2
     });
 
-    var v9 = draw.polyline([
+    var v10 = draw.polyline([
         [850, 330],
         [780, 340],
         [680, 340]
@@ -95,14 +95,8 @@ function construct() {
         width: 2
     });
 
-    // var v10=draw.polyline([[680,340],[650,330]]).fill('none').stroke({width:2});
 
-
-    // var v10=draw.path('M 680 340 Q 630 340 550 200').fill('none').stroke({width:2});
-
-    // var v11=draw.path('M 680 290 Q 640 270 610 200').fill('none').stroke({width:2});
-
-    var v10 = draw.polyline([
+    var v11 = draw.polyline([
         [680, 340],
         [630, 340],
         [630, 180]
@@ -110,7 +104,7 @@ function construct() {
         width: 2
     });
 
-    var v11 = draw.polyline([
+    var v12 = draw.polyline([
         [680, 290],
         [680, 180]
     ]).fill('none').stroke({
@@ -130,75 +124,156 @@ function construct() {
         width: 2
     });
 
-    // var v14=draw.polyline([[400,650],[400,510],[1250,510],[1250,650],[400,650]]).fill('none').stroke({width:2});
-
-    var v14 = draw.polyline([
-        [1200, 580],
-        [450, 580],
-        [650, 400],
-        [800, 400]
-    ]).fill('none').stroke({
-        width: 2
-    });
-    var v15 = draw.polyline([
-        [1100, 400],
-        [1350, 400],
-        [1200, 580]
-    ]).fill('none').stroke({
-        width: 2
+    var v14=draw.polyline([
+        [615,200],
+        [615,230],
+        [695,230],
+        [695,200],
+        [615,200]
+    ]).fill('#A3A09E').stroke({
+            width:2
     });
 
-    var v16 = draw.polyline([
-        [450, 580],
-        [450, 600],
-        [1200, 600],
-        [1200, 580]
-    ]).fill('none').stroke({
-        width: 2
-    });
-    var v17 = draw.polyline([
-        [1200, 600],
-        [1350, 420],
-        [1350, 400]
-    ]).fill('none').stroke({
-        width: 2
+    var v15=draw.polyline([
+        [615,213],
+        [560,213],
+        [560,217],
+        [615,217]
+    ]).fill('#A3A09E').stroke({
+        width:2
     });
 
-    var v18 = draw.polyline([
-        [500, 600],
-        [500, 760],
-        [520, 760],
-        [520, 600]
-    ]).fill('none').stroke({
-        width: 2
-    });
-    var v19 = draw.polyline([
-        [630, 600],
-        [630, 670],
-        [650, 670],
-        [650, 600]
-    ]).fill('none').stroke({
-        width: 2
-    });
-    var v20 = draw.polyline([
-        [1130, 600],
-        [1130, 760],
-        [1150, 760],
-        [1150, 600]
-    ]).fill('none').stroke({
-        width: 2
-    });
-    var v21 = draw.polyline([
-        [1310, 467],
-        [1310, 600],
-        [1330, 600],
-        [1330, 442]
-    ]).fill('none').stroke({
-        width: 2
+    var v16=draw.polyline([
+        [560,213],
+        [560,100],
+        [550,100],
+        [550,600],
+        [560,600],
+        [560,213]
+    ]).fill('#A3A09E').stroke({
+        width:2
     });
 
-    img = draw.image('pelton.jpg');
-    img.size(135, 135).move(880, 190);
+    var v17=draw.polyline([
+        [750,600],
+        [750,510],
+        [1140,510],
+        [1140,600]
+    ]).fill('none').stroke({
+        width:2
+    });
+
+    var v18=draw.polyline([
+        [1150,250],
+        [1150,260],
+        [1035,260],
+        [1035,250],
+        [1150,250]
+    ]).fill('#A3A09E').stroke({
+        width:2
+    });
+
+    var v19=draw.polyline([
+        [400,600],
+        [1300,600]
+    ]).stroke({
+        width:2
+    });
+
+    // var v18=draw.circle().attr({
+    //     cx:1020,
+    //     cy:148,
+    //     r:10
+    // }).fill('none').stroke({
+    //         width:5
+    // }).attr({
+    //     stroke:' #e82a2a '
+    // });
+
+    // var v13 = draw.polyline([
+    //     [1200, 580],
+    //     [450, 580],
+    //     [650, 400],
+    //     [800, 400]
+    // ]).fill('none').stroke({
+    //     width: 2
+    // });
+
+    // var v14 = draw.polyline([
+    //     [1100, 400],
+    //     [1350, 400],
+    //     [1200, 580]
+    // ]).fill('none').stroke({
+    //     width: 2
+    // });
+
+    // var v15 = draw.polyline([
+    //     [450, 580],
+    //     [450, 600],
+    //     [1200, 600],
+    //     [1200, 580]
+    // ]).fill('none').stroke({
+    //     width: 2
+    // });
+
+    // var v16 = draw.polyline([
+    //     [1200, 600],
+    //     [1350, 420],
+    //     [1350, 400]
+    // ]).fill('none').stroke({
+    //     width: 2
+    // });
+
+    // var v17 = draw.polyline([
+    //     [500, 600],
+    //     [500, 760],
+    //     [520, 760],
+    //     [520, 600]
+    // ]).fill('none').stroke({
+    //     width: 2
+    // });
+
+
+    // var v18 = draw.polyline([
+    //     [630, 600],
+    //     [630, 670],
+    //     [650, 670],
+    //     [650, 600]
+    // ]).fill('none').stroke({
+    //     width: 2
+    // });
+
+
+    // var v19 = draw.polyline([
+    //     [1130, 600],
+    //     [1130, 760],
+    //     [1150, 760],
+    //     [1150, 600]
+    // ]).fill('none').stroke({
+    //     width: 2
+    // });
+
+
+    // var v20 = draw.polyline([
+    //     [1310, 467],
+    //     [1310, 600],
+    //     [1330, 600],
+    //     [1330, 442]
+    // ]).fill('none').stroke({
+    //     width: 2
+    // });
+
+
+    img = draw.image('images/pelton.jpg');
+    img.size(130, 130).move(878, 190);
+
+
+    img2 = draw.image('images/meter.jpeg');
+    img2.size(30,28).move(640, 201);
+
+    img3=draw.image("images/water.jpg");
+    img3.size(65,65).move(705,224);
+
 }
 
 window.onload = function() {
@@ -218,8 +293,6 @@ function animation(btn) {
     document.getElementById(btn.id).disabled = true;
 
     var draw = window.value;
-
-    // construct();
 
     var v0 = draw.rect(48, 0.1).attr({
         'fill': '#00B0EA',
@@ -248,13 +321,13 @@ function animation(btn) {
     var v1 = draw.rect(0.01, 48).attr({
         'fill': '#00B0EA',
         // 'fill-opacity':'0.7',			
-        x: 675,
+        x: 678,
         y: 291
     });
 
     v1.animate({
         delay: '1s'
-    }).size(112, 48);
+    }).size(109, 48);
 
     var v_1 = draw.rect(0.01, 48).attr({
         'fill': '#FFFFFF',
@@ -384,7 +457,7 @@ function animation(btn) {
         delay: '5s'
     }).size(80, 181);
 
-    // construct();
+    // construct()
 
     var v_7 = draw.rect(82, 0.1).attr({
         'fill': '#FFFFFF',
@@ -402,14 +475,14 @@ function animation(btn) {
     $('#container').delay(5000)
         .animate({
             'height':'+=50px',
-            'top': 525
+            'top': 585
         }, 2500);
 
 
     $('#container').delay(4000)
         .animate({
             'height':'+=30px',
-             'top':495
+             'top':555
         },2500);
 
     // construct();
@@ -418,10 +491,12 @@ function animation(btn) {
         delay: '3.75s'
     }).rotate(-70);
 
-    
     img.animate({
         delay: '0s'
     }).rotate(-80);
+
+
+    // var temp=setTimeout(construct(),13000);
 
 }
 
