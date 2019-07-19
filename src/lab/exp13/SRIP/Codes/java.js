@@ -5,11 +5,11 @@ function construct() {
     var draw = window.value;
 
     var v1 = draw.polyline([
-        [800, 500],
-        [1100, 500],
-        [1100, 510],
-        [800, 510],
-        [800, 500]
+        [800,   500],
+        [1100,  500],
+        [1120,  510],
+        [780,   510],
+        [800,   500]
     ]).fill('#A3A09E').stroke({
         width: 2
     });
@@ -35,27 +35,18 @@ function construct() {
         width: 2
     });
 
-	var v5=draw.path('M 800 250 A 100 100 0 0 1 1100 250').fill('none').stroke({
-    	width:2
+    var v5=draw.path('M 800 250 A 100 100 0 0 1 1100 250').fill('none').stroke({
+        width:2
     })
 
-    // var v15=draw.polyline([[998,260],[1025,260],[998,240]]).stroke({width:2});
-
-    // var v16=draw.polyline([[900,240],[873,240],[900,260]]).stroke({width:2});
-
-    // var v17=draw.polyline([[955,200],[955,175],[935,202]]).stroke({width:2});
-
-    // var v18=draw.polyline([[940,300],[940,325],[960,298]]).stroke({width:2});
-
-    // var v19=draw.polyline([[976,290],[998,305],[993,275]]).stroke({width:2});
-
+    
     var v6 = draw.polyline([
-        [970, 165],
-        [970, 145],
-        [1150,145],
+        [970, 160],
+        [970, 140],
+        [1150,140],
         [1150,150],
         [980, 150],
-        [980, 165]
+        [980, 160]
     ]).fill('#A3A09E').stroke({
         width: 2
     });
@@ -71,10 +62,10 @@ function construct() {
     });
 
     var v8 = draw.polyline([
-        [970, 165],
-        [960, 171],
-        [990, 171],
-        [980, 165]
+        [970, 155],
+        [960, 165],
+        [990, 165],
+        [980, 155]
     ]).stroke({
         width: 2
     });
@@ -163,15 +154,15 @@ function construct() {
         width:2
     });
 
-    var v18=draw.polyline([
-        [1150,250],
-        [1150,260],
-        [1035,260],
-        [1035,250],
-        [1150,250]
-    ]).fill('#A3A09E').stroke({
-        width:2
-    });
+    // var v18=draw.polyline([
+    //     [1150,250],
+    //     [1150,260],
+    //     [1020,260],
+    //     [1020,250],
+    //     [1150,250]
+    // ]).fill('#A3A09E').stroke({
+    //     width:2
+    // });
 
     var v19=draw.polyline([
         [400,600],
@@ -267,7 +258,6 @@ function construct() {
     img = draw.image('images/pelton.jpg');
     img.size(130, 130).move(878, 190);
 
-
     img2 = draw.image('images/meter.jpeg');
     img2.size(30,28).move(640, 201);
 
@@ -286,6 +276,16 @@ function reload() {
     document.getElementById('start').disabled = true;
 
     location.reload();
+}
+
+
+var degrees=60;
+function rotat(el)
+{
+            el.animate([
+                {transform:'rotate(-60)'},
+                {repeatCount:'indefinite'}]
+            );
 }
 
 function animation(btn) {
@@ -320,7 +320,7 @@ function animation(btn) {
 
     var v1 = draw.rect(0.01, 48).attr({
         'fill': '#00B0EA',
-        // 'fill-opacity':'0.7',			
+        // 'fill-opacity':'0.7',            
         x: 678,
         y: 291
     });
@@ -342,7 +342,7 @@ function animation(btn) {
 
     var v2 = draw.rect(0.00001, 45).attr({
         'fill': '#00B0EA',
-        // 'fill-opacity':'0.7',			
+        // 'fill-opacity':'0.7',            
         x: 785,
         y: 294
 
@@ -370,7 +370,7 @@ function animation(btn) {
 
     var v3 = draw.rect(0.0001, 35).attr({
         'fill': '#00B0EA',
-        // 'fill-opacity':'0.7',			
+        // 'fill-opacity':'0.7',            
         x: 800,
         y: 298
     });
@@ -395,7 +395,7 @@ function animation(btn) {
 
     var v4 = draw.rect(0.1, 18).attr({
         'fill': '#00B0EA',
-        // 'fill-opacity':'0.7',			
+        // 'fill-opacity':'0.7',            
         x: 910,
         y: 315
     });
@@ -422,7 +422,7 @@ function animation(btn) {
 
     var v5 = draw.rect(0.1, 17).attr({
         'fill': '#00B0EA',
-        // 'fill-opacity':'0.7',			
+        // 'fill-opacity':'0.7',            
         x: 920,
         y: 316
     });
@@ -448,7 +448,7 @@ function animation(btn) {
 
     var v7 = draw.rect(80, 0.1).attr({
         'fill': '#00B0EA',
-        // 'fill-opacity':'0.7',			
+        // 'fill-opacity':'0.7',            
         x: 903,
         y: 317
     });
@@ -485,17 +485,19 @@ function animation(btn) {
              'top':555
         },2500);
 
-    // construct();
-
     img.animate({
         delay: '3.75s'
-    }).rotate(-70);
-
-    img.animate({
-        delay: '0s'
     }).rotate(-80);
 
+    img.animate().rotate(-150);
+    img.animate().rotate(-250);
+    img.animate().rotate(-360);
+    img.animate().rotate(-80);
+    img.animate().rotate(-150);
+    img.animate().rotate(-230);
+    img.animate().rotate(-280);
 
+    // construct();
     // var temp=setTimeout(construct(),13000);
 
 }
