@@ -1,0 +1,149 @@
+body{
+position:relative;
+top:90px;
+    width: 900px;
+    height: 800px;
+margin: auto;
+    border: solid blue;
+    border-width: 6px;
+    overflow:hidden;
+    display:block;
+    box-sizing: border-box;
+}
+#txt1{
+  position:relative;
+  top:-100px;
+  left:300px;
+	  padding-top: 40px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 10px;
+}
+
+
+button {
+  position:relative;
+  left:-390px;
+  top:-105px;
+  float: right;
+  background: black;
+  color: white;
+  margin: 5px;
+  padding-left: 20px;
+padding-right:20px;
+padding-top: 10px;
+padding-bottom: 10px;
+  border-radius: 4px;
+  font-family: 'Lato';
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+
+#pre6 { writing-mode: tb-rl;
+    position: relative;
+    top: 10px;
+    left:159px;
+  
+    width: 46px;
+
+    word-wrap: break-word;
+    background-color: white; 
+     border: 0px 
+ }
+
+button:hover {
+  background: grey;
+}
+
+
+#pre1 {
+    position: relative;
+    top: 80px;
+    left: 239px;
+    width: 620px;
+    background-color: white; 
+     border: 0px 
+
+}
+#pre2 {
+    position: relative;
+    top: 50px;
+    left: 430px;
+    width: 400px;
+
+    word-wrap: break-word;
+    background-color: white; 
+     border: 0px 
+
+}
+#pre3 {
+    position: relative;
+    top: 100px;
+  left:15px;
+    width: 148px;
+
+    word-wrap: break-word;
+    background-color: white; 
+     border: 0px 
+
+}
+#pre4 {
+    position: relative;
+    top: 60px;
+  left:241px;
+    width: 49px;
+
+    word-wrap: break-word;
+    background-color: white; 
+     border: 0px 
+
+}
+#pre5 {
+    position: relative;
+    top: 80px;
+  left:432px;
+    width: 49px;
+
+    word-wrap: break-word;
+    background-color: white; 
+     border: 0px 
+
+}
+#myProgress {
+  float:left;
+  width: 20%;
+  height:20px;
+  background-color: white;
+border: 1px solid #a8a8a8;
+    top: -224px;
+    left: 150px;
+    position: relative;
+ 
+    transform: rotate(270deg); 
+}
+
+#myBar {
+width:0%;
+  height: 20px;
+  background-color:#679bef;
+}
+#myProgress1 {
+  width: 20%;
+  height:20px;
+  background-color: white;
+border: 1px solid #a8a8a8;
+
+    top: -187px;
+    left: 340px;
+    position: relative;
+ 
+    transform: rotate(270deg); 
+}
+
+#myBar1 {
+width:0%;
+  height: 20px;
+  background-color:#679bef;
+}

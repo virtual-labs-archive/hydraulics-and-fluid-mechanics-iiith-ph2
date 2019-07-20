@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Venturi Meter Experiment</title>
+		
+		
+	  <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../Libraries/jquery.min.js"></script>
+		<script type="text/javascript" src="main.js"></script>
+    <script src="../Libraries/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../Libraries/bootstrap.min.css">
+		<link rel="stylesheet" href="style.css" />
+	 
+
+	</head>
+	<body>
+	<div id="txt1">
+		<u><font size="6" color="#3465b5">Venturi meter</font></u>
+	</div>
+	 <button class="play-progress1" id="iambutton1">restart</button>
+	<button class="play-progress1" id="iambutton">start</button>
+ 
+	<div class="container">
+<button style=" 
+    position: relative;
+    left: 150px;"
+data-toggle="modal" data-target="#myModalNorm">
+Calculations
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog" 
+     aria-labelledby="myModalLabel" aria-hidden="true">
+     <script>
+     	
+function isnumber(e)
+{
+	
+    var keyCode = (event.which) ? event.which : (window.event.keyCode) ? window.event.keyCode : -1;
+    var str=e.value;
+if(str.length>3) return false;
+ /*   if ((str.length==0) && (event.keyCode==46)) return false; // checking that length ==0 than not allow to enter '.'
+    if ((str.indexOf('.')>1) && (event.keyCode==46)) return false; // checking that if user already entered '.' than not allow to enter '.'*/
+if(keyCode==32) return false;
+          if (keyCode == 46 && keyCode > 31 && (keyCode < 48 || keyCode > 57))
+             return false;
+ if ((keyCode >= 48 && keyCode <= 57))
+          return true;
+return false;
+}
+     	function calculate(){
+     		var area=document.getElementById("area").value; 
+     		var height=document.getElementById("height").value;
+     		var time=document.getElementById("time").value;  
+     		var area1=document.getElementById("area1").value; 
+     		var area2=document.getElementById("area2").value; 
+     		var height1=document.getElementById("height1").value;
+     		var Qa=((area/10000)*(height/100))/time;
+     		var c1=Math.sqrt(2*9.81*(height1/100));
+     	var a1=(area1*area1);
+     	var a2=area2*area2;
+     		var c2=(Math.sqrt(a1-a2))/10000;
+     		var Qth=(area1*area2*c1)/(c2*10000*10000);
+     		alert("The Coefficient Cd:       "+Qa/Qth);
+     		return false;
+     	}
+     </script>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    Calculations
+                </h4>
+            </div>
+
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+                
+                <form role="form" onSubmit="return calculate()" name="f1" id="f1">
+                  <div class="form-group">
+                  	   <label style="font-size: 16px"><u>parameters for calculating Actual Discharge(Qa)</u></label>
+                  
+                  	   <br>
+                    <label for="area">Area of measuring tank in cm2(a)</label>
+                      <input type="text" class="form-control"
+                      id="area"  onkeypress="return isnumber(this);" required/>
+                  </div>
+                  <div class="form-group">
+                    <label for="heightDiffInPyrometer">Height differences in pyrometer in cm(h)</label>
+                      <input type="text" class="form-control"
+                          id="height"  onkeypress="return isnumber(this);" required/>
+                  </div>
+                  <div class="form-group">
+                    <label for="time">Time to collect water for a height difference of h cm, measured in Seconds(t)</label>
+                      <input type="text" class="form-control"
+                          id="time"  onkeypress="return isnumber(this);" required/>
+                  </div>
+
+                  <div class="form-group">
+                  	<label style="font-size: 16px"><u>parameters for calculating Theoretical Discharge(Qth)</u></label>
+                  
+                  	   <br>
+                    <label for="area1">The area at inlet side in cm2</label>
+                      <input type="text" class="form-control"
+                          id="area1"  onkeypress="return isnumber(this);" required/>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="area2">The area at throat in cm2</label>
+                      <input type="text" class="form-control"
+                          id="area2"  onkeypress="return isnumber(this);" required/>
+                  </div>
+           
+                  <div class="form-group">
+                    <label for="height1">Head difference in the manometer, converted to cm of water(Hw)</label>
+                      <input type="text" class="form-control"
+                          id="height1"  onkeypress="return isnumber(this);" required/>
+                  </div>
+
+                 </button>
+    <button type="submit" class="btn btn-success" style="position:relative;top:40px">Submit</button>
+                </form>
+                
+                
+            </div>
+            
+            <!-- Modal Footer -->
+            <div class="modal-footer" >
+                <button type="button" class="btn btn-danger"
+                        data-dismiss="modal" style="position:relative;top:10px">
+                            Close
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+</div>
+ 
+	<pre id="pre1"><b>&lt;---Upstream pressure tap </b></pre>
+	<pre id="pre4"><b>Pa </b></pre>
+	<pre id="pre2"><b>&lt;---Downstream pressure tap (pb)</b></pre>
+	<pre id="pre5"><b>Pb </b></pre>
+	<pre id="pre3"><b>flow direction---&gt</b></pre>
+	<pre id="pre6"><b>&lt------Da-----&gt</b></pre>
+	
+<div id="myProgress" >
+  <div id="myBar" ></div>
+</div>
+
+<div id="myProgress1" >
+  <div id="myBar1" ></div>
+</div>
+
+<div style='width:508px;height:119px;padding-left: 200px;padding-top:10px'>
+  <svg class="mysvg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="508px"
+   height="119px" viewBox="0 0 508 119" style="position: relative;
+    top: -157px;enable-background:new 0 0 508 119;" xml:space="preserve">
+<style type="text/css">
+  .st0{fill:#FFFFFF;stroke:#a8a8a8;stroke-miterlimit:0;}
+</style>
+<defs>
+   <linearGradient id="progress">
+      <stop id="stop1" offset="0" stop-color="#679bef"/>
+      <stop id="stop2" offset="0" stop-color="white"/>
+    </linearGradient>
+</defs>
+<path id="pathi" class="st0" style="fill:none" d="M0.5,1.5c1-1,1-1,1-1h5h125l63,39h126l47-39h140v118h-113l-74-34h-128l-61,34H0.5V1.5z"/>
+<text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle" style="writing-mode: tb-rl">&lt-Db-&gt</text>
+</svg>
+
+<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="492px"
+	 height="38px" viewBox="0 0 492 38" style="position:relative;top:-272px;enable-background:new 0 0 492 38;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+</style>
+<defs>
+</defs>
+    <path stroke="#000" stroke-width="1.5" fill="none" d="M492,0.5H364l-46,37H184l-61-37H0" stroke-dasharray="5,5" stroke-dashoffset="0.00"/>
+    <path id="top" stroke="#fff" stroke-width="3" fill="none" d="M492,0.5H364l-46,37H184l-61-37H0"/>
+
+</svg>
+
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="490px"
+	 height="17px" viewBox="0 0 490 17" style="position:relative;top:-295px;enable-background:new 0 0 490 17;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+</style>
+<defs>
+</defs>
+  <path stroke="#000" stroke-width="1.5" fill="none" d="M492,0.5H364l-46,37H184l-61-37H0" stroke-dasharray="5,5" stroke-dashoffset="0.00"/>
+    <path id="top1" stroke="#fff" stroke-width="3" fill="none" d="M492,0.5H364l-46,37H184l-61-37H0"/>
+
+</svg>
+
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="490px"
+	 height="17px" viewBox="0 0 490 17" style="transform: rotate(180deg);position:relative;top:-307px;enable-background:new 0 0 490 17;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+</style>
+<defs>
+</defs>
+  <path stroke="#000" stroke-width="1.5" fill="none" d="M0,0.5h484" stroke-dasharray="5,5" stroke-dashoffset="0.00"/>
+    <path id="top2" stroke="#fff" stroke-width="3" fill="none" d="M0,0.5h484"/>
+
+</svg>
+
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="490px"
+	 height="17px" viewBox="0 0 490 17" style="position:relative;top:-304px;transform: rotate(180deg);enable-background:new 0 0 490 17;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+</style>
+<defs>
+</defs>
+  <path stroke="#000" stroke-width="1.5" fill="none" d="M492,0.5H364l-46,37H184l-61-37H0" stroke-dasharray="5,5" stroke-dashoffset="0.00"/>
+    <path id="top3" stroke="#fff" stroke-width="3" fill="none" d="M492,0.5H364l-46,37H184l-61-37H0"/>
+
+</svg>
+
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="492px"
+	 height="38px" viewBox="0 0 492 38" style="position:relative;top:-327px;transform: rotate(180deg);enable-background:new 0 0 492 38;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+</style>
+<defs>
+</defs>
+    <path stroke="#000" stroke-width="1.5" fill="none" d="M492,0.5H364l-46,37H184l-61-37H0" stroke-dasharray="5,5" stroke-dashoffset="0.00"/>
+    <path id="top4" stroke="#fff" stroke-width="3" fill="none" d="M492,0.5H364l-46,37H184l-61-37H0"/>
+
+</svg>
+
+
+
+
+
+
+ <script>
+$(document).ready(function(){
+
+$("#iambutton1").click(function(){
+
+window.location.reload();
+});
+	//if start button is clicked the flow will start again
+$("#iambutton").click(function(){
+ 
+      $("#pathi").attr("style","fill:url(#progress)");
+t();
+t1();
+t2();
+t3();
+t4();
+  
+window.setTimeout(move, 1000);
+window.setTimeout(move2, 5500);
+});
+});
+function setProgress(amt)
+{
+  amt = (amt < 0) ? 0 : (amt > 1) ? 1 : amt;
+  document.getElementById("stop1").setAttribute("offset", amt);
+  document.getElementById("stop2").setAttribute("offset", amt);
+   
+}
+  
+
+// We step up from 0 to 1 using timeouts
+val = 0;
+doTimeout();
+function doTimeout() {
+  setProgress(val);
+  if(val==0){
+  	val+=0.00001;
+  }
+  else if(val<0.25){
+  	val+=0.0015;
+  }
+  else if (val>0.78){
+  	val+=0.0015;
+  }
+  else{
+val+=0.0055;
+  }
+  if (val <= 1) {
+    setTimeout(doTimeout, 30);
+  }
+}
+ </script>
+
+
+	</body>
+</html>

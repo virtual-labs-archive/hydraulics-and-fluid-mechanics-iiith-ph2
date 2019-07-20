@@ -1,0 +1,12 @@
+
+
+
+INSTRUCTIONS ON HOW TO USE SIMULATOR:
+->Firstly run the VenturiMeterExperiment.html file in the browser.
+->Click on the Start Button to start the simulation.
+->Click on restart Button to come to the initial stage before simulation.
+->Click on Calculations Button to calculate Coefficient Cd.
+	|->Give the required values to calculate Cd.
+	   (The values should be only positive integers less than 10,000).
+	|->Click on Submit button to calculate Cd.
+	|->Click on Close Button to close the Calculations model or window.
