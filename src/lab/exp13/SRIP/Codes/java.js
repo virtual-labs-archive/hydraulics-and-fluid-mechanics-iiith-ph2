@@ -16,13 +16,13 @@ function construct() {
 
     var v2 = draw.line([
         [800, 500],
-        [800, 335]
+        [800, 339]
     ]).stroke({
         width: 2
     });
 
     var v3 = draw.line([
-        [800, 295],
+        [800, 292],
         [800, 250]
     ]).stroke({
         width: 2
@@ -35,8 +35,8 @@ function construct() {
         width: 2
     });
 
-    var v5=draw.path('M 800 250 A 100 100 0 0 1 1100 250').fill('none').stroke({
-        width:2
+	var v5=draw.path('M 800 250 A 100 100 0 0 1 1100 250').fill('none').stroke({
+    	width:2
     })
 
     
@@ -71,17 +71,19 @@ function construct() {
     });
 
     var v9 = draw.polyline([
-        [850, 300],
-        [780, 290],
-        [680, 290]
+        [680, 290],
+        [800, 290],
+        [820, 300],
+        [865, 300]
     ]).fill('none').stroke({
         width: 2
     });
 
     var v10 = draw.polyline([
-        [850, 330],
-        [780, 340],
-        [680, 340]
+        [680, 340],
+        [800, 340],
+        [820, 330],
+        [865, 330]
     ]).fill('none').stroke({
         width: 2
     });
@@ -320,14 +322,14 @@ function animation(btn) {
 
     var v1 = draw.rect(0.01, 48).attr({
         'fill': '#00B0EA',
-        // 'fill-opacity':'0.7',            
+        // 'fill-opacity':'0.7',			
         x: 678,
         y: 291
     });
 
     v1.animate({
         delay: '1s'
-    }).size(109, 48);
+    }).size(123, 48);
 
     var v_1 = draw.rect(0.01, 48).attr({
         'fill': '#FFFFFF',
@@ -338,137 +340,137 @@ function animation(btn) {
 
     v_1.animate({
         delay: '8s'
-    }).size(117, 48);
+    }).size(131, 48);
 
     var v2 = draw.rect(0.00001, 45).attr({
         'fill': '#00B0EA',
-        // 'fill-opacity':'0.7',            
-        x: 785,
+        // 'fill-opacity':'0.7',			
+        x: 800,
         y: 294
 
     });
 
     v2.animate({
         delay: '2s'
-    }).size(29, 42);
+    }).size(15, 42);
 
 
     var v_2 = draw.rect(0.0001, 45).attr({
         'fill': '#FFFFFF',
         // 'fill-opacity':'0.7',            
-        x: 783,
+        x: 800,
         y: 294
 
     });
 
     v_2.animate({
         delay: '9s'
-    }).size(31, 42);
+    }).size(16, 42);
 
 
     construct();
 
-    var v3 = draw.rect(0.0001, 35).attr({
+    var v3 = draw.rect(0.0001, 28).attr({
         'fill': '#00B0EA',
-        // 'fill-opacity':'0.7',            
-        x: 800,
-        y: 298
+        // 'fill-opacity':'0.7',			
+        x: 810,
+        y: 301
     });
 
     v3.animate({
         delay: '2.75s'
-    }).size(110, 35);
+    }).size(90, 28);
 
-    var v_3 = draw.rect(0.0001, 38).attr({
+    var v_3 = draw.rect(0.0001, 28).attr({
         'fill': '#FFFFFF',
         // 'fill-opacity':'0.7',            
-        x: 798,
-        y: 297
+        x: 805,
+        y: 301
     });
 
     v_3.animate({
         delay: '9.75s'
-    }).size(112, 38);
+    }).size(95, 28);
 
 
-    // construct();
+    // // construct();
 
-    var v4 = draw.rect(0.1, 18).attr({
+    // var v4 = draw.rect(0.1, 18).attr({
+    //     'fill': '#00B0EA',
+    //     // 'fill-opacity':'0.7',			
+    //     x: 910,
+    //     y: 305
+    // });
+
+    // v4.animate({
+    //     delay: '3.65s'
+    // }).size(15, 18);
+
+
+    // // construct();
+
+    // var v_4 = draw.rect(0.001, 18).attr({
+    //     'fill': '#FFFFFF',
+    //     // 'fill-opacity':'0.7',            
+    //     x: 910,
+    //     y: 315
+    // });
+
+    // v_4.animate({
+    //     delay: '9.65s'
+    // }).size(15, 18);
+
+
+
+    var v5 = draw.rect(0.1, 15).attr({
         'fill': '#00B0EA',
-        // 'fill-opacity':'0.7',            
-        x: 910,
-        y: 315
-    });
-
-    v4.animate({
-        delay: '3.65s'
-    }).size(15, 18);
-
-
-    // construct();
-
-    var v_4 = draw.rect(0.001, 18).attr({
-        'fill': '#FFFFFF',
-        // 'fill-opacity':'0.7',            
-        x: 910,
-        y: 315
-    });
-
-    v_4.animate({
-        delay: '9.65s'
-    }).size(15, 18);
-
-
-
-    var v5 = draw.rect(0.1, 17).attr({
-        'fill': '#00B0EA',
-        // 'fill-opacity':'0.7',            
-        x: 920,
-        y: 316
+        // 'fill-opacity':'0.7',			
+        x: 900,
+        y: 313
     });
 
     v5.animate({
-        delay: '4.25s'
-    }).size(63, 17);
+        delay: '3.75s'
+    }).size(83, 15);
 
 
     // construct();
 
-    var v_5 = draw.rect(0.1, 17).attr({
+    var v_5 = draw.rect(0.1, 15).attr({
         'fill': '#FFFFFF',
         // 'fill-opacity':'0.7',            
-        x: 920,
-        y: 316
+        x: 900,
+        y: 313
     });
 
     v_5.animate({
-        delay: '10.25s'
-    }).size(63, 17);
+        delay: '10.75s'
+    }).size(84, 15);
 
 
-    var v7 = draw.rect(80, 0.1).attr({
+    var v7 = draw.rect(83, 0.1).attr({
         'fill': '#00B0EA',
-        // 'fill-opacity':'0.7',            
-        x: 903,
-        y: 317
+        // 'fill-opacity':'0.7',			
+        x: 900,
+        y: 313
     });
 
     v7.animate({
         delay: '5s'
-    }).size(80, 181);
+    }).size(83, 181);
 
     // construct()
 
-    var v_7 = draw.rect(82, 0.1).attr({
+    var v_7 = draw.rect(85, 0.1).attr({
         'fill': '#FFFFFF',
         // 'fill-opacity':'0.7',            
-        x: 902,
-        y: 316
+        x: 899,
+        y: 312
     });
 
     v_7.animate({
         delay: '10.75s'
-    }).size(82, 84);
+    }).size(85, 88);
 
 
 
