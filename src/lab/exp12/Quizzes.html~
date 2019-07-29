@@ -88,27 +88,51 @@
 			
 			<!-- =================================================================================================================================== -->
 			<div class="container-fluid"  style="margin-left: 35px; margin-right: 35px;">
-				<h2 class="text-h2-lightblue" style=" margin-bottom: 20px; margin-top: 10px; "><a href="http://vlabs.ac.in/civil-engineering-labs.html" class="sidebar-a" >Civil Engineering</a> &rarr;<a href="../Introduction.html" class="sidebar-a" >Fluid Mechanics Lab</a>&nbsp&rarr;<a href="../List of experiments.html" class="sidebar-a" >List Of Experiments</a><br/></h2>
+				<h2 class="text-h2-lightblue" style=" margin-bottom: 20px; margin-top: 10px; "><a href="http://vlabs.ac.in/civil-engineering-labs.html" class="sidebar-a" >Civil Engineering</a> &rarr;<a href="../Introduction.html" class="sidebar-a" >Soil Mechanics Lab</a>&nbsp&rarr;<a href="../List of experiments.html" class="sidebar-a" >List Of Experiments</a><br/></h2>
 					
 					<div class="row">
 						<div class="col-md-2 sidebar-col-2">
 						<!--edit1-->
-<a href="Introduction.html?domain=Civil Engineering&lab=Fluid Mechanics Lab" class="sidebar-a" > <h3 class="text-h3-darkblue" style="margin-top: 2px;">Introduction</h3></a><a href="Theory.html?domain=Civil Engineering&lab=Fluid Mechanics Lab" class="sidebar-a" > <h3 class="text-h3-darkblue" style="margin-top: 2px;">Theory</h3></a><a href="Objective.html?domain=Civil Engineering&lab=Fluid Mechanics Lab" class="sidebar-a" > <h3 class="text-h3-darkblue" style="margin-top: 2px;">Objective</h3></a><a href="Experiment.html?domain=Civil Engineering&lab=Fluid Mechanics Lab" class="sidebar-a" > <h3 class="text-h3-darkblue" style="margin-top: 2px;">Experiment</h3></a><a href="Manual.html?domain=Civil Engineering&lab=Fluid Mechanics Lab" class="sidebar-a" > <h3 class="text-h3-darkblue" style="margin-top: 2px;">Manual</h3></a><a href="Quizzes.html?domain=Civil Engineering&lab=Fluid Mechanics Lab" class="sidebar-a" > <h3 class="text-h3-darkblue" style="margin-top: 2px;">Quizzes</h3></a><a href="Procedure.html?domain=Civil Engineering&lab=Fluid Mechanics Lab" class="sidebar-a" > <h3 class="text-h3-darkblue" style="margin-top: 2px;">Procedure</h3></a><a href="Further Readings.html?domain=Civil Engineering&lab=Fluid Mechanics Lab" class="sidebar-a" > <h3 class="text-h3-darkblue" style="margin-top: 2px;">Further Readings</h3></a><a href="Feedback.html?domain=Civil Engineering&lab=Fluid Mechanics Lab" class="sidebar-a" > <h3 class="text-h3-darkblue" style="margin-top: 2px;">Feedback</h3></a>						</div>
+<a href="Introduction.html?domain=Civil Engineering&lab=Soil Mechanics Lab" class="sidebar-a" > <h3 class="text-h3-darkblue" style="margin-top: 2px;">Introduction</h3></a><a href="Theory.html?domain=Civil Engineering&lab=Soil Mechanics Lab" class="sidebar-a" > <h3 class="text-h3-darkblue" style="margin-top: 2px;">Theory</h3></a><a href="Objective.html?domain=Civil Engineering&lab=Soil Mechanics Lab" class="sidebar-a" > <h3 class="text-h3-darkblue" style="margin-top: 2px;">Objective</h3></a><a href="Experiment.html?domain=Civil Engineering&lab=Soil Mechanics Lab" class="sidebar-a" > <h3 class="text-h3-darkblue" style="margin-top: 2px;">Experiment</h3></a><a href="Manual.html?domain=Civil Engineering&lab=Soil Mechanics Lab" class="sidebar-a" > <h3 class="text-h3-darkblue" style="margin-top: 2px;">Manual</h3></a><a href="Quizzes.html?domain=Civil Engineering&lab=Soil Mechanics Lab" class="sidebar-a" > <h3 class="text-h3-darkblue" style="margin-top: 2px;">Quizzes</h3></a><a href="Procedure.html?domain=Civil Engineering&lab=Soil Mechanics Lab" class="sidebar-a" > <h3 class="text-h3-darkblue" style="margin-top: 2px;">Procedure</h3></a><a href="Further Readings.html?domain=Civil Engineering&lab=Soil Mechanics Lab" class="sidebar-a" > <h3 class="text-h3-darkblue" style="margin-top: 2px;">Further Readings</h3></a><a href="Feedback.html?domain=Civil Engineering&lab=Soil Mechanics Lab" class="sidebar-a" > <h3 class="text-h3-darkblue" style="margin-top: 2px;">Feedback</h3></a>						</div>
 						
 						<div class="col-md-10 lab-list-col-10">
 							
 							<!--edit -->
-<h1 class="text-h2-lightblue">Channels</h1><div class="content" id="experiment-article-section-6-content">
+<h1 class="text-h2-lightblue">Jets</h1><div class="content" id="experiment-article-section-6-content">
 <p>
 <b>Q1.</b> 
-              What is the significance of determination of the ﬂow rate of water in open channels ?  <br/><br/>
+              Flow to be laminar the Reynolds number should be greater than 2000.  <br>
+<input id="q1" name="q1" type="radio" value="1">
+<font color="green"> True </font> <br>
+<input id="q1" name="q1" type="radio" value="0">
+<font color="red"> False </font> <br/><br/>
 <b>Q2.</b> 
-              What is the function of weir in an open channel ? <br/><br/>
+              For flow to be turbulent the flow should be more than 400. <br>
+<input id="q2" name="q2" type="radio" value="1">
+<font color="green"> True </font> <br>
+<input id="q2" name="q2" type="radio" value="0">
+<font color="red"> False </font> <br/><br/>
 <b>Q3.</b> 
-              What are sharp-crested weirs ?  <br/><br/>
-</p>
+              Concept of Reynolds number is used in open channels. <br>
+<input id="q3" name="q3" type="radio" value="1">
+<font color="green"> True </font> <br>
+<input id="q3" name="q3" type="radio" value="0">
+<font color="red"> False </font> <br/><br/>
+<b>Q4.</b> 
+              The behavior of path lines is laminar flow.  <br>
+<input id="q4" name="q4" type="radio" value="1">
+<font color="green"> True </font> <br>
+<input id="q4" name="q4" type="radio" value="0">
+<font color="red"> False </font> <br/><br/>
+<b>Q5.</b> 
+              If the Reynolds number is in between 2000 and 4000 then the flow is.  <br>
+<input id="q5" name="q5" type="radio" value="1">
+<font color="green"> True </font> <br>
+<input id="q5" name="q5" type="radio" value="0">
+<font color="red"> False </font> <br/><br/>
+</input></br></input></br></input></br></input></br></input></br></input></br></input></br></input></br></input></br></input></br></p>
 <p>
-<a href="6.Channels.pdf" target="_blank">Read More</a>
+<a href="9.Jets.pdf" target="_blank">Read More</a>
 </p>
 </div>						</div>
 					</div>
@@ -159,13 +183,13 @@
 
 			<div class="col-md-2 border-right-green-dotted" >
 				<h2 class="text-h2-lightblue-small" style="font-weight: bold;margin-top: 0px;"> Follow us</h2>
-				<a href="https://www.facebook.com/pages/Virtual-Labs-IIT-Delhi/301510159983871" class="text-a-lightgreen nounderline"   target="_blank"> <img src="../images/social/fb.png"  style="border-radius: 50%;"/> </a>
-				<a href="https://twitter.com/TheVirtualLabs" class="text-a-lightgreen nounderline"   target="_blank"> <img src="../images/social/twitter.png"  style="border-radius: 50%;"/></a>
-				<a href="http://linkedin.com" class="text-a-lightgreen nounderline"  target="_blank" > <img src="../images/social/linkedin.png" style="border-radius: 50%;" /></a>
+				<a href="https://www.facebook.com/pages/Virtual-Labs-IIT-Delhi/301510159983871" class="text-a-lightgreen nounderline"   target="_blank"> <img src="images/social/fb.png"  style="border-radius: 50%;"/> </a>
+				<a href="https://twitter.com/TheVirtualLabs" class="text-a-lightgreen nounderline"   target="_blank"> <img src="images/social/twitter.png"  style="border-radius: 50%;"/></a>
+				<a href="http://linkedin.com" class="text-a-lightgreen nounderline"  target="_blank" > <img src="images/social/linkedin.png" style="border-radius: 50%;" /></a>
 				<a href="https://www.youtube.com/watch?v=mVBYNXLaDdg"
 				class="text-a-lightgreen nounderline"
 				target="_blank" >
-				<img src="../images/social/youtube.png"
+				<img src="images/social/youtube.png"
 				style="border-radius: 50%; width: 38px;
 				height: 38px" /></a>
 
