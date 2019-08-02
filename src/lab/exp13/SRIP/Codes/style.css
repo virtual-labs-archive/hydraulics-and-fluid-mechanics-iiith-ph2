@@ -1,0 +1,207 @@
+
+h1
+{
+	text-align: center;
+    margin-right: 15px;
+}
+
+#setup{
+	margin-left: 50px;
+  margin-top: 60px;
+}
+
+#start{
+  display: inline-block;
+	padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 15px;
+}
+
+#reset{
+	display: inline-block;
+	padding: 10px;
+	cursor: pointer;
+  	text-align: center;
+	font-size: 15px;
+}
+
+#calc{
+	display: inline-block;
+	padding: 10px;
+	cursor: pointer;
+  	text-align: center;
+	font-size: 15px;
+}
+
+
+#progressbar {
+    background-color: black;
+    border-radius: 8px;
+    padding: 3px;
+    width: 400px;
+}
+
+#progressbar div {
+    background-color: #0063C6;
+    width: 80%;
+    height: 10px;
+    border-radius: 5px;
+    animation:loadbar 5s;
+}
+
+@keyframes loadbar {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 80%;
+    }
+}
+
+
+
+
+#container{
+	width: 298px;
+	background-color: #00B0EA;
+	height:50px;
+	/*opacity:0.7;*/
+	position: absolute;
+	left: 851px;
+	top: 635px;
+}
+
+#water-rate1
+{
+	/*margin-left: 50px;*/
+    width: 18%;
+    padding: 8px;
+    border: 1px;
+    background: #C1BDBA;
+ }
+ 
+#water-rate2
+{
+	/*margin-left: 49px;*/
+    width: 18%;
+    padding: 8px;
+    border: 1px;
+    background: #C1BDBA;
+ }   
+
+#water-head1
+{
+	width: 18%;
+    padding: 8px;
+	/*margin-left: 145px;*/
+	border: 1px;
+    background: #C1BDBA;
+}
+
+#water-head2
+{
+	width: 18%;
+    padding: 8px;
+	/*margin-left: 50px;*/
+	border: 1px;
+    background: #C1BDBA;
+}
+
+#revolution1
+{
+   width: 18%;
+   padding: 8px;
+   /*margin-left: 13px;*/
+   border: 1px;
+   background: #C1BDBA;
+}
+
+#revolution2
+{
+   width: 18%;
+   padding: 8px;
+   /*margin-left: 50px;*/
+   border: 1px;
+   background: #C1BDBA;
+}
+
+#length1
+{
+	/*margin-left: 25px;*/
+	width: 18%;
+    padding: 8px;
+    border: 1px;
+    background: #C1BDBA;
+}
+
+
+#length2
+{
+	/*margin-left: 50px;*/
+	width: 18%;
+    padding: 8px;
+    border: 1px;
+    background: #C1BDBA;
+}
+
+#mass1
+{
+	/*margin-left: 47px;*/
+	width: 18%;
+    padding: 8px;
+    border: 1px;
+    background: #C1BDBA;
+}
+
+#mass2
+{
+	/*margin-left: 51px;*/
+	width: 18%;
+    padding: 8px;
+    border: 1px;
+    background: #C1BDBA;
+}
+
+
+#form{
+	/*margin-left: 450px;	*/
+	font-size: 20px;	
+}
+
+
+h2{
+	text-align: center;
+	/*font-size: 60px;*/
+}
+
+#submit{
+	display: inline-block;
+	padding: 10px;
+	cursor: pointer;
+	text-align: center;
+	font-size: 15px;
+}
+
+#plot{
+	display: inline-block;
+	padding: 10px;
+  	cursor: pointer;
+  	text-align: center;
+ 	font-size: 15px;
+}
+
+#erase{
+	display: inline-block;
+	padding: 10px;
+  	cursor: pointer;
+  	text-align: center;
+  	font-size: 15px;
+}
+
+#chartContainer
+{
+	height: 300px; 
+	width: 50%;
+	margin-left: 450px;
+}
