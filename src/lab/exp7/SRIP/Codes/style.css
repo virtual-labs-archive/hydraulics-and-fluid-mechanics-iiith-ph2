@@ -59,7 +59,7 @@ h1
     }
 }
 
-#water-rate1
+#diameter1
 {
 	/*margin-left: 50px;*/
     width: 18%;
@@ -68,7 +68,7 @@ h1
     background: #C1BDBA;
  }
  
-#water-rate2
+#diameter2
 {
 	/*margin-left: 49px;*/
     width: 18%;
@@ -95,7 +95,7 @@ h1
     background: #C1BDBA;
 }
 
-#revolution1
+#length1
 {
    width: 18%;
    padding: 8px;
@@ -104,7 +104,7 @@ h1
    background: #C1BDBA;
 }
 
-#revolution2
+#length2
 {
    width: 18%;
    padding: 8px;
@@ -113,7 +113,7 @@ h1
    background: #C1BDBA;
 }
 
-#length1
+#width1
 {
 	/*margin-left: 25px;*/
 	width: 18%;
@@ -123,7 +123,7 @@ h1
 }
 
 
-#length2
+#width2
 {
 	/*margin-left: 50px;*/
 	width: 18%;
@@ -132,7 +132,7 @@ h1
     background: #C1BDBA;
 }
 
-#mass1
+#time1
 {
 	/*margin-left: 47px;*/
 	width: 18%;
@@ -141,7 +141,7 @@ h1
     background: #C1BDBA;
 }
 
-#mass2
+#time2
 {
 	/*margin-left: 51px;*/
 	width: 18%;
