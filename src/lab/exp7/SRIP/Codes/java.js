@@ -840,31 +840,45 @@ function b() {
 
         var efficiency = parseFloat(act_discharge1 - act_discharge2) / parseFloat(calc_discharge1 - calc_discharge2);
 
-        // alert("The input power is "+input_power);
-        // alert("The output power is "+output_power);
-        // alert("Efficiency of the Pelton Turbine is "+efficiency);
+        // alert(act_discharge1);
+        // alert(calc_discharge1);
 
+        // alert(act_discharge2);
+        // alert(calc_discharge2);
+
+        alert(Math.abs(efficiency));
 
         var chart = new CanvasJS.Chart("chartContainer", {
+
+            animationEnabled: true,
 
             title: {
 
                 text: "Co-efficient of Discharge"
             },
 
+            legend:{
+                cursor: "pointer",
+                fontSize: 16
+            },
             data: [{
-                type: "line",
-
-                dataPoints: [{
-                        x: h1,
-                        y: act_discharge1
-                    },
-                    {
-                        x: h2,
-                        y: act_discharge2
-                    }
-                ]
-            }]
+                    name: "vs H",
+                    type: "spline",
+                    showInLegend: true,
+                    dataPoints: [
+                        { x: h1, y:act_discharge1 },
+                        { x: h2, y:act_discharge2 }
+                    ]
+                },
+                {
+                    name: "vs sqrt(H)",
+                    type: "spline",
+                    showInLegend: true,
+                    dataPoints: [
+                        { x:Math.sqrt(h1) , y:act_discharge1 },
+                        { x:Math.sqrt(h2) , y:act_discharge2 }
+                    ]
+                }]
         });
 
         chart.render();
