@@ -846,7 +846,7 @@ function b() {
         // alert(act_discharge2);
         // alert(calc_discharge2);
 
-        alert(Math.abs(efficiency));
+        alert("The coefficient of discharge is "+Math.abs(efficiency));
 
         var chart = new CanvasJS.Chart("chartContainer", {
 
@@ -854,7 +854,7 @@ function b() {
 
             title: {
 
-                text: "Co-efficient of Discharge"
+                text: "Co-Efficient of Discharge"
             },
 
             legend:{
