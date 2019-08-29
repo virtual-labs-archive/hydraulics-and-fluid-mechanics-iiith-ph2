@@ -466,6 +466,93 @@ function plotGraph(vh1, vh2, ph1, ph2, th1, th2) {
   }
 }
 
+
+function plotGraphAlt(vh1, vh2, ph1, ph2, th1, th2) {
+  var chart = new CanvasJS.Chart("chartContainer", {
+
+
+    title: {
+
+      text: "vs Total Head (in cm)",
+
+
+    },
+    axisY: [{
+        title: "Pressure Head (in cm)",
+        lineColor: "#C24642",
+        tickColor: "#C24642",
+        labelFontColor: "#C24642",
+        titleFontColor: "#C24642",
+
+      },
+      {
+        title: "Velocity Head (in cm)",
+        lineColor: "#369EAD",
+        tickColor: "#369EAD",
+        labelFontColor: "#369EAD",
+        titleFontColor: "#369EAD"
+
+      }
+    ],
+
+    toolTip: {
+      shared: true
+    },
+    legend: {
+      cursor: "pointer",
+      itemclick: toggleDataSeries
+    },
+    data: [{
+        type: "line",
+        name: "Velocity Head",
+        color: "#369EAD",
+        showInLegend: true,
+        axisYIndex: 1,
+        dataPoints: [{
+            x: th1,
+            y: vh1
+          },
+          {
+            x: th2,
+            y: vh2
+          }
+
+        ]
+      },
+      {
+        type: "line",
+        name: "Pressure Head",
+        color: "#C24642",
+        axisYIndex: 0,
+        showInLegend: true,
+        dataPoints: [{
+            x: th1,
+            y: ph1
+          },
+          {
+            x: th2,
+            y: ph2
+          }
+        ]
+      },
+      {
+
+      }
+    ]
+  });
+  chart.render();
+
+  function toggleDataSeries(e) {
+    if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+      e.dataSeries.visible = false;
+    }
+    else {
+      e.dataSeries.visible = true;
+    }
+    e.chart.render();
+  }
+}
+
 // FUNCTIONING OF THE CALCULATE AND CLEAR BUTTONS
 
 resultButton = document.getElementById("result");
