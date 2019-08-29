@@ -1,0 +1,150 @@
+
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="../Libraries/two.js"></script>
+      <script src="../Libraries/svg.js"></script>
+      <script src="../Libraries/jquery.js"></script>
+      <script src="../Libraries/canvasjs.min.js"></script>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="../Libraries/bootstrap.min.css">
+
+
+      <title>Mouthpiece Experiment</title>
+      
+      <div class="heading">
+      <div class="col-md-4.5">
+      <div class="col-md-4.5 text-center">
+      <h1>Mouthpiece Experiment</h1>
+      <br>
+      </div>
+      </div>
+      </div>
+
+      <div id="switch" class="col-md-3.25">
+      	
+         <div class="col-md-3.25 text-center">
+             <button id="start" type="button" onclick="animation(this)">START</button>
+
+             <button id="reset" type="button" onclick="reload()">RESET</button>
+
+             <a href="#calculation"><button id="calc">CALCULATION</button></a>
+         </div>
+      <br><br>
+      </div>
+   </head>
+   <body>
+   
+      <div id="setup" class="col-md-4.5">
+         <div id="container"> </div>
+      </div>
+
+
+      <br><br>
+
+      <div id="calculation">
+
+
+         <h2>Calculations</h2>
+         <br><br><br>
+
+         
+         <form id="form" onsubmit="return false">
+            
+          <div class="col-md-3.25">
+          <div id="water-head" class="col-md-3.25 text-center">
+              <b>WATER HEAD&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp :</b>
+              <input type="number" id="water-head1" name="water-head1" placeholder="in meter (reading-1)" min="0" required>
+              <input type="number" id="water-head2" name="water-head2" placeholder="in meter (reading-2)" min="0" required>
+              <br><br>
+          </div>
+          </div>
+          
+
+         	<div class="col-md-3.25">
+            <div id="diameter" class="col-md-3.25 text-center">
+	            <b>DIAMETER OF MOUTHPIECE&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp :</b>
+	            <input type="number" id="diameter1" name="diameter1" placeholder="in meter (reading-1)" min="0" required>
+	            <input type="number" id="diameter2" name="diameter2" placeholder="in meter (reading-2)" min="0" required>
+	            <br><br>
+        	</div>
+        	</div>
+
+          
+        	<div class="col-md-3.25">
+        	<div id="length" class="col-md-3.25 text-center">
+	            <b>LENGTH OF THE COLLECTING TANK :</b>
+	            <input type="number" id="length1" name="length1" placeholder="in meter (reading-1)" min="0" required>
+	            <input type="number" id="length2" name="length2" placeholder="in meter (reading-2)" min="0" required>
+	            <br><br>
+        	</div>
+        	</div>
+        
+
+          
+        	<div class="col-md-3.25">
+        	<div id="width" class="col-md-3.25 text-center">
+	            <b>WIDTH OF THE COLLECTING TANK &nbsp&nbsp&nbsp:</b>
+	            <input type="number" id="width1" name="width1" placeholder="in meter (reading-1)" min="0" required>
+	            <input type="number" id="width2" name="width2" placeholder="in meter (reading-2)" min="0" required>
+	            <br><br>
+        	</div>
+        	</div>
+
+
+
+          <div class="col-md-3.25">
+          <div id="time" class="col-md-3.25 text-center">
+              <b>TIME&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp :</b>
+              <input type="number" id="time1" name="time1" placeholder="in second (reading-1)" min="0" required>
+              <input type="number" id="time2" name="time2" placeholder="in second (reading-2)" min="0" required>
+              <br><br>
+          </div>
+          </div>
+          
+          <!--
+        	<div class="col-md-3.25">
+        	<div id="mass" class="col-md-3.25 text-center">
+	            <b>MASS OF THE HANGER&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:</b>
+	            <select id="mass1" name="mass1">
+	               <option value="0.5">0.5 KG</option>
+	               <option value="1.0">1.0 KG</option>
+	               <option value="1.5">1.5 KG</option>
+	               <option value="2.0">2.0 KG</option>
+	            </select>
+	            <select id="mass2" name="mass2">
+	               <option value="0.5">0.5 KG</option>
+	               <option value="1.0">1.0 KG</option>
+	               <option value="1.5">1.5 KG</option>
+	               <option value="2.0">2.0 KG</option>
+	            </select>
+        	</div>
+        	</div>
+          -->
+          
+            <div id="calculation-buttons" class="col-md-3.25">
+               <br><br><br>
+
+               <div class="col-md-3.25 text-center">
+               <input type="submit" id="submit" value="SUBMIT" name="Submit" onclick="enable()">      
+               <button id="erase" type="button" onclick="reload()">RESET</button>
+               <button id="plot" type="button" onclick="b()">PLOT GRAPH</button>
+               <br><br><br><br><br><br><br>
+               </div>
+
+            </div>
+
+         </form>
+      </div>
+
+      <div>
+      <div id="chartContainer" class="col-md-4 text-center"></div>
+      </div>
+   </body>
+   <script src="java.js"></script>
+</html>
+

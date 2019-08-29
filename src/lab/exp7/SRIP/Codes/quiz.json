@@ -1,0 +1,149 @@
+{
+  "articles": [
+    {
+      "quiztitle": "Quiz for Expiceriment"
+    },
+    {
+      "q": "1. When is orifice called ‘large orifice?",
+      "option": [
+        "If the head of liquid is less than 5 times the depth of orifice",
+        "If the head of liquid is less than 2.5 times the depth of orifice",
+        "If the head of liquid is less Hence, 4 times the depth of orifice",
+        "If the head of liquid is less than 1.5 times the depth of orifice"
+      ],
+      "answer": "If the head of liquid is less than 5 times the depth of orifice",
+      "description": "It is the correct parametric definition for ‘large orifice'."
+    },
+    {
+      "q": " In case of any orifice, velocity always remains constant and hence discharge can be calculated.",
+      "option": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "description": "In case of large orifice, velocity always remains variable and hence discharge cannot be calculated."
+    },
+    {
+      "q": " Find the discharge through totally drowned orifice of width 3.3 m if the difference of water levels on both side of the orifice be 50 cm. The height of water from to and bottom of the orifice are 2.25 m and 2.67 m respectively",
+      "option": [
+        "2.8 m^3/s",
+        "2.7 m^3/s",
+        "2.6 m^3/s",
+        "2.5 m3/s"
+      ],
+      "answer": "2.8 m^3/s",
+      "description": "Formula Based"
+    },
+    {
+      "q": "Location of  vena contracta is d/2",
+      "option": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "description": "Basic"
+    },
+    {
+      "q": "Find the discharge through a rectangular orifice 2.2 m wide and 1.3 m deep fitted to a easier tank. The water level in a team is 2.5 m above the top edge of orifice.",
+      "option": [
+        "13.9 m^3/s",
+        "11.5 m^3/s",
+        "16.9 m^3/s",
+        "8.7 m^3/s"
+      ],
+      "answer": "13.9 m^3/s",
+      "description": "Formula Based"
+    },
+    {
+      "q": "What is Co-efficient of Discharge?",
+      "option": [
+        "ratio of actual velocity of jet at vena-contracta to the theoritical velocity",
+        "ratio of area of jet at the vena-contracta to the area of orifice",
+        "ratio of actual discharge to theoritical discharge",
+        "None of the above"
+      ],
+      "answer": "ratio of actual discharge to theoritical discharge",
+      "description": "Basics"
+    },
+    {
+      "q": "The time taken to empty the tank is independent of Cd but depends only on the height and acceleration due to gravity.",
+      "option": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "description": "The time taken to empty the tank is dependent on Cd as well as depends only on the height and acceleration due to gravity."
+    },
+    {
+      "q": "A rectangular orifice of 2 m width and 1.2 m deep is fitted in one side of large tank. The easier level on one side of the orifice is 3m above the top edge of the orifice while on the other side of the orifice the water level is 0.5 m below it’s top edge. Calculate discharge if Cd = .64",
+      "option": [
+        "4.95 m^3/s",
+        "5.67 m^3/s",
+        "3.56 m^3/s",
+        "6.75 m^3/s"
+      ],
+      "answer": "4.95 m^3/",
+      "description": "Formula Based"
+    },
+    {
+      "q": "In case of submerged orifice the discharge is substantially dependent on temperature of fluid.",
+      "option": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "description": " Discharge is dependent on temperature but minimally."
+    },
+    {
+      "q": "What is Co-efficient of contraction?",
+      "option": [
+        "ratio of actual velocity of jet at vena-contracta to the theoritical velocity",
+        "ratio of area of jet at the vena-contracta to the area of orifice",
+        "ratio of actual discharge to theoritical discharge",
+        "None of the above"
+      ],
+      "answer": "ratio of area of jet at the vena-contracta to the area of orifice",
+      "description": "Basics"
+    },
+    {
+      "q": "The discharge rate is independent of the height difference and dependent only on the height.",
+      "option": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "description": "The discharge rate is dependent of the height difference and dependent only on the height."
+    },
+    {
+      "q": "A beaker contains water up to a certain height as shown. If the water is allowed to get discharged through a small pipe (of a uniform diameter), what type of flow will it be in the pipe?",
+      "option": [
+        "steady and uniform",
+        "unsteady and uniform",
+        "steady and non-uniform",
+        "unsteady and non-uniform"
+      ],
+      "answer": "unsteady and uniform",
+      "description": "The velocity in which the water is discharged with a velocity With time as the water gets discharged,v decreases as H decreases. Hence, it will be an unsteady flow.According to the continuity equation, ρAV =constant, where ρ= density, A= cross-sectional area of flow, V = velocity of flow. Since water is treated as an incompressible liquid (ρ =constant) and the pipe has a uniform diameter (A =constant) at a given instant, V will remain constant throughout the whole cross-section of the pipe. Hence, it will be a uniform flow."
+    },
+    {
+      "q": "The approximate distance ofvenacontracta from the centre of orifice is",
+      "options": [
+        "d",
+        "d/2"
+      ],
+      "answer": "d/2",
+      "description": "Basic"
+    },
+    {
+      "q": "What is Co-efficient of velocity?",
+      "option": [
+        "ratio of actual velocity of jet at vena-contracta to the theoritical velocity",
+        "ratio of area of jet at the vena-contracta to the area of orifice",
+        "ratio of actual discharge to theoritical discharge",
+        "None of the above"
+      ],
+      "answer": "ratio of actual velocity of jet at vena-contracta to the theoritical velocity",
+      "description": "Basics"
+    }
+  ]
+}
