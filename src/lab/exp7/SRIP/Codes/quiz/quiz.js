@@ -54,7 +54,7 @@ function nextques(){
 		q.style.display = "none";
         quiz.style.display = "none";
         result.style.display = "";
-        result.textContent = "SCORED: " + score + " out of 25 " + String.fromCodePoint(0x1F3C6) +String.fromCodePoint(0x1F973);
+        result.textContent = "SCORED: " + score + " out of 10 " + String.fromCodePoint(0x1F3C6) +String.fromCodePoint(0x1F973);
         return;
 	}
     giveQues(quesindex);
