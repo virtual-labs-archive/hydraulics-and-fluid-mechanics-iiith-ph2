@@ -1016,14 +1016,14 @@ font-size: 30px;
 /*Labs page*/
 .sidebar-col-2
 {
-
+    margin-bottom : 15px;
 }
 
 .lab-list-col-10
 {
 	background: url("../images/devider-blue-v-o.png") repeat-y;
 	background-position: left top;
-	margin-bottom: 25px;
+	margin-bottom: 15px;
 }
 
 .sidebar-a:HOVER, .text-h3-darkblue:HOVER {
